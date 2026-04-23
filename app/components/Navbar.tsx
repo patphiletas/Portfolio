@@ -34,7 +34,8 @@ export default function Navbar() {
           <li>
             <a
               href="/cv-patrice-philetas.pdf"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
               className="theme-button-secondary text-sm px-4 py-2 border rounded hover:opacity-80 transition-all"
             >
               CV
@@ -103,7 +104,8 @@ export default function Navbar() {
             <li>
               <a
                 href="/cv-patrice-philetas.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="theme-button-secondary inline-block text-sm px-4 py-2 border rounded hover:opacity-80"
               >
                 CV

@@ -39,10 +39,11 @@ export default function Hero() {
               </a>
               <a
                 href="/cv-patrice-philetas.pdf"
-                download
+                target="_blank"
+                rel="noopener noreferrer"
                 className="theme-button-secondary px-6 py-3 border rounded-lg hover:opacity-80 transition-colors"
               >
-                Télécharger mon CV
+                Voir mon CV
               </a>
             </div>
           </div>
