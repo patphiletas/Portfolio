@@ -9,7 +9,7 @@ export default function Graphisme() {
         <div className="mb-4">
           <h2 className="theme-text text-3xl md:text-4xl font-bold mb-3">Graphisme</h2>
           <p className="theme-text-muted text-sm uppercase tracking-widest mb-2">
-            15 ans d'expérience éditoriale
+            20 ans d'expérience éditoriale
           </p>
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-10">
             Avant le développement, 20 ans de graphisme éditorial : direction artistique,
