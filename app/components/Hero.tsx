@@ -25,9 +25,10 @@ export default function Hero() {
             </h2>
 
             <p className="theme-text-muted max-w-xl mb-8 leading-relaxed">
-              En reconversion vers le développement web full stack après 15 ans dans
-              le graphisme et la production éditoriale. En formation à Ada Tech School,
-              avec l'accent sur la pratique, la qualité du code et la collaboration.
+              Après près de 20 ans comme graphiste dans l’édition, je me forme aujourd’hui
+              au développement web full stack à Ada Tech School, avec une attention
+              particulière portée à la pratique, à la rigueur technique et au
+              travail en équipe.
             </p>
 
             <div className="flex flex-wrap gap-4">

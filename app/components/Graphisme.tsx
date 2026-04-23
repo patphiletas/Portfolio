@@ -12,7 +12,7 @@ export default function Graphisme() {
             15 ans d'expérience éditoriale
           </p>
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-10">
-            Avant le développement, 15 ans de graphisme éditorial : direction artistique,
+            Avant le développement, 20 ans de graphisme éditorial : direction artistique,
             maquette de livres, illustration, fabrication. Cette double compétence
             nourrit directement mon sens du design et de l'UX.
           </p>
