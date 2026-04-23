@@ -22,7 +22,7 @@ export default function Graphisme() {
           {graphismeItems.map((item) => (
             <div
               key={item.title}
-              className="theme-surface-muted rounded-lg overflow-hidden border theme-border hover:opacity-95 transition-colors"
+              className="theme-surface-muted theme-card-border rounded-lg overflow-hidden hover:opacity-95 transition-colors"
             >
               <div className="h-48 bg-gray-800 overflow-hidden">
                 <img

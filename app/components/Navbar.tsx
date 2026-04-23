@@ -14,7 +14,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="theme-surface fixed top-0 left-0 right-0 z-50 backdrop-blur-sm border-b theme-border-subtle">
+    <header className="theme-surface theme-divider-bottom fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
       <div className="text-white text-center py-2 text-sm font-medium" style={{ backgroundColor: '#3399CC' }}>
         Disponible pour une alternance 1J/4J — Juin 2026
       </div>
@@ -57,7 +57,7 @@ export default function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="theme-surface md:hidden border-t theme-border-subtle px-6 pb-6">
+        <div className="theme-surface md:hidden theme-divider-top px-6 pb-6">
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.href}>

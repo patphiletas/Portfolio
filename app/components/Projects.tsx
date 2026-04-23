@@ -17,7 +17,7 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.id}
-              className="theme-surface-muted rounded-lg overflow-hidden border theme-border hover:opacity-95 transition-colors"
+              className="theme-surface-muted theme-card-border rounded-lg overflow-hidden hover:opacity-95 transition-colors"
             >
               <div className="relative h-44 bg-gray-800 overflow-hidden">
                 <img
