@@ -5,8 +5,8 @@ export default function Hero() {
     <section id="hero" className="theme-surface min-h-screen flex items-center justify-center px-6 pt-20">
       <div className="max-w-4xl w-full">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
-          <div className="shrink-0">
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 theme-border">
+          <div className="w-full md:w-auto shrink-0 flex justify-center">
+            <div className="w-full max-w-[22rem] aspect-square md:w-48 md:h-48 md:max-w-none rounded-full overflow-hidden border-2 theme-border">
               <img
                 src="/images/patrice-philetas.jpg"
                 alt="Patrice Philétas"

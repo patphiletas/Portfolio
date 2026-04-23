@@ -49,9 +49,39 @@ export default function Navbar() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span className={`block w-6 h-0.5 bg-current transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-current transition-all ${menuOpen ? "opacity-0" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-current transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              className="overflow-visible"
+              aria-hidden="true"
+            >
+              <line
+                x1="3"
+                y1="6"
+                x2="21"
+                y2="6"
+                className={`origin-center transition-all ${menuOpen ? "translate-y-[6px] rotate-45" : ""}`}
+              />
+              <line
+                x1="3"
+                y1="12"
+                x2="21"
+                y2="12"
+                className={`origin-center transition-all ${menuOpen ? "opacity-0" : ""}`}
+              />
+              <line
+                x1="3"
+                y1="18"
+                x2="21"
+                y2="18"
+                className={`origin-center transition-all ${menuOpen ? "-translate-y-[6px] -rotate-45" : ""}`}
+              />
+            </svg>
           </button>
         </div>
       </nav>
