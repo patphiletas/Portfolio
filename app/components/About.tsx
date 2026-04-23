@@ -22,7 +22,7 @@ export default function About() {
                 éditoriale, j'ai choisi de me reconvertir vers le développement web full stack.
               </p>
               <p>
-                Cette transition n'est pas un changement radical mais une évolution logique :
+                Cette transition n'est pas un changement radical mais une évolution logique :
                 le même soin apporté à la mise en page d'un livre de 800 pages se retrouve
                 dans la rigueur d'un code propre, typé, et bien structuré.
               </p>
