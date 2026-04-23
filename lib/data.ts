@@ -25,9 +25,9 @@ export const projects: Project[] = [
     title: "My Real Book",
     description:
       "Application Full Stack de partitions issues du célèbre Real Book. Gestion rigoureuse des données musicales, stockage média (Cloudinary), table SQL (Neon), intégration d'une API d'IA pour l'enrichissement de contenu.",
-    stack: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Cloudinary", "API IA"],
+    stack: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Neon", "Tailwind CSS", "Cloudinary", "API IA"],
     liveUrl: "https://real-book-patphiletas-projects.vercel.app/",
-    githubUrl: "https://github.com/patphiletas",
+    githubUrl: "https://github.com/patphiletas/AdaRealBook",
     image: "/images/real-book.png",
   },
   {
@@ -35,9 +35,9 @@ export const projects: Project[] = [
     title: "Adaverse",
     description:
       "Application web interactive et immersive. Projet full stack démontrant la maîtrise du routing, des composants typés et du déploiement.",
-    stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL"],
+    stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Neon"],
     liveUrl: "https://adaverse-one.vercel.app/",
-    githubUrl: "https://github.com/patphiletas",
+    githubUrl: "https://github.com/patphiletas/Adaverse",
     image: "/images/adaverse.png",
   },
   {
@@ -47,7 +47,7 @@ export const projects: Project[] = [
       "Application web de visualisation de données permettant d'explorer en temps réel les événements et loisirs de la ville de Paris. Recherche dynamique, filtrage par thématiques.",
     stack: ["JavaScript", "Vite", "API", "CSS"],
     liveUrl: "https://adataviz-patphiletas.vercel.app/",
-    githubUrl: "https://github.com/patphiletas",
+    githubUrl: "https://github.com/patphiletas/grace-adataviz-patphiletas",
     image: "/images/adataviz.png",
   },
   {
@@ -55,9 +55,9 @@ export const projects: Project[] = [
     title: "Mes Compétences",
     description:
       "Plateforme d'auto-évaluation des compétences techniques. Interface dynamique permettant de suivre sa progression par palier avec le CRUD.",
-    stack: ["Vanilla JS", "JavaScript", "PostgreSQL", "LocalStorage"],
+    stack: ["Vanilla JS", "JavaScript", "PostgreSQL", "Neon", "LocalStorage"],
     liveUrl: "https://skills-patphiletas.vercel.app/",
-    githubUrl: "https://github.com/patphiletas",
+    githubUrl: "https://github.com/patphiletas/skills",
     image: "/images/skills.png",
   },
   {
@@ -67,7 +67,7 @@ export const projects: Project[] = [
       "Page vitrine interactive dédiée à l'univers Harry Potter. Intégration d'une timeline dynamique, gestion du responsive avec Tailwind CSS, composants typés.",
     stack: ["React.js", "TypeScript", "Tailwind CSS", "React Router"],
     liveUrl: "https://adapage-harry-potter.vercel.app/",
-    githubUrl: "https://github.com/patphiletas",
+    githubUrl: "https://github.com/patphiletas/Adapage-Harry-Potter",
     image: "/images/harry-potter.png",
   },
   {
@@ -77,7 +77,7 @@ export const projects: Project[] = [
       "Application de quiz interactive. Algorithme de calcul de résultats en temps réel et interface optimisée pour la lecture de données complexes.",
     stack: ["CSS", "JavaScript"],
     liveUrl: "https://quiz-patphiletas.vercel.app/",
-    githubUrl: "https://github.com/patphiletas",
+    githubUrl: "https://github.com/patphiletas/quiz-project",
     image: "/images/quiz.png",
   },
 ];
