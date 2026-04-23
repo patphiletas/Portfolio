@@ -49,6 +49,17 @@ export default function Projects() {
                   ))}
                 </div>
 
+                {project.readmeUrl && (
+                  <a
+                    href={project.readmeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="theme-link mb-4 text-xs underline underline-offset-2 hover:opacity-80 transition-colors"
+                  >
+                    Voir le README
+                  </a>
+                )}
+
                 <div className="mt-auto flex gap-3">
                   <a
                     href={project.liveUrl}
@@ -56,7 +67,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="theme-button-primary flex-1 text-center text-xs py-2 font-semibold rounded hover:opacity-80 transition-colors"
                   >
-                    Voir le site
+                    Démo
                   </a>
                   <a
                     href={project.githubUrl}

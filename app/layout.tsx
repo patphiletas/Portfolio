@@ -12,7 +12,7 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Patrice Philétas — Développeur Full Stack",
   description:
-    "Portfolio de Patrice Philétas, développeur Full Stack en formation (Ada Tech School) et graphiste avec 15 ans d'expérience éditoriale.",
+    "Portfolio de Patrice Philétas, développeur Full Stack en formation (Ada Tech School) et graphiste avec 20 ans d'expérience éditoriale.",
 };
 
 export default function RootLayout({

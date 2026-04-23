@@ -5,6 +5,7 @@ export type Project = {
   stack: string[];
   liveUrl: string;
   githubUrl: string;
+  readmeUrl?: string;
   image: string;
 };
 
@@ -28,6 +29,7 @@ export const projects: Project[] = [
     stack: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Neon", "Tailwind CSS", "Cloudinary", "API IA"],
     liveUrl: "https://real-book-patphiletas-projects.vercel.app/",
     githubUrl: "https://github.com/patphiletas/AdaRealBook",
+    readmeUrl: "https://github.com/patphiletas/AdaRealBook#readme",
     image: "/images/real-book.png",
   },
   {
@@ -38,6 +40,7 @@ export const projects: Project[] = [
     stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Drizzle", "Neon"],
     liveUrl: "https://adaverse-one.vercel.app/",
     githubUrl: "https://github.com/patphiletas/Adaverse",
+    readmeUrl: "https://github.com/patphiletas/Adaverse#readme",
     image: "/images/adaverse.png",
   },
   {
@@ -48,6 +51,7 @@ export const projects: Project[] = [
     stack: ["JavaScript", "Vite", "API", "CSS"],
     liveUrl: "https://adataviz-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/grace-adataviz-patphiletas",
+    readmeUrl: "https://github.com/patphiletas/grace-adataviz-patphiletas#readme",
     image: "/images/adataviz.png",
   },
   {
@@ -58,6 +62,7 @@ export const projects: Project[] = [
     stack: ["Vanilla JS", "JavaScript", "PostgreSQL", "Neon", "LocalStorage"],
     liveUrl: "https://skills-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/skills",
+    readmeUrl: "https://github.com/patphiletas/skills#readme",
     image: "/images/skills.png",
   },
   {
@@ -68,6 +73,7 @@ export const projects: Project[] = [
     stack: ["React.js", "TypeScript", "Tailwind CSS", "React Router"],
     liveUrl: "https://adapage-harry-potter.vercel.app/",
     githubUrl: "https://github.com/patphiletas/Adapage-Harry-Potter",
+    readmeUrl: "https://github.com/patphiletas/Adapage-Harry-Potter#readme",
     image: "/images/harry-potter.png",
   },
   {
@@ -78,6 +84,7 @@ export const projects: Project[] = [
     stack: ["CSS", "JavaScript"],
     liveUrl: "https://quiz-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/quiz-project",
+    readmeUrl: "https://github.com/patphiletas/quiz-project#readme",
     image: "/images/quiz.png",
   },
 ];
