@@ -35,7 +35,7 @@ export const projects: Project[] = [
     title: "Adaverse",
     description:
       "Application web interactive et immersive. Projet full stack démontrant la maîtrise du routing, des composants typés et du déploiement.",
-    stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Neon"],
+    stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Drizzle", "Neon"],
     liveUrl: "https://adaverse-one.vercel.app/",
     githubUrl: "https://github.com/patphiletas/Adaverse",
     image: "/images/adaverse.png",
@@ -86,13 +86,13 @@ export const graphismeItems: GraphismeItem[] = [
   {
     title: "Maquette de livres",
     description:
-      "Direction artistique et maquette de couvertures et intérieurs pour des maisons d'édition (Groupe Grego, Éditions jésuites, Éditions La Martinière, VG Éditions). Plus de 100 ouvrages publiés.",
+      "Direction artistique et maquette de couvertures et intérieurs pour des maisons d'édition (Groupe Grego, Éditions jésuites, Éditions La Martinière, VG Éditions). Plus de 800 ouvrages publiés.",
     image: "/images/graphisme-livres.png",
   },
   {
     title: "Identités visuelles & logos",
     description:
-      "Création de logos et identités visuelles pour des institutions : Alternatives Communes, Institut de Pathologie de Paris, Afri'Monde, Éditions jésuites.",
+      "Création de logos et identités visuelles pour des institutions : Alternatives Communes, Institut de Pathologie de Paris, Acat, Afri'Monde, Éditions jésuites.",
     image: "/images/graphisme-logos.png",
   },
   {
@@ -120,7 +120,7 @@ export const skills: Skill[] = [
   },
   {
     category: "Outils",
-    items: ["VSCode", "Git / Github", "Terminal", "Neon / Cloudinary", "Docker", "Figma"],
+    items: ["VSCode", "Git / Github", "Terminal", "Neon / Cloudinary", "Docker", "Figma", "Codex", "ChatGPT", "Claude", "Gemini"],
   },
   {
     category: "Graphisme",

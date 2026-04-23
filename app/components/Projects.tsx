@@ -17,7 +17,7 @@ export default function Projects() {
           {projects.map((project) => (
             <article
               key={project.id}
-              className="theme-surface-muted theme-card-border rounded-lg overflow-hidden hover:opacity-95 transition-colors"
+              className="theme-surface-muted theme-card-border flex h-full flex-col rounded-lg overflow-hidden hover:opacity-95 transition-colors"
             >
               <div className="relative h-44 bg-gray-800 overflow-hidden">
                 <img
@@ -30,11 +30,11 @@ export default function Projects() {
                 />
               </div>
 
-              <div className="p-5">
+              <div className="flex flex-1 flex-col p-5">
                 <h3 className="theme-text font-bold text-lg mb-2">
                   {project.title}
                 </h3>
-                <p className="theme-text-muted text-sm mb-4 leading-relaxed line-clamp-3">
+                <p className="theme-text-muted text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -49,7 +49,7 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-3">
+                <div className="mt-auto flex gap-3">
                   <a
                     href={project.liveUrl}
                     target="_blank"

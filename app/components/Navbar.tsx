@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className="theme-surface theme-divider-bottom fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
       <div className="text-white text-center py-2 text-sm font-medium" style={{ backgroundColor: '#3399CC' }}>
-        Disponible pour une alternance 1J/4J — Juin 2026
+        Disponible pour une alternance 4J/1J — Juin 2026
       </div>
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-center relative">
 
