@@ -50,8 +50,8 @@ export const projects: Project[] = [
       "Application web de visualisation de données permettant d'explorer en temps réel les événements et loisirs de la ville de Paris. Recherche dynamique, filtrage par thématiques.",
     stack: ["JavaScript", "Vite", "API", "CSS"],
     liveUrl: "https://adataviz-patphiletas.vercel.app/",
-    githubUrl: "https://github.com/patphiletas/grace-adataviz-patphiletas",
-    readmeUrl: "https://github.com/patphiletas/grace-adataviz-patphiletas#readme",
+    githubUrl: "https://github.com/patphiletas/adataviz-patphiletas",
+    readmeUrl: "https://github.com/patphiletas/adataviz-patphiletas#readme",
     image: "/images/adataviz.png",
   },
   {
