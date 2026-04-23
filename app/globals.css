@@ -3,10 +3,10 @@
 
 :root {
   color-scheme: light;
-  --theme-bg: #ebe3da;
-  --theme-surface: #f6efe7;
-  --theme-surface-muted: #efe6dd;
-  --theme-surface-strong: #d8cabc;
+  --theme-bg: #faf6f0;
+  --theme-surface: #fffdf9;
+  --theme-surface-muted: #fcf7f0;
+  --theme-surface-strong: #e8dfd3;
   --theme-text: #111827;
   --theme-text-muted: #4b5563;
   --theme-text-soft: #374151;
@@ -31,7 +31,7 @@ html.dark {
   --theme-border: rgb(255 255 255 / 0.2);
   --theme-border-strong: rgb(255 255 255 / 0.3);
   --theme-border-subtle: rgb(255 255 255 / 0.1);
-  --theme-divider: rgb(255 255 255 / 0.08);
+  --theme-divider: rgb(255 255 255 / 0.22);
   --theme-accent: #3399cc;
   --theme-inverse-bg: #ffffff;
   --theme-inverse-text: #000000;
@@ -102,8 +102,7 @@ section:last-of-type {
 }
 
 .theme-divider-bottom {
-  border-bottom-width: 10px;
-  border-bottom-color: var(--theme-divider);
+  box-shadow: 0 12px 28px -18px rgb(17 24 39 / 0.24);
 }
 
 .theme-divider-top {
