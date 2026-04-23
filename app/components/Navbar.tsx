@@ -45,13 +45,13 @@ export default function Navbar() {
         <div className="absolute right-6 flex items-center gap-4">
           <ThemeToggle />
           <button
-            className="md:hidden flex flex-col gap-1.5"
+            className="theme-text md:hidden flex flex-col gap-1.5"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
-            <span className={`theme-text block w-6 h-0.5 transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`theme-text block w-6 h-0.5 transition-all ${menuOpen ? "opacity-0" : ""}`} />
-            <span className={`theme-text block w-6 h-0.5 transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span className={`block w-6 h-0.5 bg-current transition-all ${menuOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-6 h-0.5 bg-current transition-all ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-6 h-0.5 bg-current transition-all ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
           </button>
         </div>
       </nav>
