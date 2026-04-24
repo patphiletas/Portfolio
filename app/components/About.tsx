@@ -22,7 +22,7 @@ export default function About() {
                 éditoriale, j'ai choisi de me reconvertir vers le développement web full stack.
               </p>
               <p>
-                Cette transition n'est pas un changement radical mais une évolution logique :
+                Cette transition n'est pas un changement radical mais une évolution logique&nbsp;:
                 le même soin apporté à la mise en page d'un livre de 800 pages se retrouve
                 dans la rigueur d'un code propre, typé, et bien structuré.
               </p>
@@ -33,7 +33,7 @@ export default function About() {
               <p>
                 Je recherche une{" "}
                 <span className="theme-text font-medium">
-                  alternance de 12 mois à partir de juin 2026
+                  alternance de 12 mois minimum à partir de juin 2026
                 </span>{" "}
                 (4j/1j en professionnalisation).
               </p>
