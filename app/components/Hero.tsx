@@ -17,11 +17,11 @@ export default function Hero() {
 
           <div>
             <h1 className="theme-text text-3xl md:text-5xl font-bold mb-4 leading-tight">
-              Patrice Philétas
+              <span className="font-light">Patrice</span> Philétas
             </h1>
 
             <h2 className="theme-text-muted text-xl md:text-2xl mb-6">
-              Développeur Full Stack <span className="theme-text">×</span> Graphiste
+              Développeur Full Stack <span className="theme-text">|</span> Graphiste
             </h2>
 
             <p className="theme-text-muted max-w-xl mb-8 leading-relaxed">
