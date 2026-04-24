@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="max-w-4xl w-full">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
           <div className="w-full md:w-auto shrink-0 flex justify-center">
-            <div className="w-full max-w-[22rem] aspect-square md:w-48 md:h-48 md:max-w-none rounded-full overflow-hidden border-2 theme-border">
+            <div className="w-full max-w-[22rem] aspect-square md:w-48 md:h-48 md:max-w-none rounded-full overflow-hidden border-2 theme-accent">
               <img
                 src="/images/patrice-philetas.jpg"
                 alt="Patrice Philétas"
