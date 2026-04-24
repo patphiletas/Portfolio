@@ -97,12 +97,6 @@ export const graphismeItems: GraphismeItem[] = [
     image: "/images/graphisme-livres.png",
   },
   {
-    title: "Identités visuelles & logos",
-    description:
-      "Création de logos et identités visuelles pour des institutions : Alternatives Communes, Institut de Pathologie de Paris, Acat, Afri'Monde, Éditions jésuites.",
-    image: "/images/graphisme-logos.png",
-  },
-  {
     title: "Illustration",
     description:
       "Séries d'illustrations numériques et conventionnelles pour des projets éditoriaux : guides de voyage, livrets d'accueil, mascotte de collections médicales.",
@@ -111,8 +105,8 @@ export const graphismeItems: GraphismeItem[] = [
   {
     title: "Communication print",
     description:
-      "Catalogues, mailings, affiches, flyers, kakémonos. Suivi de fabrication complet : choix prestataires, imposition, prépresse.",
-    image: "/images/graphisme-print.png",
+      "Catalogues, mailings, affiches, flyers, kakémonos, identités visuelles. Suivi de fabrication complet : choix prestataires, imposition, prépresse.",
+    image: "/images/graphisme-logos.png",
   },
 ];
 
