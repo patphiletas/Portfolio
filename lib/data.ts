@@ -106,7 +106,7 @@ export const graphismeItems: GraphismeItem[] = [
     title: "Illustration",
     description:
       "Séries d'illustrations numériques et conventionnelles pour des projets éditoriaux : guides de voyage, livrets d'accueil, mascotte de collections médicales.",
-    image: "/images/graphisme-illustration.png",
+    image: "/images/graphisme-illustration.jpg",
   },
   {
     title: "Communication print",
