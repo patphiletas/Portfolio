@@ -113,7 +113,7 @@ export const graphismeItems: GraphismeItem[] = [
 export const skills: Skill[] = [
   {
     category: "Front-End",
-    items: ["Next JS", "React JS", "JavaScript", "TypeScript", "Tailwind CSS"],
+    items: ["Next JS", "React JS", "JavaScript", "TypeScript", "Tailwind CSS", "Python", "Angular"],
   },
   {
     category: "Back-End",
