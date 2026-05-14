@@ -22,6 +22,17 @@ export type Skill = {
 
 export const projects: Project[] = [
   {
+    id: "alternative",
+    title: "AlterNative",
+    description:
+      "Projet en cours de développement : plateforme full stack de maison d'édition fictive. Soumission de manuscrits, dashboard admin, publications, commentaires, notation, authentification, base PostgreSQL et CI/CD.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Drizzle", "Neon", "Better Auth", "Zod", "Vitest"],
+    liveUrl: "https://demo-day-wine.vercel.app/",
+    githubUrl: "https://github.com/patphiletas/DemoDay",
+    readmeUrl: "https://github.com/patphiletas/DemoDay#readme",
+    image: "/images/demoday.png",
+  },
+  {
     id: "real-book",
     title: "My Real Book",
     description:
