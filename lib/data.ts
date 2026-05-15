@@ -87,17 +87,17 @@ export const projects: Project[] = [
     readmeUrl: "https://github.com/patphiletas/Adapage-Harry-Potter#readme",
     image: "/images/harry-potter.png",
   },
-  {
-    id: "quiz",
-    title: "Quiz Interactif",
-    description:
-      "Application de quiz interactive. Algorithme de calcul de résultats en temps réel et interface optimisée pour la lecture de données complexes.",
-    stack: ["CSS", "JavaScript"],
-    liveUrl: "https://quiz-patphiletas.vercel.app/",
-    githubUrl: "https://github.com/patphiletas/quiz-project",
-    readmeUrl: "https://github.com/patphiletas/quiz-project#readme",
-    image: "/images/quiz.png",
-  },
+  // {
+  //   id: "quiz",
+  //   title: "Quiz Interactif",
+  //   description:
+  //     "Application de quiz interactive. Algorithme de calcul de résultats en temps réel et interface optimisée pour la lecture de données complexes.",
+  //   stack: ["CSS", "JavaScript"],
+  //   liveUrl: "https://quiz-patphiletas.vercel.app/",
+  //   githubUrl: "https://github.com/patphiletas/quiz-project",
+  //   readmeUrl: "https://github.com/patphiletas/quiz-project#readme",
+  //   image: "/images/quiz.png",
+  // },
 ];
 
 export const graphismeItems: GraphismeItem[] = [
