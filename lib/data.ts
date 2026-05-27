@@ -25,8 +25,8 @@ export const projects: Project[] = [
     id: "alternative",
     title: "AlterNative",
     description:
-      "Projet en cours de développement : plateforme full stack de maison d'édition fictive. Soumission de manuscrits, modération admin, publications avec notation étoiles et commentaires, dashboards auteur et admin, sessions HTTP-only, dark mode et CI/CD.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Drizzle", "Neon", "Better Auth", "Zod", "Vitest", "GitHub Actions"],
+      "Projet en cours de développement : plateforme full stack de maison d'édition fictive. Soumission de manuscrits avec import EPUB, modération admin, publications avec notation et commentaires, recherche full-text, upload d'images via Cloudinary, emails transactionnels, rate limiting, dashboards auteur et admin, dark mode et CI/CD.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Drizzle", "Neon", "Better Auth", "Zod", "Vitest", "Resend", "Cloudinary", "GitHub Actions"],
     liveUrl: "https://demo-day-wine.vercel.app/",
     githubUrl: "https://github.com/patphiletas/DemoDay",
     readmeUrl: "https://github.com/patphiletas/DemoDay#readme",
