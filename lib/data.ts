@@ -25,7 +25,7 @@ export const projects: Project[] = [
     id: "alternative",
     title: "AlterNative",
     description:
-      "Projet en cours de développement : plateforme full stack de maison d'édition fictive. Soumission de manuscrits avec import EPUB, modération admin, publications avec notation et commentaires, recherche full-text, upload d'images via Cloudinary, emails transactionnels, rate limiting, dashboards auteur et admin, dark mode et CI/CD.",
+      "Plateforme full stack de maison d'édition fictive. Soumission de manuscrits avec import EPUB, modération admin, publications avec notation et commentaires, recherche full-text, upload d'images via Cloudinary, emails transactionnels, rate limiting, dashboards auteur et admin, dark mode et CI/CD.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Drizzle", "Neon", "Better Auth", "Zod", "Vitest", "Resend", "Cloudinary", "GitHub Actions"],
     liveUrl: "https://demo-day-wine.vercel.app/",
     githubUrl: "https://github.com/patphiletas/DemoDay",
@@ -36,7 +36,7 @@ export const projects: Project[] = [
     id: "real-book",
     title: "My Real Book",
     description:
-      "Application Full Stack de partitions issues du célèbre Real Book. Gestion rigoureuse des données musicales, stockage média (Cloudinary), table SQL (Neon), intégration d'une API d'IA pour l'enrichissement de contenu.",
+      "Application de lecture de partitions musicales issues du célèbre Real Book. Gestion rigoureuse des données musicales, stockage média (Cloudinary), table SQL (Neon), intégration d'une API d'IA pour l'enrichissement de contenu.",
     stack: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Neon", "Tailwind CSS", "Cloudinary", "API IA"],
     liveUrl: "https://real-book-patphiletas-projects.vercel.app/",
     githubUrl: "https://github.com/patphiletas/AdaRealBook",
@@ -46,8 +46,7 @@ export const projects: Project[] = [
   {
     id: "adaverse",
     title: "Adaverse",
-    description:
-      "Application web interactive et immersive. Projet full stack démontrant la maîtrise du routing, des composants typés et du déploiement.",
+    description: `Application web répertoriant les projets des étudiants d’Ada Tech School. Projet démontrant la maîtrise du routing, des composants typés et du déploiement.`,
     stack: ["React.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Drizzle", "Neon"],
     liveUrl: "https://adaverse-one.vercel.app/",
     githubUrl: "https://github.com/patphiletas/Adaverse",
