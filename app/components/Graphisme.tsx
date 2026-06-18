@@ -18,7 +18,7 @@ export default function Graphisme() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
           {graphismeItems.map((item) => (
             <div
               key={item.title}
