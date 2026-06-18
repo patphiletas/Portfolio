@@ -2,6 +2,12 @@
 
 import { skills } from "@/lib/data";
 
+const FEATURED_SKILLS = new Set([
+  "Next JS", "React JS", "JavaScript", "TypeScript", "Tailwind CSS",
+  "PostgreSQL / SQL", "VSCode", "Git / Github",
+  "Photoshop", "Indesign", "Illustrator", "Acrobat Pro",
+]);
+
 export default function About() {
   return (
     <section id="apropos" className="theme-surface py-24 px-6">
@@ -79,28 +85,18 @@ export default function About() {
 
         <div>
           <h3 className="theme-text font-semibold text-lg mb-6">Compétences</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {skills.map((skillGroup) => (
-              <div key={skillGroup.category}>
-                <p className="theme-text-muted text-xs uppercase tracking-widest mb-3">
-                  {skillGroup.category}
-                </p>
-                <ul className="space-y-2">
-                  {skillGroup.items.map(({ name, level }) => (
-                    <li key={name} className="flex items-center justify-between gap-2">
-                      <span className="theme-text-soft text-sm">{name}</span>
-                      <span className="flex gap-0.5 shrink-0">
-                        {[1, 2, 3].map((dot) => (
-                          <span
-                            key={dot}
-                            className={`w-1.5 h-1.5 rounded-full ${dot <= level ? "bg-(--theme-accent)" : "bg-(--theme-surface-strong)"}`}
-                          />
-                        ))}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+          <div className="flex flex-wrap gap-2">
+            {skills.flatMap((g) => g.items).map((item) => (
+              <span
+                key={item}
+                className={`text-xs px-3 py-1 rounded-full border ${
+                  FEATURED_SKILLS.has(item)
+                    ? "theme-chip-featured"
+                    : "theme-chip"
+                }`}
+              >
+                {item}
+              </span>
             ))}
           </div>
         </div>

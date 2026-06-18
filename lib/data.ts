@@ -17,7 +17,7 @@ export type GraphismeItem = {
 
 export type Skill = {
   category: string;
-  items: { name: string; level: 1 | 2 | 3 }[];
+  items: string[];
 };
 
 export const projects: Project[] = [
@@ -123,49 +123,19 @@ export const graphismeItems: GraphismeItem[] = [
 export const skills: Skill[] = [
   {
     category: "Front-End",
-    items: [
-      { name: "Next JS", level: 3 },
-      { name: "React JS", level: 3 },
-      { name: "JavaScript", level: 3 },
-      { name: "TypeScript", level: 3 },
-      { name: "Tailwind CSS", level: 3 },
-      { name: "Python", level: 1 },
-      { name: "Angular", level: 1 },
-    ],
+    items: ["Next JS", "React JS", "JavaScript", "TypeScript", "Tailwind CSS", "Python", "Angular"],
   },
   {
     category: "Back-End",
-    items: [
-      { name: "NodeJS", level: 2 },
-      { name: "ExpressJS", level: 2 },
-      { name: "PostgreSQL / SQL", level: 3 },
-      { name: "API Rest", level: 2 },
-      { name: "CRUD", level: 3 },
-    ],
+    items: ["NodeJS", "ExpressJS", "PostgreSQL / SQL", "API Rest", "CRUD"],
   },
   {
     category: "Outils",
-    items: [
-      { name: "VSCode", level: 3 },
-      { name: "Git / Github", level: 3 },
-      { name: "Terminal", level: 2 },
-      { name: "Neon / Cloudinary", level: 2 },
-      { name: "Docker", level: 1 },
-      { name: "Figma", level: 2 },
-      { name: "Codex", level: 1 },
-      { name: "ChatGPT", level: 3 },
-      { name: "Claude", level: 3 },
-      { name: "Gemini", level: 2 },
-    ],
+    items: ["VSCode", "Git / Github", "Terminal", "Neon / Cloudinary", "Docker", "Figma", "Codex", "ChatGPT", "Claude", "Gemini"],
   },
   {
     category: "Graphisme",
-    items: [
-      { name: "Photoshop", level: 3 },
-      { name: "Indesign", level: 3 },
-      { name: "Illustrator", level: 3 },
-      { name: "Acrobat Pro", level: 3 },
-    ],
+    items: ["Photoshop", "Indesign", "Illustrator", "Acrobat Pro"],
   },
 ];
 
