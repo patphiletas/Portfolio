@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { projects } from "@/lib/data";
 
 export default function Projects() {
@@ -20,10 +21,11 @@ export default function Projects() {
               className="theme-surface-muted theme-card-border flex h-full flex-col rounded-lg overflow-hidden hover:opacity-95 transition-colors"
             >
               <div className="relative h-44 bg-gray-800 overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover object-top"
+                  fill
+                  className="object-cover object-top"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
                   }}

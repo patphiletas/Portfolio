@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { graphismeItems, clients } from "@/lib/data";
 
 export default function Graphisme() {
@@ -24,11 +25,12 @@ export default function Graphisme() {
               key={item.title}
               className="theme-surface-muted theme-card-border rounded-lg overflow-hidden hover:opacity-95 transition-colors"
             >
-              <div className="h-48 bg-gray-800 overflow-hidden">
-                <img
+              <div className="relative h-48 bg-gray-800 overflow-hidden">
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
                   }}
