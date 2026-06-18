@@ -17,7 +17,7 @@ export type GraphismeItem = {
 
 export type Skill = {
   category: string;
-  items: string[];
+  items: { name: string; level: 1 | 2 | 3 }[];
 };
 
 export const projects: Project[] = [
@@ -86,17 +86,17 @@ export const projects: Project[] = [
     readmeUrl: "https://github.com/patphiletas/Adapage-Harry-Potter#readme",
     image: "/images/harry-potter.png",
   },
-  // {
-  //   id: "quiz",
-  //   title: "Quiz Interactif",
-  //   description:
-  //     "Application de quiz interactive. Algorithme de calcul de résultats en temps réel et interface optimisée pour la lecture de données complexes.",
-  //   stack: ["CSS", "JavaScript"],
-  //   liveUrl: "https://quiz-patphiletas.vercel.app/",
-  //   githubUrl: "https://github.com/patphiletas/quiz-project",
-  //   readmeUrl: "https://github.com/patphiletas/quiz-project#readme",
-  //   image: "/images/quiz.png",
-  // },
+  {
+    id: "quiz",
+    title: "Quiz Interactif",
+    description:
+      "Application de quiz interactive. Algorithme de calcul de résultats en temps réel et interface optimisée pour la lecture de données complexes.",
+    stack: ["CSS", "JavaScript"],
+    liveUrl: "https://quiz-patphiletas.vercel.app/",
+    githubUrl: "https://github.com/patphiletas/quiz-project",
+    readmeUrl: "https://github.com/patphiletas/quiz-project#readme",
+    image: "/images/quiz.png",
+  },
 ];
 
 export const graphismeItems: GraphismeItem[] = [
@@ -123,19 +123,49 @@ export const graphismeItems: GraphismeItem[] = [
 export const skills: Skill[] = [
   {
     category: "Front-End",
-    items: ["Next JS", "React JS", "JavaScript", "TypeScript", "Tailwind CSS", "Python", "Angular"],
+    items: [
+      { name: "Next JS", level: 3 },
+      { name: "React JS", level: 3 },
+      { name: "JavaScript", level: 3 },
+      { name: "TypeScript", level: 3 },
+      { name: "Tailwind CSS", level: 3 },
+      { name: "Python", level: 1 },
+      { name: "Angular", level: 1 },
+    ],
   },
   {
     category: "Back-End",
-    items: ["NodeJS", "ExpressJS", "PostgreSQL / SQL", "API Rest", "CRUD"],
+    items: [
+      { name: "NodeJS", level: 2 },
+      { name: "ExpressJS", level: 2 },
+      { name: "PostgreSQL / SQL", level: 3 },
+      { name: "API Rest", level: 2 },
+      { name: "CRUD", level: 3 },
+    ],
   },
   {
     category: "Outils",
-    items: ["VSCode", "Git / Github", "Terminal", "Neon / Cloudinary", "Docker", "Figma", "Codex", "ChatGPT", "Claude", "Gemini"],
+    items: [
+      { name: "VSCode", level: 3 },
+      { name: "Git / Github", level: 3 },
+      { name: "Terminal", level: 2 },
+      { name: "Neon / Cloudinary", level: 2 },
+      { name: "Docker", level: 1 },
+      { name: "Figma", level: 2 },
+      { name: "Codex", level: 1 },
+      { name: "ChatGPT", level: 3 },
+      { name: "Claude", level: 3 },
+      { name: "Gemini", level: 2 },
+    ],
   },
   {
     category: "Graphisme",
-    items: ["Photoshop", "Indesign", "Illustrator", "Acrobat Pro"],
+    items: [
+      { name: "Photoshop", level: 3 },
+      { name: "Indesign", level: 3 },
+      { name: "Illustrator", level: 3 },
+      { name: "Acrobat Pro", level: 3 },
+    ],
   },
 ];
 

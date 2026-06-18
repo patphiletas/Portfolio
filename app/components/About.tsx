@@ -85,11 +85,18 @@ export default function About() {
                 <p className="theme-text-muted text-xs uppercase tracking-widest mb-3">
                   {skillGroup.category}
                 </p>
-                <ul className="space-y-1.5">
-                  {skillGroup.items.map((item) => (
-                    <li key={item} className="theme-text-soft flex items-center gap-2 text-sm">
-                      <span className="theme-text w-1 h-1 rounded-full shrink-0" />
-                      {item}
+                <ul className="space-y-2">
+                  {skillGroup.items.map(({ name, level }) => (
+                    <li key={name} className="flex items-center justify-between gap-2">
+                      <span className="theme-text-soft text-sm">{name}</span>
+                      <span className="flex gap-0.5 shrink-0">
+                        {[1, 2, 3].map((dot) => (
+                          <span
+                            key={dot}
+                            className={`w-1.5 h-1.5 rounded-full ${dot <= level ? "bg-(--theme-accent)" : "bg-(--theme-surface-strong)"}`}
+                          />
+                        ))}
+                      </span>
                     </li>
                   ))}
                 </ul>
