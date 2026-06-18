@@ -4,6 +4,8 @@ import Image from "next/image";
 import { projects } from "@/lib/data";
 
 export default function Projects() {
+  const [featured, ...rest] = projects;
+
   return (
     <section id="projets" className="theme-surface py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -14,8 +16,70 @@ export default function Projects() {
           </p>
         </div>
 
+        {/* Featured project */}
+        <article className="theme-surface-muted theme-card-border flex flex-col md:flex-row rounded-lg overflow-hidden mb-8 hover:opacity-95 transition-colors">
+          <div className="relative h-56 md:h-auto md:w-2/5 bg-gray-800 shrink-0">
+            <Image
+              src={featured.image}
+              alt={featured.title}
+              fill
+              className="object-cover object-top"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = "none";
+              }}
+            />
+          </div>
+          <div className="flex flex-1 flex-col p-6">
+            <div className="flex items-center gap-3 mb-3">
+              <h3 className="theme-text font-bold text-xl">{featured.title}</h3>
+              <span className="text-xs px-2 py-0.5 rounded-full border theme-card-border theme-text-muted">
+                Projet phare
+              </span>
+            </div>
+            <p className="theme-text-muted text-sm mb-4 leading-relaxed">
+              {featured.description}
+            </p>
+            <div className="flex flex-wrap gap-1.5 mb-5">
+              {featured.stack.map((tech) => (
+                <span key={tech} className="theme-chip text-xs px-2 py-0.5 rounded border">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            {featured.readmeUrl && (
+              <a
+                href={featured.readmeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="theme-link mb-4 text-xs underline underline-offset-2 hover:opacity-80 transition-colors"
+              >
+                Voir le README
+              </a>
+            )}
+            <div className="mt-auto flex gap-3">
+              <a
+                href={featured.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="theme-button-primary flex-1 text-center text-xs py-2 font-semibold rounded hover:opacity-80 transition-colors"
+              >
+                Démo
+              </a>
+              <a
+                href={featured.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="theme-button-secondary flex-1 text-center text-xs py-2 border rounded hover:opacity-80 transition-colors"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        {/* Other projects */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+          {rest.map((project) => (
             <article
               key={project.id}
               className="theme-surface-muted theme-card-border flex h-full flex-col rounded-lg overflow-hidden hover:opacity-95 transition-colors"
@@ -31,7 +95,6 @@ export default function Projects() {
                   }}
                 />
               </div>
-
               <div className="flex flex-1 flex-col p-5">
                 <h3 className="theme-text font-bold text-lg mb-2">
                   {project.title}
@@ -39,18 +102,13 @@ export default function Projects() {
                 <p className="theme-text-muted text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
-
                 <div className="flex flex-wrap gap-1.5 mb-5">
                   {project.stack.map((tech) => (
-                    <span
-                      key={tech}
-                      className="theme-chip text-xs px-2 py-0.5 rounded border"
-                    >
+                    <span key={tech} className="theme-chip text-xs px-2 py-0.5 rounded border">
                       {tech}
                     </span>
                   ))}
                 </div>
-
                 {project.readmeUrl && (
                   <a
                     href={project.readmeUrl}
@@ -61,7 +119,6 @@ export default function Projects() {
                     Voir le README
                   </a>
                 )}
-
                 <div className="mt-auto flex gap-3">
                   <a
                     href={project.liveUrl}
