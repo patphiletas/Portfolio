@@ -15,9 +15,11 @@ export type GraphismeItem = {
   image: string;
 };
 
+export type SkillItem = { name: string; featured?: true };
+
 export type Skill = {
   category: string;
-  items: string[];
+  items: SkillItem[];
 };
 
 export const projects: Project[] = [
@@ -123,19 +125,49 @@ export const graphismeItems: GraphismeItem[] = [
 export const skills: Skill[] = [
   {
     category: "Front-End",
-    items: ["Next JS", "React JS", "JavaScript", "TypeScript", "Tailwind CSS", "Python", "Angular"],
+    items: [
+      { name: "Next JS", featured: true },
+      { name: "React JS", featured: true },
+      { name: "JavaScript", featured: true },
+      { name: "TypeScript", featured: true },
+      { name: "Tailwind CSS", featured: true },
+      { name: "Python" },
+      { name: "Angular" },
+    ],
   },
   {
     category: "Back-End",
-    items: ["NodeJS", "ExpressJS", "PostgreSQL / SQL", "API Rest", "CRUD"],
+    items: [
+      { name: "NodeJS" },
+      { name: "ExpressJS" },
+      { name: "PostgreSQL / SQL", featured: true },
+      { name: "API Rest" },
+      { name: "CRUD" },
+    ],
   },
   {
     category: "Outils",
-    items: ["VSCode", "Git / Github", "Terminal", "Neon / Cloudinary", "Docker", "Figma", "Codex", "ChatGPT", "Claude", "Gemini"],
+    items: [
+      { name: "VSCode", featured: true },
+      { name: "Git / Github", featured: true },
+      { name: "Terminal" },
+      { name: "Neon / Cloudinary" },
+      { name: "Docker" },
+      { name: "Figma" },
+      { name: "Codex" },
+      { name: "ChatGPT" },
+      { name: "Claude Code" },
+      { name: "Gemini" },
+    ],
   },
   {
     category: "Graphisme",
-    items: ["Photoshop", "Indesign", "Illustrator", "Acrobat Pro"],
+    items: [
+      { name: "Photoshop", featured: true },
+      { name: "Indesign", featured: true },
+      { name: "Illustrator", featured: true },
+      { name: "Acrobat Pro", featured: true },
+    ],
   },
 ];
 

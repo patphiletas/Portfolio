@@ -2,12 +2,6 @@
 
 import { skills } from "@/lib/data";
 
-const FEATURED_SKILLS = new Set([
-  "Next JS", "React JS", "JavaScript", "TypeScript", "Tailwind CSS",
-  "PostgreSQL / SQL", "VSCode", "Git / Github",
-  "Photoshop", "Indesign", "Illustrator", "Acrobat Pro",
-]);
-
 export default function About() {
   return (
     <section id="apropos" className="theme-surface py-24 px-6">
@@ -86,16 +80,12 @@ export default function About() {
         <div>
           <h3 className="theme-text font-semibold text-lg mb-6">Compétences</h3>
           <div className="flex flex-wrap gap-2">
-            {skills.flatMap((g) => g.items).map((item) => (
+            {skills.flatMap((g) => g.items).map(({ name, featured }) => (
               <span
-                key={item}
-                className={`text-xs px-3 py-1 rounded-full border ${
-                  FEATURED_SKILLS.has(item)
-                    ? "theme-chip-featured"
-                    : "theme-chip"
-                }`}
+                key={name}
+                className={`text-xs px-3 py-1 rounded-full border ${featured ? "theme-chip-featured" : "theme-chip"}`}
               >
-                {item}
+                {name}
               </span>
             ))}
           </div>

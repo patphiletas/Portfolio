@@ -13,6 +13,7 @@ export default function Hero() {
                 src="/images/patrice-philetas.jpg"
                 alt="Patrice Philétas"
                 fill
+                priority
                 className="object-cover"
               />
             </div>
