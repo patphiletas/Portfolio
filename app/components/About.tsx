@@ -23,7 +23,7 @@ export default function About() {
               </p>
               <p>
                 Cette transition n'est pas un changement radical mais une évolution logique&nbsp;:
-                le même soin apporté à la mise en page d'un livre de 800 pages se retrouve
+                le même soin apporté à la mise en page d'un livre de 700 pages se retrouve
                 dans la rigueur d'un code propre, typé, et bien structuré.
               </p>
               <p>
