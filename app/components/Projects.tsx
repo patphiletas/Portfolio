@@ -32,7 +32,7 @@ export default function Projects() {
           <div className="flex flex-1 flex-col p-6">
             <div className="flex items-center gap-3 mb-3">
               <h3 className="theme-text font-bold text-xl">{featured.title}</h3>
-              <span className="text-xs px-2 py-0.5 rounded-full border theme-card-border theme-text-muted">
+              <span className="text-xs px-2 py-0.5 rounded theme-chip-featured">
                 Projet phare
               </span>
             </div>

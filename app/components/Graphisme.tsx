@@ -56,7 +56,7 @@ export default function Graphisme() {
             {clients.map((client) => (
               <span
                 key={client}
-                className="theme-button-secondary text-sm px-4 py-2 rounded-full border"
+                className="theme-chip text-sm px-4 py-2 rounded"
               >
                 {client}
               </span>

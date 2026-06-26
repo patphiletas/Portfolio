@@ -59,7 +59,7 @@ export default function Hero() {
             (tech) => (
               <span
                 key={tech}
-                className="theme-chip text-xs px-3 py-1 rounded-full border"
+                className="theme-chip text-xs px-3 py-1 rounded"
               >
                 {tech}
               </span>

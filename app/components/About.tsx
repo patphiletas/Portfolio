@@ -44,7 +44,7 @@ export default function About() {
                 (item) => (
                   <span
                     key={item}
-                    className="theme-chip text-xs px-3 py-1.5 rounded-full border"
+                    className="theme-chip text-xs px-3 py-1.5 rounded"
                   >
                     {item}
                   </span>
@@ -83,7 +83,7 @@ export default function About() {
             {skills.flatMap((g) => g.items).map(({ name, featured }) => (
               <span
                 key={name}
-                className={`text-xs px-3 py-1 rounded-full border ${featured ? "theme-chip-featured" : "theme-chip"}`}
+                className={`text-xs px-3 py-1 rounded ${featured ? "theme-chip-featured" : "theme-chip"}`}
               >
                 {name}
               </span>

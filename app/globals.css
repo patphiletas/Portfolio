@@ -112,8 +112,8 @@ section:last-of-type {
 
 .theme-chip {
   background-color: var(--theme-surface-strong);
-  color: var(--theme-text);
-  border-color: var(--theme-border);
+  color: var(--theme-text-soft);
+  border-color: transparent;
 }
 
 .theme-button-primary {
@@ -127,9 +127,9 @@ section:last-of-type {
 }
 
 .theme-chip-featured {
-  background-color: rgb(51 153 204 / 0.12);
+  background-color: rgb(51 153 204 / 0.1);
   color: var(--theme-accent);
-  border-color: var(--theme-accent);
+  border-color: transparent;
 }
 
 .theme-link {
