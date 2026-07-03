@@ -35,10 +35,21 @@ export const projects: Project[] = [
     image: "/images/demoday.png",
   },
   {
+    id: "kpratik",
+    title: "Kpratik",
+    description:
+      "Application d’intelligence commerciale B2B : analyse le site public d’une entreprise et produit des informations actionnables — stack technique, signaux commerciaux, enrichissement Wikipedia/Wikidata, analyse IA et score de fit /100.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zod", "Vitest", "API IA", "GitHub Actions"],
+    liveUrl: "https://kpratik.vercel.app/",
+    githubUrl: "https://github.com/patphiletas/konsole-analyzer",
+    readmeUrl: "https://github.com/patphiletas/konsole-analyzer#readme",
+    image: "/images/kpratik.png",
+  },
+  {
     id: "real-book",
     title: "My Real Book",
     description:
-      "Application de lecture de partitions musicales issues du célèbre Real Book. Gestion rigoureuse des données musicales, stockage média (Cloudinary), table SQL (Neon), intégration d'une API d'IA pour l'enrichissement de contenu.",
+      "Application de lecture de partitions musicales issues du célèbre Real Book. Gestion rigoureuse des données musicales, stockage média (Cloudinary), table SQL (Neon), intégration d’une API d’IA pour l’enrichissement de contenu.",
     stack: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Neon", "Tailwind CSS", "Cloudinary", "API IA"],
     liveUrl: "https://real-book-patphiletas-projects.vercel.app/",
     githubUrl: "https://github.com/patphiletas/AdaRealBook",
@@ -59,7 +70,7 @@ export const projects: Project[] = [
     id: "adataviz",
     title: "Que faire à Paris ?",
     description:
-      "Application web de visualisation de données permettant d'explorer en temps réel les événements et loisirs de la ville de Paris. Recherche dynamique, filtrage par thématiques.",
+      "Application web de visualisation de données permettant d’explorer en temps réel les événements et loisirs de la ville de Paris. Recherche dynamique, filtrage par thématiques.",
     stack: ["JavaScript", "Vite", "API", "CSS"],
     liveUrl: "https://adataviz-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/adataviz-patphiletas",
@@ -70,35 +81,35 @@ export const projects: Project[] = [
     id: "skills",
     title: "Mes Compétences",
     description:
-      "Plateforme d'auto-évaluation des compétences techniques. Interface dynamique permettant de suivre sa progression par palier avec le CRUD.",
+      "Plateforme d’auto-évaluation des compétences techniques. Interface dynamique permettant de suivre sa progression par palier avec le CRUD.",
     stack: ["Vanilla JS", "JavaScript", "PostgreSQL", "Neon", "LocalStorage"],
     liveUrl: "https://skills-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/skills",
     readmeUrl: "https://github.com/patphiletas/skills#readme",
     image: "/images/skills.png",
   },
-  {
-    id: "harry-potter",
-    title: "Harry Potter",
-    description:
-      "Page vitrine interactive dédiée à l'univers Harry Potter. Intégration d'une timeline dynamique, gestion du responsive avec Tailwind CSS, composants typés.",
-    stack: ["React.js", "TypeScript", "Tailwind CSS", "React Router"],
-    liveUrl: "https://adapage-harry-potter.vercel.app/",
-    githubUrl: "https://github.com/patphiletas/Adapage-Harry-Potter",
-    readmeUrl: "https://github.com/patphiletas/Adapage-Harry-Potter#readme",
-    image: "/images/harry-potter.png",
-  },
-  {
-    id: "quiz",
-    title: "Quiz Interactif",
-    description:
-      "Application de quiz interactive. Algorithme de calcul de résultats en temps réel et interface optimisée pour la lecture de données complexes.",
-    stack: ["CSS", "JavaScript"],
-    liveUrl: "https://quiz-patphiletas.vercel.app/",
-    githubUrl: "https://github.com/patphiletas/quiz-project",
-    readmeUrl: "https://github.com/patphiletas/quiz-project#readme",
-    image: "/images/quiz.png",
-  },
+  // {
+  //   id: "harry-potter",
+  //   title: "Harry Potter",
+  //   description:
+  //     "Page vitrine interactive dédiée à l'univers Harry Potter. Intégration d'une timeline dynamique, gestion du responsive avec Tailwind CSS, composants typés.",
+  //   stack: ["React.js", "TypeScript", "Tailwind CSS", "React Router"],
+  //   liveUrl: "https://adapage-harry-potter.vercel.app/",
+  //   githubUrl: "https://github.com/patphiletas/Adapage-Harry-Potter",
+  //   readmeUrl: "https://github.com/patphiletas/Adapage-Harry-Potter#readme",
+  //   image: "/images/harry-potter.png",
+  // },
+  // {
+  //   id: "quiz",
+  //   title: "Quiz Interactif",
+  //   description:
+  //     "Application de quiz interactive. Algorithme de calcul de résultats en temps réel et interface optimisée pour la lecture de données complexes.",
+  //   stack: ["CSS", "JavaScript"],
+  //   liveUrl: "https://quiz-patphiletas.vercel.app/",
+  //   githubUrl: "https://github.com/patphiletas/quiz-project",
+  //   readmeUrl: "https://github.com/patphiletas/quiz-project#readme",
+  //   image: "/images/quiz.png",
+  // },
 ];
 
 export const graphismeItems: GraphismeItem[] = [
