@@ -2,34 +2,29 @@
 
 import Image from "next/image";
 import { graphismeItems, clients } from "@/lib/data";
+import Chapter from "./Chapter";
 
 export default function Graphisme() {
   return (
-    <section id="graphisme" className="theme-surface py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-4">
-          <h2 className="theme-text text-3xl md:text-4xl font-bold mb-3">Graphisme</h2>
-          <p className="theme-text-muted text-sm uppercase tracking-widest mb-2">
-            20 ans d'expérience éditoriale
-          </p>
-          <p className="theme-text-muted max-w-2xl leading-relaxed mb-10">
-            Avant le développement, 20 ans de graphisme éditorial : direction artistique,
-            maquette de livres, illustration, fabrication. Cette double compétence
-            nourrit directement mon sens du design et de l'UX.
-          </p>
-        </div>
+    <Chapter id="graphisme" title="Graphisme" kicker="20 ans d’expérience éditoriale" surface="muted">
+        <p className="theme-text-muted max-w-2xl leading-relaxed mb-10">
+          Avant le développement, 20 ans de graphisme éditorial : direction artistique,
+          maquette de livres, illustration, fabrication. Cette double compétence
+          nourrit directement mon sens du design et de l&apos;UX.
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
           {graphismeItems.map((item) => (
             <div
               key={item.title}
-              className="theme-surface-muted theme-card-border rounded-lg overflow-hidden hover:opacity-95 transition-colors"
+              className="theme-surface theme-card-border rounded-lg overflow-hidden hover:opacity-95 transition-colors"
             >
               <div className="relative h-48 bg-gray-800 overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
                   className="object-cover"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
@@ -73,7 +68,6 @@ export default function Graphisme() {
             <span>↗</span>
           </a>
         </div>
-      </div>
-    </section>
+    </Chapter>
   );
 }

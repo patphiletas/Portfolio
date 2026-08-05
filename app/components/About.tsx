@@ -1,30 +1,23 @@
 "use client";
 
 import { skills } from "@/lib/data";
+import Chapter from "./Chapter";
 
 export default function About() {
   return (
-    <section id="apropos" className="theme-surface py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <h2 className="theme-text text-3xl md:text-4xl font-bold mb-3">À propos</h2>
-          <p className="theme-text-muted text-sm uppercase tracking-widest">
-            Parcours & compétences
-          </p>
-        </div>
-
+    <Chapter id="parcours" title="Parcours">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
-            <h3 className="theme-text font-semibold text-lg mb-4">Parcours</h3>
+            <h3 className="theme-text font-semibold text-lg mb-4">Reconversion</h3>
             <div className="theme-text-muted space-y-5 leading-relaxed">
               <p>
                 Après plus de 15 ans comme graphiste-maquettiste et chargé de fabrication
-                éditoriale, j'ai choisi de me reconvertir vers le développement web full stack.
+                éditoriale, j&apos;ai choisi de me reconvertir vers le développement web full stack.
               </p>
               <p>
-                Cette transition n'est pas un changement radical mais une évolution logique&nbsp;:
-                le même soin apporté à la mise en page d'un livre de 700 pages se retrouve
-                dans la rigueur d'un code propre, typé, et bien structuré.
+                Cette transition n&apos;est pas un changement radical mais une évolution logique&nbsp;:
+                le même soin apporté à la mise en page d&apos;un livre de 700 pages se retrouve
+                dans la rigueur d&apos;un code propre, typé, et bien structuré.
               </p>
               <p>
                 Je me forme actuellement à <span className="theme-text font-medium">Ada Tech School</span>, avec un accent
@@ -33,7 +26,7 @@ export default function About() {
               <p>
                 Je recherche une{" "}
                 <span className="theme-text font-medium">
-                  alternance de 12 mois minimum à partir de juin 2026
+                  alternance de 12 mois minimum à partir de septembre 2026
                 </span>{" "}
                 (4j/1j en professionnalisation).
               </p>
@@ -58,12 +51,12 @@ export default function About() {
             <div className="space-y-4">
               <div className="border-l-2 theme-border-strong pl-4">
                 <p className="theme-text-muted text-sm mb-0.5">2025 — en cours</p>
-                <p className="theme-text font-medium">Développeur d'application Full Stack</p>
+                <p className="theme-text font-medium">Développeur d&apos;application Full Stack</p>
                 <p className="theme-text-muted text-sm">Ada Tech School</p>
               </div>
               <div className="border-l-2 theme-border pl-4">
                 <p className="theme-text-muted text-sm mb-0.5">2006 — 2025</p>
-                <p className="theme-text font-medium">Graphiste-maquettiste chargé d'édition et de fabrication</p>
+                <p className="theme-text font-medium">Graphiste-maquettiste chargé d&apos;édition et de fabrication</p>
                 <p className="theme-text-muted text-sm">
                   Groupe Grego · Éditions jésuites · Éditions La Martinière · CDI & freelance
                 </p>
@@ -90,7 +83,6 @@ export default function About() {
             ))}
           </div>
         </div>
-      </div>
-    </section>
+    </Chapter>
   );
 }

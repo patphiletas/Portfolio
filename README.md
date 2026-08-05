@@ -30,7 +30,7 @@
 
 <br/>
 
-Ce portfolio présente mon parcours de reconversion vers le développement web full stack après près de 20 ans dans le graphisme éditorial. Il rassemble mes projets web, mes compétences techniques, mon expérience en direction artistique et les liens de contact pour une recherche d'alternance à partir de juin 2026.
+Ce portfolio présente mon parcours de reconversion vers le développement web full stack après près de 20 ans dans le graphisme éditorial. Il rassemble mes projets web, mes compétences techniques, mon expérience en direction artistique et les liens de contact pour une recherche d'alternance à partir de septembre 2026.
 
 ---
 
@@ -66,7 +66,7 @@ Ce portfolio présente mon parcours de reconversion vers le développement web f
 ```txt
 portfolio-patphiletas/
 ├── app/
-│   ├── components/      # Hero, Projects, Graphisme, About, Contact, Navbar
+│   ├── components/      # Cover (sommaire), Chapter, About, Projects, Graphisme, Contact, Navbar
 │   ├── context/         # ThemeContext
 │   ├── globals.css      # Thèmes, variables CSS et styles globaux
 │   ├── layout.tsx       # Layout racine

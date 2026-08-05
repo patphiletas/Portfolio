@@ -2,20 +2,13 @@
 
 import Image from "next/image";
 import { projects } from "@/lib/data";
+import Chapter from "./Chapter";
 
 export default function Projects() {
   const [featured, ...rest] = projects;
 
   return (
-    <section id="projets" className="theme-surface py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="mb-12">
-          <h2 className="theme-text text-3xl md:text-4xl font-bold mb-3">Projets</h2>
-          <p className="theme-text-muted text-sm uppercase tracking-widest">
-            Développement web
-          </p>
-        </div>
-
+    <Chapter id="projets" title="Projets" kicker="Développement web">
         {/* Featured project */}
         <article className="theme-surface-muted theme-card-border flex flex-col md:flex-row rounded-lg overflow-hidden mb-8 hover:opacity-95 transition-colors">
           <div className="relative h-56 md:h-auto md:w-2/5 bg-gray-800 shrink-0">
@@ -23,6 +16,7 @@ export default function Projects() {
               src={featured.image}
               alt={featured.title}
               fill
+              sizes="(min-width: 768px) 40vw, 100vw"
               className="object-cover object-top"
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
@@ -89,6 +83,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                   className="object-cover object-top"
                   onError={(e) => {
                     (e.target as HTMLImageElement).style.display = "none";
@@ -141,7 +136,6 @@ export default function Projects() {
             </article>
           ))}
         </div>
-      </div>
-    </section>
+    </Chapter>
   );
 }

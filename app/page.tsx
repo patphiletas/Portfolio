@@ -1,16 +1,16 @@
-import Hero from "./components/Hero";
+import Cover from "./components/Cover";
+import About from "./components/About";
 import Projects from "./components/Projects";
 import Graphisme from "./components/Graphisme";
-import About from "./components/About";
 import Contact from "./components/Contact";
 
 export default function Page() {
   return (
     <main>
-      <Hero />
+      <Cover />
+      <About />
       <Projects />
       <Graphisme />
-      <About />
       <Contact />
     </main>
   );
