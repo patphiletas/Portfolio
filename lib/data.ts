@@ -77,17 +77,17 @@ export const projects: Project[] = [
     readmeUrl: "https://github.com/patphiletas/adataviz-patphiletas#readme",
     image: "/images/adataviz.png",
   },
-  {
-    id: "skills",
-    title: "Mes Compétences",
-    description:
-      "Application de gestion de compétences par catégorie (Backend, Front-end, Graphisme) : ajout, affichage et suppression de compétences avec un niveau de maîtrise.",
-    stack: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "PostgreSQL", "Neon"],
-    liveUrl: "https://skills-patphiletas.vercel.app/",
-    githubUrl: "https://github.com/patphiletas/skills",
-    readmeUrl: "https://github.com/patphiletas/skills#readme",
-    image: "/images/skills.png",
-  },
+  // {
+  //   id: "skills",
+  //   title: "Mes Compétences",
+  //   description:
+  //     "Application de gestion de compétences par catégorie (Backend, Front-end, Graphisme) : ajout, affichage et suppression de compétences avec un niveau de maîtrise.",
+  //   stack: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "PostgreSQL", "Neon"],
+  //   liveUrl: "https://skills-patphiletas.vercel.app/",
+  //   githubUrl: "https://github.com/patphiletas/skills",
+  //   readmeUrl: "https://github.com/patphiletas/skills#readme",
+  //   image: "/images/skills.png",
+  // },
   // {
   //   id: "harry-potter",
   //   title: "Harry Potter",
