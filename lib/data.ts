@@ -38,8 +38,8 @@ export const projects: Project[] = [
     id: "kpratik",
     title: "Kpratik",
     description:
-      "Application d’intelligence commerciale B2B : analyse le site public d’une entreprise et produit des informations actionnables — stack technique, signaux commerciaux, enrichissement Wikipedia/Wikidata, analyse IA et score de fit /100.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zod", "Vitest", "API IA", "GitHub Actions"],
+      "Application d’intelligence commerciale B2B : analyse le site public d’une entreprise et produit des informations actionnables — stack technique, signaux commerciaux, enrichissement Wikipedia/Wikidata, agent IA autonome (tool-use, personnalisation ICP) et score de fit /100.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Zod", "Vitest", "Groq", "Upstash", "GitHub Actions"],
     liveUrl: "https://kpratik.vercel.app/",
     githubUrl: "https://github.com/patphiletas/konsole-analyzer",
     readmeUrl: "https://github.com/patphiletas/konsole-analyzer#readme",
@@ -49,8 +49,8 @@ export const projects: Project[] = [
     id: "real-book",
     title: "My Real Book",
     description:
-      "Application de lecture de partitions musicales issues du célèbre Real Book. Gestion rigoureuse des données musicales, stockage média (Cloudinary), table SQL (Neon), intégration d’une API d’IA pour l’enrichissement de contenu.",
-    stack: ["React.js", "TypeScript", "Node.js", "PostgreSQL", "Neon", "Tailwind CSS", "Cloudinary", "API IA"],
+      "Bibliothèque de partitions jazz façon Real Book : recherche par titre, compositeur ou tonalité, lecture PDF en split view, synchronisation Cloudinary et fiche IA (biographie, grille, anecdotes) mise en cache par morceau.",
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Neon", "Cloudinary", "API IA", "Vitest"],
     liveUrl: "https://real-book-patphiletas-projects.vercel.app/",
     githubUrl: "https://github.com/patphiletas/AdaRealBook",
     readmeUrl: "https://github.com/patphiletas/AdaRealBook#readme",
@@ -68,7 +68,7 @@ export const projects: Project[] = [
   },
   {
     id: "adataviz",
-    title: "Que faire à Paris ?",
+    title: "Adataviz – Événements Paris",
     description:
       "Application web de visualisation de données permettant d’explorer en temps réel les événements et loisirs de la ville de Paris. Recherche dynamique, filtrage par thématiques.",
     stack: ["JavaScript", "Vite", "API", "CSS"],
@@ -81,8 +81,8 @@ export const projects: Project[] = [
     id: "skills",
     title: "Mes Compétences",
     description:
-      "Plateforme d’auto-évaluation des compétences techniques. Interface dynamique permettant de suivre sa progression par palier avec le CRUD.",
-    stack: ["Vanilla JS", "JavaScript", "PostgreSQL", "Neon", "LocalStorage"],
+      "Application de gestion de compétences par catégorie (Backend, Front-end, Graphisme) : ajout, affichage et suppression de compétences avec un niveau de maîtrise.",
+    stack: ["HTML", "CSS", "JavaScript", "Node.js", "Express", "PostgreSQL", "Neon"],
     liveUrl: "https://skills-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/skills",
     readmeUrl: "https://github.com/patphiletas/skills#readme",
