@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { graphismeItems } from "@/lib/data";
 import {
   academic,
   avent,
@@ -29,15 +31,6 @@ export const metadata: Metadata = {
 
 const COVER_SIZES = "(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 46vw";
 const WIDE_SIZES = "(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 92vw";
-
-const steps = [
-  { title: "Brief et maquette", text: "Couvertures, intérieurs, création de collections." },
-  { title: "Iconographie", text: "Choix des images, schémas techniques, illustrations originales." },
-  { title: "Préparation des fichiers", text: "Normalisation selon le type d’impression." },
-  { title: "Imposition", text: "Quite Imposing, que j’ai choisi et déployé chez Grego." },
-  { title: "BAT", text: "Vérification et validation auprès des imprimeurs." },
-  { title: "Fabrication", text: "Choix des prestataires, suivi, fichiers numériques (PDF, ePub)." },
-];
 
 function Part({
   id,
@@ -119,7 +112,7 @@ export default function GraphismePage() {
               {[
                 ["20 ans", "de graphisme éditorial et de fabrication"],
                 ["700+", "ouvrages conçus et fabriqués"],
-                ["6", "étapes, du brief au BAT"],
+                ["3", "savoir-faire"],
               ].map(([value, label]) => (
                 <div key={value}>
                   <dt className="font-serif theme-text text-4xl md:text-5xl">{value}</dt>
@@ -136,16 +129,29 @@ export default function GraphismePage() {
           </div>
         </section>
 
-        <Part id="chaine" title="De la maquette au BAT" lead="Les étapes que je prends en charge sur un projet." muted>
-          <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {steps.map((step, index) => (
-              <li key={step.title} className="theme-surface theme-card-border rounded-lg p-5">
-                <span className="theme-text-muted font-serif text-sm">{String(index + 1).padStart(2, "0")}</span>
-                <p className="theme-text mt-1 font-semibold">{step.title}</p>
-                <p className="theme-text-muted mt-1 text-sm leading-relaxed">{step.text}</p>
-              </li>
+        <Part id="chaine" title="Vue d’ensemble" lead="Trois savoir-faire complémentaires, du crayon au fichier imprimeur." muted>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {graphismeItems.map((item) => (
+              <div
+                key={item.title}
+                className="theme-surface theme-card-border overflow-hidden rounded-lg"
+              >
+                <div className="relative h-48">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="theme-text font-semibold">{item.title}</h3>
+                  <p className="theme-text-muted mt-2 text-sm leading-relaxed">{item.description}</p>
+                </div>
+              </div>
             ))}
-          </ol>
+          </div>
         </Part>
 
         <Part

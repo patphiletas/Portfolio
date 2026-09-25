@@ -23,7 +23,7 @@ export const academic: GraphismeImage[] = [
   { id: "c_luc", caption: "L’Évangile selon saint Luc", width: 422, height: 597, grey: false },
   { id: "c_myst", caption: "Mysterium Christi", width: 422, height: 596, grey: false },
   { id: "c_phenomene", caption: "Le Phénomène Humain", width: 422, height: 596, grey: false },
-  { id: "c_creux", caption: "Au creux du malheur, la lumière ?", width: 448, height: 640, grey: false },
+  { id: "c_creux", caption: "Au creux du malheur, la lumière ?", width: 989, height: 1400, grey: false },
 ];
 
 export const general: GraphismeImage[] = [
@@ -31,13 +31,13 @@ export const general: GraphismeImage[] = [
   { id: "c_musulmane", caption: "Musulmane, disciple du Christ", width: 404, height: 640, grey: false },
   { id: "c_politique", caption: "Politique et écologie", width: 453, height: 640, grey: false },
   { id: "c_portraits", caption: "15 portraits philosophiques du Christ", width: 453, height: 640, grey: false },
-  { id: "c_pascote", caption: "Un pas de côté", width: 404, height: 640, grey: false },
+  { id: "c_pascote", caption: "Un pas de côté", width: 884, height: 1400, grey: false },
   { id: "c_choisir", caption: "Choisissez bien votre psy", width: 391, height: 640, grey: false },
   { id: "c_ecologie", caption: "Guide pratique de l’écologie intégrale", width: 404, height: 640, grey: false },
-  { id: "c_ignace", caption: "Ignace de Loyola (bande dessinée)", width: 456, height: 640, grey: false },
+  { id: "c_ignace", caption: "Ignace de Loyola (bande dessinée)", width: 996, height: 1400, grey: false },
   { id: "c_kobik", caption: "Ignace de Loyola, le pèlerinage intérieur", width: 421, height: 640, grey: false },
   { id: "c_feujbook", caption: "Feujbook", width: 313, height: 449, grey: false },
-  { id: "c_bible", caption: "Prier avec la Bible", width: 453, height: 640, grey: false },
+  { id: "c_bible", caption: "Prier avec la Bible", width: 990, height: 1400, grey: false },
 ];
 
 export const scholar: GraphismeImage[] = [
@@ -72,7 +72,7 @@ export const fabrication: GraphismeImage[] = [
   { id: "f_coffret", caption: "Coffret six livres", width: 468, height: 477, grey: true },
   { id: "f_cal", caption: "Calendrier avec pages détachables", width: 585, height: 443, grey: true },
   { id: "f_nappe", caption: "Nappe promotionnelle", width: 386, height: 525, grey: true },
-  { id: "f_kak", caption: "Kakémono, hauteur 2 m", width: 290, height: 640, grey: true },
+  { id: "f_kak", caption: "Kakémono, hauteur 2 m", width: 577, height: 1400, grey: false },
 ];
 
 export const posters: GraphismeImage[] = [
@@ -82,8 +82,8 @@ export const posters: GraphismeImage[] = [
 
 export const catalogues: GraphismeImage[] = [
   { id: "k_cat_avent", caption: "Catalogue — Avent 2023", width: 438, height: 640, grey: false },
-  { id: "k_cat1", caption: "Catalogue — automne 2021", width: 441, height: 640, grey: false },
-  { id: "k_cat2", caption: "Catalogue — carême 2022", width: 441, height: 640, grey: false },
+  { id: "k_cat1", caption: "Catalogue éditeur 2022", width: 1400, height: 990, grey: false },
+  { id: "k_cat2", caption: "Catalogue éditeur 2023", width: 1400, height: 990, grey: false },
   { id: "k_soutien", caption: "Mailing — bon de soutien", width: 364, height: 640, grey: false },
   { id: "k_ete22", caption: "Catalogue — été 2022", width: 472, height: 631, grey: false },
   { id: "k_voeux", caption: "Mailing — cartes de vœux 2024", width: 1600, height: 1132, grey: false },

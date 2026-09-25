@@ -5,11 +5,19 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
-const navLinks = [
+const devNavLinks = [
   { href: "/#parcours", label: "Parcours" },
   { href: "/#projets", label: "Projets" },
   { href: "/#graphisme", label: "Graphisme" },
   { href: "/#contact", label: "Contact" },
+];
+
+const graphismeNavLinks = [
+  { href: "/graphisme#edition", label: "Édition" },
+  { href: "/graphisme#fabrication", label: "Fabrication" },
+  { href: "/graphisme#communication", label: "Communication" },
+  { href: "/graphisme#illustration", label: "Illustration" },
+  { href: "/graphisme#contact-graphisme", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -17,6 +25,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const isGraphisme = pathname === "/graphisme";
   const cvHref = isGraphisme ? "/cv-patrice-philetas-graphisme.pdf" : "/cv-patrice-philetas.pdf";
+  const navLinks = isGraphisme ? graphismeNavLinks : devNavLinks;
 
   return (
     <header className="theme-surface theme-divider-bottom fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
@@ -121,7 +130,7 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="/cv-patrice-philetas.pdf"
+                href={cvHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-button-secondary inline-block px-4 py-2 border hover:opacity-80"

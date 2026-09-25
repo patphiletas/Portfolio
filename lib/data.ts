@@ -120,16 +120,16 @@ export const graphismeItems: GraphismeItem[] = [
     image: "/images/graphisme-livres.png",
   },
   {
-    title: "Illustration",
-    description:
-      "Séries d'illustrations numériques et conventionnelles pour des projets éditoriaux : guides de voyage, livrets d'accueil, mascotte de collections médicales.",
-    image: "/images/graphisme-illustration.jpg",
-  },
-  {
     title: "Communication print",
     description:
       "Catalogues, mailings, affiches, flyers, kakémonos, identités visuelles. Suivi de fabrication complet : choix prestataires, imposition, prépresse.",
     image: "/images/graphisme-logos.png",
+  },
+  {
+    title: "Illustration",
+    description:
+      "Séries d'illustrations numériques et conventionnelles pour des projets éditoriaux : guides de voyage, livrets d'accueil, mascotte de collections médicales.",
+    image: "/images/graphisme-illustration.jpg",
   },
 ];
 
