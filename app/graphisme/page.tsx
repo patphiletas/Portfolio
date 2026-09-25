@@ -245,9 +245,9 @@ export default function GraphismePage() {
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
             Déclinaisons d’illustrations numériques pour des projets éditoriaux.
           </p>
-          <div className="mb-4 grid max-w-sm grid-cols-4 gap-3">
+          <div className="mb-4 grid max-w-2xl grid-cols-4 gap-4">
             {mascotteIcons.map((item) => (
-              <Figure key={item.id} item={item} sizes="180px" />
+              <Figure key={item.id} item={item} sizes="(min-width: 640px) 160px, 22vw" />
             ))}
           </div>
           <Grid items={illustrationSeries} />
