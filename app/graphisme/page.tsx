@@ -211,7 +211,7 @@ export default function GraphismePage() {
             </div>
           </div>
           <SubTitle>Autres supports</SubTitle>
-          <Grid items={fabrication} wide />
+          <Grid items={fabrication} />
         </Part>
 
         <Part
@@ -245,9 +245,9 @@ export default function GraphismePage() {
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
             Déclinaisons d’illustrations numériques pour des projets éditoriaux.
           </p>
-          <div className="mb-3 grid max-w-xs grid-cols-4 gap-2">
+          <div className="mb-4 grid max-w-sm grid-cols-4 gap-3">
             {mascotteIcons.map((item) => (
-              <Figure key={item.id} item={item} sizes="120px" />
+              <Figure key={item.id} item={item} sizes="180px" />
             ))}
           </div>
           <Grid items={illustrationSeries} />
