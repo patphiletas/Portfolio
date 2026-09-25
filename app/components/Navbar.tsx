@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
@@ -13,6 +14,8 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isGraphisme = pathname === "/graphisme";
 
   return (
     <header className="theme-surface theme-divider-bottom fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
@@ -20,7 +23,9 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 py-1.5 flex items-center justify-between gap-4 text-[10px] sm:text-[11px] uppercase tracking-[0.15em]">
           <span className="theme-text-muted hidden sm:inline">Portfolio — Développeur & Graphiste</span>
           <span className="font-medium" style={{ color: "var(--theme-accent)" }}>
-            Disponible — Alternance 4J/1J · Graphisme / PAO
+            {isGraphisme
+              ? "Disponible immédiatement — CDI, CDD, freelance"
+              : "Disponible — Alternance 4J/1J — Septembre 2026"}
           </span>
         </div>
       </div>
