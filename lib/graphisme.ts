@@ -112,19 +112,16 @@ export const illustration: GraphismeImage[] = [
 ];
 
 export const illustrationSeries: GraphismeImage[] = [
-  { id: "ser_1", caption: "", width: 1307, height: 1400, grey: false },
-  { id: "ser_2", caption: "", width: 1178, height: 1400, grey: false },
-  { id: "ser_3", caption: "", width: 1189, height: 1400, grey: false },
-  { id: "ser_4", caption: "", width: 1288, height: 1400, grey: false },
-  { id: "ser_5", caption: "", width: 1395, height: 1400, grey: false },
-  { id: "ser_6", caption: "", width: 1221, height: 1400, grey: false },
+  { id: "ser_1", caption: "", width: 680, height: 728, grey: false },
+  { id: "ser_2", caption: "", width: 682, height: 810, grey: false },
+  { id: "ser_3", caption: "", width: 707, height: 832, grey: false },
 ];
 
 export const mascotteIcons: GraphismeImage[] = [
-  { id: "ser_16", caption: "", width: 1400, height: 884, grey: false },
-  { id: "ser_17", caption: "", width: 1400, height: 671, grey: false },
-  { id: "ser_18", caption: "", width: 1400, height: 885, grey: false },
-  { id: "ser_19", caption: "", width: 1400, height: 887, grey: false },
+  { id: "ser_16", caption: "", width: 613, height: 387, grey: false },
+  { id: "ser_17", caption: "", width: 761, height: 365, grey: false },
+  { id: "ser_18", caption: "", width: 650, height: 411, grey: false },
+  { id: "ser_19", caption: "", width: 682, height: 432, grey: false },
 ];
 
 export const musiciens: GraphismeImage[] = [
@@ -132,16 +129,16 @@ export const musiciens: GraphismeImage[] = [
   { id: "mus_2", caption: "Dustin Wong, l’artiste bicolore aux 1000 pédales", width: 785, height: 1400, grey: false },
   { id: "mus_3", caption: "Nisennenmondai — la charley obsessionnelle", width: 836, height: 1400, grey: false },
   { id: "mus_4", caption: "Gull — tout seul avec un masque diabolique", width: 836, height: 1400, grey: false },
-  { id: "mus_5", caption: "", width: 1023, height: 1400, grey: false },
-  { id: "mus_6", caption: "", width: 1020, height: 1400, grey: false },
+  { id: "mus_5", caption: "Rock.fr", width: 933, height: 1400, grey: false },
+  { id: "mus_6", caption: "Not for you", width: 933, height: 1400, grey: false },
 ];
 
 export const illustrationsDiverses: GraphismeImage[] = [
-  { id: "div_1", caption: "", width: 1179, height: 1400, grey: false },
-  { id: "div_2", caption: "", width: 1400, height: 1400, grey: false },
-  { id: "div_3", caption: "", width: 1378, height: 1400, grey: false },
-  { id: "div_4", caption: "", width: 1400, height: 1400, grey: false },
-  { id: "div_5", caption: "", width: 1356, height: 1400, grey: false },
-  { id: "div_6", caption: "", width: 1392, height: 1400, grey: false },
+  { id: "div_1", caption: "", width: 739, height: 877, grey: false },
+  { id: "div_2", caption: "", width: 701, height: 701, grey: false },
+  { id: "div_3", caption: "", width: 709, height: 720, grey: false },
+  { id: "div_4", caption: "", width: 709, height: 709, grey: false },
+  { id: "div_5", caption: "", width: 687, height: 709, grey: false },
+  { id: "div_6", caption: "", width: 701, height: 705, grey: false },
 ];
 
