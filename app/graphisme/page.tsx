@@ -9,12 +9,10 @@ import {
   fabrication,
   general,
   illustration,
-  medical,
   mockups,
   plv,
   posters,
-  series,
-  web,
+  scholar,
   type GraphismeImage,
 } from "@/lib/graphisme";
 import { Figure, LightboxProvider } from "./Lightbox";
@@ -151,17 +149,17 @@ export default function GraphismePage() {
           title="Édition"
           lead="Responsable du graphisme : création de collections, maquette de couvertures et d’intérieurs, choix de l’iconographie. Livres académiques, grand public, médicaux et scolaires."
         >
-          <div className="mb-2 grid grid-cols-2 gap-3 sm:grid-cols-5">
+          <div className="mb-2 grid max-w-2xl grid-cols-3 gap-3">
             {mockups.map((item) => (
-              <Figure key={item.id} item={item} sizes={COVER_SIZES} />
+              <Figure key={item.id} item={item} sizes="(min-width: 768px) 200px, 30vw" />
             ))}
           </div>
-          <SubTitle>Livres académiques et théologie</SubTitle>
+          <SubTitle>Livres académiques</SubTitle>
           <Grid items={academic} />
-          <SubTitle>Grand public</SubTitle>
+          <SubTitle>Livres grand public</SubTitle>
           <Grid items={general} />
-          <SubTitle>Médical et pédagogique</SubTitle>
-          <Grid items={medical} />
+          <SubTitle>Livres scolaires et pédagogiques</SubTitle>
+          <Grid items={scholar} />
           <SubTitle>Beau livre</SubTitle>
           <div className="grid items-start gap-6 md:grid-cols-[minmax(200px,300px)_1fr]">
             <div>
@@ -217,18 +215,10 @@ export default function GraphismePage() {
           title="Communication"
           lead="Affiches, plaquettes, catalogues et mailings papier, pour les éditeurs comme pour des associations."
         >
-          <SubTitle>Séries et campagnes</SubTitle>
-          <Grid items={series} />
-          <SubTitle>Affiches et événements</SubTitle>
+          <SubTitle>Affiches et plaquettes</SubTitle>
           <Grid items={posters} wide />
-          <SubTitle>Catalogues et mailings</SubTitle>
-          <Grid items={catalogues} wide />
-          <SubTitle>Web</SubTitle>
-          <div className="grid gap-4 md:grid-cols-2">
-            {web.map((item) => (
-              <Figure key={item.id} item={item} sizes="(min-width: 768px) 46vw, 92vw" />
-            ))}
-          </div>
+          <SubTitle>Catalogues et mailings papier</SubTitle>
+          <Grid items={catalogues} />
         </Part>
 
         <Part
@@ -243,7 +233,7 @@ export default function GraphismePage() {
         <Part
           id="illustration"
           title="Illustration"
-          lead="Dessin traditionnel et numérique. Série d’illustrations pour deux guides de voyage alternatifs (éditions Nanika, 2018). Book illustration complet sur demande."
+          lead="Dessin traditionnel et numérique. Illustrations pour deux guides de voyage alternatifs des éditions Nanika : Côte d’Ivoire (2018) et Martinique (2021). Book illustration complet sur demande."
         >
           <Grid items={illustration} />
         </Part>
