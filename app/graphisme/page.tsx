@@ -115,7 +115,7 @@ export default function GraphismePage() {
               {[
                 ["20 ans", "de graphisme éditorial et de fabrication"],
                 ["700+", "ouvrages conçus et fabriqués"],
-                ["≈ 30", "ouvrages par an aux Éditions jésuites"],
+                ["6", "étapes, du brief au BAT"],
               ].map(([value, label]) => (
                 <div key={value}>
                   <dt className="font-serif theme-text text-4xl md:text-5xl">{value}</dt>
