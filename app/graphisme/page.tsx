@@ -255,6 +255,14 @@ export default function GraphismePage() {
             <a className="theme-link" href="https://www.linkedin.com/in/patricephiletas">
               LinkedIn
             </a>
+            <a
+              className="theme-link"
+              href="/cv-patrice-philetas-graphisme.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Télécharger mon CV (PDF)
+            </a>
             <Link className="theme-link" href="/#projets">
               Portfolio développement web
             </Link>

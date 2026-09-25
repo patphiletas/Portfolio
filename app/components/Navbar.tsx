@@ -16,6 +16,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const isGraphisme = pathname === "/graphisme";
+  const cvHref = isGraphisme ? "/cv-patrice-philetas-graphisme.pdf" : "/cv-patrice-philetas.pdf";
 
   return (
     <header className="theme-surface theme-divider-bottom fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
@@ -49,7 +50,7 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="/cv-patrice-philetas.pdf"
+                href={cvHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="theme-button-secondary px-4 py-2 border hover:opacity-80 transition-all"
