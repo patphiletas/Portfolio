@@ -116,7 +116,7 @@ export const graphismeItems: GraphismeItem[] = [
   {
     title: "Maquette de livres",
     description:
-      "Direction artistique et maquette de couvertures et intérieurs pour des maisons d'édition (Groupe Grego, Éditions jésuites, Éditions La Martinière, VG Éditions). Plus de 800 ouvrages publiés.",
+      "Direction artistique et maquette de couvertures et intérieurs pour des maisons d'édition (Groupe Grego, Éditions jésuites, Éditions La Martinière, VG Éditions). Plus de 700 ouvrages publiés.",
     image: "/images/graphisme-livres.png",
   },
   {

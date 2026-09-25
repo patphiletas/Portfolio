@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { graphismeItems, clients } from "@/lib/data";
 import Chapter from "./Chapter";
 
@@ -58,15 +59,24 @@ export default function Graphisme() {
             ))}
           </div>
 
-          <a
-            href="/portfolio-graphisme.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="theme-link inline-flex items-center gap-2 text-sm transition-colors"
-          >
-            Voir le portfolio graphisme complet (PDF)
-            <span>↗</span>
-          </a>
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+            <Link
+              href="/graphisme"
+              className="theme-button-primary inline-flex items-center gap-2 px-5 py-2.5 text-sm transition-opacity hover:opacity-80"
+            >
+              Voir le portfolio graphisme en ligne
+              <span aria-hidden="true">→</span>
+            </Link>
+            <a
+              href="/portfolio-graphisme.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="theme-link inline-flex items-center gap-2 text-sm transition-colors"
+            >
+              Version PDF
+              <span>↗</span>
+            </a>
+          </div>
         </div>
     </Chapter>
   );

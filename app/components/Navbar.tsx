@@ -1,13 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
-  { href: "#parcours", label: "Parcours" },
-  { href: "#projets", label: "Projets" },
-  { href: "#graphisme", label: "Graphisme" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#parcours", label: "Parcours" },
+  { href: "/#projets", label: "Projets" },
+  { href: "/#graphisme", label: "Graphisme" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -19,15 +20,15 @@ export default function Navbar() {
         <div className="max-w-6xl mx-auto px-6 py-1.5 flex items-center justify-between gap-4 text-[10px] sm:text-[11px] uppercase tracking-[0.15em]">
           <span className="theme-text-muted hidden sm:inline">Portfolio — Développeur & Graphiste</span>
           <span className="font-medium" style={{ color: "var(--theme-accent)" }}>
-            Disponible — Alternance 4J/1J — Septembre 2026
+            Disponible — Alternance 4J/1J · Graphisme / PAO
           </span>
         </div>
       </div>
 
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#hero" className="font-serif text-xl md:text-2xl theme-text shrink-0">
+        <Link href="/#hero" className="font-serif text-xl md:text-2xl theme-text shrink-0">
           <span className="italic font-light">Patrice</span> Philétas
-        </a>
+        </Link>
 
         <div className="flex items-center gap-6">
           <ul className="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.12em]">
