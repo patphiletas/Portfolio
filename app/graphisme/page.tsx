@@ -9,7 +9,11 @@ import {
   fabrication,
   general,
   illustration,
+  illustrationSeries,
+  illustrationsDiverses,
+  mascotteIcons,
   mockups,
+  musiciens,
   plv,
   posters,
   scholar,
@@ -236,6 +240,29 @@ export default function GraphismePage() {
           lead="Dessin traditionnel et numérique. Illustrations pour deux guides de voyage alternatifs des éditions Nanika : Côte d’Ivoire (2018) et Martinique (2021). Book illustration complet sur demande."
         >
           <Grid items={illustration} />
+
+          <SubTitle>Séries d’illustrations</SubTitle>
+          <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
+            Déclinaisons d’illustrations numériques pour des projets éditoriaux.
+          </p>
+          <div className="mb-3 grid max-w-xs grid-cols-4 gap-2">
+            {mascotteIcons.map((item) => (
+              <Figure key={item.id} item={item} sizes="120px" />
+            ))}
+          </div>
+          <Grid items={illustrationSeries} />
+
+          <SubTitle>Musiciens</SubTitle>
+          <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
+            Pour Croq en live, sur le Festival West Side (2013).
+          </p>
+          <Grid items={musiciens} />
+
+          <SubTitle>Illustrations diverses</SubTitle>
+          <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
+            Série d’illustrations numériques et conventionnelles. Certaines ont été publiées.
+          </p>
+          <Grid items={illustrationsDiverses} />
         </Part>
 
         <Part
