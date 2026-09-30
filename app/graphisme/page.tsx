@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { graphismeItems } from "@/lib/data";
+import { clients, graphismeItems } from "@/lib/data";
 import {
   academic,
   avent,
@@ -28,6 +28,8 @@ export const metadata: Metadata = {
   description:
     "20 ans de graphisme éditorial, PAO, prépresse et fabrication. Plus de 700 ouvrages : couvertures, maquettes, supports de communication, PLV, illustration.",
 };
+
+const catalogueHighlights = catalogues.filter((item) => item.id === "k_cat1" || item.id === "k_cat2");
 
 const COVER_SIZES = "(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 46vw";
 const WIDE_SIZES = "(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 92vw";
@@ -223,12 +225,9 @@ export default function GraphismePage() {
         <Part
           id="communication"
           title="Communication"
-          lead="Affiches, plaquettes, catalogues et mailings papier, pour les éditeurs comme pour des associations."
+          lead="Affiches, plaquettes et catalogues, pour les éditeurs comme pour des associations."
         >
-          <SubTitle>Affiches et plaquettes</SubTitle>
-          <Grid items={posters} wide />
-          <SubTitle>Catalogues et mailings papier</SubTitle>
-          <Grid items={catalogues} />
+          <Grid items={[...posters, ...catalogueHighlights]} wide />
         </Part>
 
         <Part
@@ -269,6 +268,16 @@ export default function GraphismePage() {
             Série d’illustrations numériques et conventionnelles. Certaines ont été publiées.
           </p>
           <Grid items={illustrationsDiverses} />
+        </Part>
+
+        <Part id="clients" title="Clients & éditeurs" muted>
+          <div className="flex flex-wrap gap-3">
+            {clients.map((client) => (
+              <span key={client} className="theme-chip rounded px-4 py-2 text-sm">
+                {client}
+              </span>
+            ))}
+          </div>
         </Part>
 
         <Part
