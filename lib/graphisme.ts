@@ -31,7 +31,7 @@ export const general: GraphismeImage[] = [
   { id: "c_autain", caption: "Clémentine Autain — biographie", width: 422, height: 640, grey: false },
   { id: "c_musulmane", caption: "Musulmane, disciple du Christ", width: 404, height: 640, grey: false, link: "https://www.calameo.com/read/006730137c506b192a13a" },
   { id: "c_politique", caption: "Politique et écologie", width: 453, height: 640, grey: false },
-  { id: "c_portraits", caption: "15 portraits philosophiques du Christ", width: 453, height: 640, grey: false },
+  { id: "c_portraits", caption: "15 portraits philosophiques du Christ", width: 990, height: 1400, grey: false },
   { id: "c_pascote", caption: "Un pas de côté", width: 884, height: 1400, grey: false, link: "https://www.calameo.com/read/0067301378c221a790ced" },
   { id: "c_choisir", caption: "Choisissez bien votre psy", width: 391, height: 640, grey: false },
   { id: "c_ecologie", caption: "Guide pratique de l’écologie intégrale", width: 404, height: 640, grey: false, link: "https://www.calameo.com/read/006730137e0cda3411a3b" },
@@ -42,9 +42,9 @@ export const general: GraphismeImage[] = [
 ];
 
 export const scholar: GraphismeImage[] = [
-  { id: "c_route", caption: "En route vers la lecture", width: 318, height: 449, grey: false },
+  { id: "c_route", caption: "En route vers la lecture", width: 1400, height: 1400, grey: false },
   { id: "c_lire", caption: "Lire et écrire", width: 256, height: 368, grey: false },
-  { id: "c_abc", caption: "L’ABCdaire médical", width: 436, height: 640, grey: false },
+  { id: "c_abc", caption: "L’ABCdaire médical", width: 954, height: 1400, grey: false },
   { id: "c_psy", caption: "Carnets de stage infirmiers — Psychiatrie", width: 331, height: 455, grey: false },
   { id: "c_inter", caption: "Intermemo — Gynécologie obstétrique", width: 307, height: 455, grey: false },
   { id: "c_corps", caption: "Corps, tonus et psychomotricité", width: 284, height: 455, grey: false },
