@@ -93,6 +93,16 @@ export function Figure({ item, sizes, className = "" }: FigureProps) {
           {item.caption}
         </figcaption>
       )}
+      {item.link && (
+        <a
+          href={item.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="theme-link block border-t theme-border-subtle px-3 py-1.5 text-[11px] uppercase tracking-widest transition-colors hover:opacity-80"
+        >
+          Aperçu en ligne ↗
+        </a>
+      )}
     </figure>
   );
 }
