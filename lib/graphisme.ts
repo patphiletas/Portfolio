@@ -75,6 +75,8 @@ export const posters: GraphismeImage[] = [
   { id: "k_careme", caption: "Mailing — Vivre le Carême", width: 729, height: 1010 },
   { id: "k_lire21", caption: "Lettre « Lire avec les Éditions jésuites » — automne 2021", width: 732, height: 1007 },
   { id: "k_bdc", caption: "Bon de commande — Pratique du discernement en commun", width: 707, height: 1011 },
+  { id: "k_sessd1", caption: "Plaquette SESSD APF — couverture", width: 1128, height: 1600 },
+  { id: "k_sessd2", caption: "Plaquette SESSD APF — intérieur", width: 1600, height: 1135 },
 ];
 
 export const catalogues: GraphismeImage[] = [
