@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { clients, graphismeItems } from "@/lib/data";
+import { clients } from "@/lib/data";
 import {
   academic,
   avent,
@@ -17,6 +17,7 @@ import {
   plv,
   posters,
   scholar,
+  thumbSrc,
   webAuthorBanners,
   webBanners,
   webEventBanners,
@@ -26,6 +27,7 @@ import {
   type GraphismeImage,
 } from "@/lib/graphisme";
 import { Figure, LightboxProvider } from "./Lightbox";
+import { ShowMore } from "./ShowMore";
 
 export const metadata: Metadata = {
   title: "Portfolio graphisme — Patrice Philétas",
@@ -34,6 +36,45 @@ export const metadata: Metadata = {
 };
 
 const catalogueHighlights = catalogues.filter((item) => item.id === "k_cat1" || item.id === "k_cat2");
+
+const OVERVIEW = [
+  {
+    id: "edition",
+    title: "Édition",
+    image: "/images/graphisme-livres.png",
+    description: "Couvertures, maquettes intérieures et collections : académique, grand public, médical, scolaire.",
+  },
+  {
+    id: "fabrication",
+    title: "Fabrication",
+    image: thumbSrc("f_signets_careme"),
+    description: "Calendriers, dépliants, marque-pages, kakémonos : de l’objet imprimé au suivi chez l’imprimeur.",
+  },
+  {
+    id: "communication",
+    title: "Communication",
+    image: "/images/graphisme-logos.png",
+    description: "Affiches, plaquettes, mailings et catalogues, PLV pour les libraires.",
+  },
+  {
+    id: "web",
+    title: "Web",
+    image: thumbSrc("wb_29"),
+    description: "Bannières auteurs et nouveautés, opérations commerciales, visuels pour les sites.",
+  },
+  {
+    id: "illustration",
+    title: "Illustration",
+    image: "/images/graphisme-illustration.jpg",
+    description: "Guides de voyage, personnages déclinés en séries, musiciens, dessin de presse.",
+  },
+  {
+    id: "illustration-scientifique",
+    title: "Illustration scientifique",
+    image: thumbSrc("sci_11"),
+    description: "Schémas et planches pour des ouvrages médicaux : hématologie, immunologie, anatomie.",
+  },
+];
 
 const GRID_SIZES = "(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 46vw";
 const WIDE_SIZES = "(min-width: 1024px) 36vw, (min-width: 640px) 60vw, 92vw";
@@ -137,7 +178,7 @@ export default function GraphismePage() {
               {[
                 ["20 ans", "de graphisme éditorial et de fabrication"],
                 ["700+", "ouvrages conçus et fabriqués"],
-                ["3", "savoir-faire"],
+                ["6", "domaines, de l’édition au web"],
               ].map(([value, label]) => (
                 <div key={value}>
                   <dt className="font-serif theme-text text-4xl md:text-5xl">{value}</dt>
@@ -149,32 +190,34 @@ export default function GraphismePage() {
             <p className="theme-text-muted max-w-2xl leading-relaxed">
               Groupe Grego, Éditions jésuites, Éditions La Martinière. De la maquette au bon à
               tirer, je prépare les fichiers, gère l’imposition et suis la fabrication avec les
-              imprimeurs. InDesign, Illustrator, Photoshop, Quite Imposing.
+              imprimeurs. Je conçois aussi les bannières web des éditeurs et dessine, des
+              personnages aux schémas scientifiques. InDesign, Illustrator, Photoshop, Quite Imposing.
             </p>
           </div>
         </section>
 
-        <Part id="chaine" title="Vue d’ensemble" lead="Trois savoir-faire complémentaires, du crayon au fichier imprimeur." muted>
-          <div className="grid gap-6 sm:grid-cols-3">
-            {graphismeItems.map((item) => (
-              <div
-                key={item.title}
-                className="theme-surface theme-card-border overflow-hidden rounded-lg"
+        <Part id="chaine" title="Vue d’ensemble" lead="Six domaines complémentaires, du crayon au fichier imprimeur." muted>
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+            {OVERVIEW.map((section) => (
+              <a
+                key={section.id}
+                href={`#${section.id}`}
+                className="theme-surface theme-card-border group overflow-hidden rounded-lg"
               >
-                <div className="relative h-48">
+                <div className="relative aspect-[16/9] bg-white">
                   <Image
-                    src={item.image}
-                    alt={item.title}
+                    src={section.image}
+                    alt={section.title}
                     fill
-                    sizes="(min-width: 768px) 33vw, 100vw"
-                    className="object-cover"
+                    sizes="(min-width: 768px) 33vw, 50vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-5">
-                  <h3 className="theme-text font-semibold">{item.title}</h3>
-                  <p className="theme-text-muted mt-2 text-sm leading-relaxed">{item.description}</p>
+                <div className="p-4">
+                  <h3 className="theme-text font-semibold">{section.title} →</h3>
+                  <p className="theme-text-muted mt-1 text-sm leading-relaxed">{section.description}</p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </Part>
@@ -242,7 +285,9 @@ export default function GraphismePage() {
           muted
         >
           <SubTitle>Auteurs et nouveautés — Éditions jésuites</SubTitle>
-          <Banners items={webAuthorBanners} />
+          <ShowMore height="36rem">
+            <Banners items={webAuthorBanners} />
+          </ShowMore>
 
           <SubTitle>Événements</SubTitle>
           <Banners items={webEventBanners} />
@@ -277,12 +322,14 @@ export default function GraphismePage() {
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
             Déclinaisons d’illustrations numériques pour des projets éditoriaux.
           </p>
-          {illustrationSeries.map((series) => (
-            <div key={series.title} className="mb-8">
-              <h4 className="theme-text mb-3 text-sm font-semibold">{series.title}</h4>
-              <Grid items={series.items} shape="square" contain />
-            </div>
-          ))}
+          <ShowMore height="36rem">
+            {illustrationSeries.map((series) => (
+              <div key={series.title} className="mb-8">
+                <h4 className="theme-text mb-3 text-sm font-semibold">{series.title}</h4>
+                <Grid items={series.items} shape="square" contain />
+              </div>
+            ))}
+          </ShowMore>
 
           <SubTitle>Musiciens</SubTitle>
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
@@ -302,7 +349,9 @@ export default function GraphismePage() {
           title="Illustration scientifique"
           lead="Schémas et planches pour des ouvrages médicaux : hématologie, immunologie, anatomie. Des dessins précis et lisibles, pensés pour accompagner l’apprentissage."
         >
-          <Grid items={illustrationScientifique} shape="square" contain />
+          <ShowMore height="34rem">
+            <Grid items={illustrationScientifique} shape="square" contain />
+          </ShowMore>
         </Part>
 
         <Part id="clients" title="Clients & éditeurs" muted>

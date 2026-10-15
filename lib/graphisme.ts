@@ -101,13 +101,13 @@ export const plv: GraphismeImage[] = [
 ];
 
 export const illustration: GraphismeImage[] = [
-  { id: "i_taxi", caption: "Guides de voyage alternatifs — éditions Nanika", width: 640, height: 547 },
+  { id: "i_taxi", caption: "Côte d’Ivoire — les taxis d’Abidjan", width: 640, height: 547 },
   { id: "i_guys", caption: "", width: 530, height: 640 },
-  { id: "i_woman", caption: "", width: 302, height: 640 },
+  { id: "i_woman", caption: "Martinique — le madras", width: 302, height: 640 },
   { id: "i_pool", caption: "", width: 529, height: 640 },
   { id: "i_market", caption: "", width: 640, height: 559 },
   { id: "i_woman2", caption: "", width: 531, height: 640 },
-  { id: "i_mask", caption: "", width: 399, height: 640 },
+  { id: "i_mask", caption: "Côte d’Ivoire — danse des masques", width: 399, height: 640 },
   { id: "i_church", caption: "", width: 619, height: 640 },
 ];
 
@@ -131,12 +131,15 @@ export const illustrationSeries: IllustrationSeries[] = [
       { id: "ser_bebe_gyneco", caption: "", width: 1328, height: 1600 },
       { id: "ser_bebe_neuro", caption: "", width: 1467, height: 1600 },
       { id: "ser_bebe_psy", caption: "", width: 1524, height: 1600 },
+      { id: "ser_bebe_famille", caption: "", width: 1449, height: 1600 },
     ],
   },
   {
     title: "L’étudiant en médecine",
     items: [
       { id: "ser_2", caption: "", width: 682, height: 810 },
+      { id: "ser_11", caption: "", width: 1310, height: 1400 },
+      { id: "ser_14", caption: "", width: 1400, height: 1400 },
       { id: "ser_etu_mm", caption: "", width: 1600, height: 1519 },
       { id: "ser_etu_od", caption: "", width: 1553, height: 1600 },
       { id: "ser_etu_noms", caption: "", width: 1032, height: 1060 },
@@ -189,13 +192,13 @@ export const musiciens: GraphismeImage[] = [
 
 export const illustrationsDiverses: GraphismeImage[] = [
   { id: "div_1", caption: "", width: 739, height: 877 },
-  { id: "div_2", caption: "", width: 701, height: 701 },
-  { id: "div_3", caption: "", width: 709, height: 720 },
+  { id: "div_2", caption: "Portrait — Donald Trump", width: 701, height: 701 },
+  { id: "div_3", caption: "Carnet de croquis", width: 709, height: 720 },
   { id: "div_5", caption: "", width: 1745, height: 2465 },
-  { id: "div_6", caption: "", width: 1744, height: 1876 },
-  { id: "div_7", caption: "", width: 1003, height: 954 },
-  { id: "div_8", caption: "", width: 919, height: 958 },
-  { id: "div_9", caption: "", width: 553, height: 794 },
+  { id: "div_6", caption: "Dessin de presse — « Merci Charlie »", width: 1744, height: 1876 },
+  { id: "div_7", caption: "Dessin de presse — Avon, 2014", width: 1003, height: 954 },
+  { id: "div_8", caption: "Dessin de presse — Avon, 2014", width: 919, height: 958 },
+  { id: "div_9", caption: "Dessin de presse — « Circuler est un droit… »", width: 553, height: 794 },
 ];
 
 export const illustrationScientifique: GraphismeImage[] = [
