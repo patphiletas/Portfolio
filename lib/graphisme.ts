@@ -222,7 +222,6 @@ export const illustrationScientifique: GraphismeImage[] = [
 ];
 
 export const webBanners: GraphismeImage[] = [
-  { id: "w_nouveautes", caption: "Bannière — nouveautés", width: 2400, height: 300 },
   { id: "w_rivages", caption: "Bannière — revue Rivages", width: 2400, height: 300 },
   { id: "w_rouleau", caption: "Bannière — opération « Le livre et le rouleau »", width: 2400, height: 300 },
 ];
@@ -236,8 +235,7 @@ export const webVisuals: GraphismeImage[] = [
   { id: "w_avent24", caption: "Visuel — campagne de l’Avent 2024", width: 1417, height: 992 },
   { id: "w_voeux", caption: "Visuel — cartes de vœux", width: 1416, height: 992 },
   { id: "w_avent23", caption: "Visuel — Avent 2023", width: 1000, height: 1333 },
-  { id: "w_rmpp_signets", caption: "Visuel — Réseau mondial de prière du Pape, signets", width: 1226, height: 1600 },
-  { id: "w_rmpp_affiches", caption: "Visuel — Réseau mondial de prière du Pape, affiches", width: 1226, height: 1600 },
+  { id: "w_rmpp_signets", caption: "Visuel — Réseau mondial de prière du Pape", width: 1226, height: 1600 },
 ];
 
 export const webAuthorBanners: GraphismeImage[] = [
