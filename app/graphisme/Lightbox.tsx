@@ -63,33 +63,26 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
 type FigureProps = {
   item: GraphismeImage;
   sizes: string;
+  shape?: "square" | "portrait";
   className?: string;
 };
 
-export function Figure({ item, sizes, className = "" }: FigureProps) {
+export function Figure({ item, sizes, shape = "portrait", className = "" }: FigureProps) {
   const lightbox = useContext(LightboxContext);
   const label = item.caption || "Réalisation graphique";
 
   return (
-    <figure className={`theme-surface theme-card-border overflow-hidden rounded-lg ${className}`}>
+    <figure className={`theme-surface theme-card-border flex flex-col overflow-hidden rounded-lg ${className}`}>
       <button
         type="button"
         onClick={() => lightbox?.open(item)}
         aria-label={`Agrandir : ${label}`}
-        className="block w-full cursor-zoom-in"
-        style={{ backgroundColor: item.grey ? "#8e8584" : "#ffffff" }}
+        className={`relative block w-full cursor-zoom-in bg-white ${shape === "square" ? "aspect-square" : "aspect-[5/7]"}`}
       >
-        <Image
-          src={thumbSrc(item.id)}
-          alt={label}
-          width={item.width}
-          height={item.height}
-          sizes={sizes}
-          className="h-auto w-full"
-        />
+        <Image src={thumbSrc(item.id)} alt={label} fill sizes={sizes} className="object-cover" />
       </button>
       {item.caption && (
-        <figcaption className="theme-text-muted px-3 py-2 text-[13px] leading-snug">
+        <figcaption className="theme-text-muted line-clamp-2 px-3 py-2 text-[13px] leading-snug">
           {item.caption}
         </figcaption>
       )}
@@ -98,7 +91,7 @@ export function Figure({ item, sizes, className = "" }: FigureProps) {
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="theme-link block border-t theme-border-subtle px-3 py-1.5 text-[11px] uppercase tracking-widest transition-colors hover:opacity-80"
+          className="theme-link mt-auto block border-t theme-border-subtle px-3 py-1.5 text-[11px] uppercase tracking-widest transition-colors hover:opacity-80"
         >
           Aperçu en ligne ↗
         </a>

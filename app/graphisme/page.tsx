@@ -5,8 +5,6 @@ import { clients, graphismeItems } from "@/lib/data";
 import {
   academic,
   avent,
-  beauLivreCover,
-  beauLivreSpreads,
   catalogues,
   fabrication,
   general,
@@ -31,8 +29,7 @@ export const metadata: Metadata = {
 
 const catalogueHighlights = catalogues.filter((item) => item.id === "k_cat1" || item.id === "k_cat2");
 
-const COVER_SIZES = "(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 46vw";
-const WIDE_SIZES = "(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 92vw";
+const GRID_SIZES = "(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 46vw";
 
 function Part({
   id,
@@ -73,21 +70,15 @@ function SubTitle({ children }: { children: React.ReactNode }) {
 
 function Grid({
   items,
-  wide = false,
+  shape = "portrait",
 }: {
   items: GraphismeImage[];
-  wide?: boolean;
+  shape?: "square" | "portrait";
 }) {
   return (
-    <div
-      className={
-        wide
-          ? "grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-3"
-          : "grid grid-cols-2 items-start gap-4 sm:grid-cols-3 lg:grid-cols-5"
-      }
-    >
+    <div className="grid grid-cols-2 items-start gap-4 sm:grid-cols-3 lg:grid-cols-5">
       {items.map((item) => (
-        <Figure key={item.id} item={item} sizes={wide ? WIDE_SIZES : COVER_SIZES} />
+        <Figure key={item.id} item={item} shape={shape} sizes={GRID_SIZES} />
       ))}
     </div>
   );
@@ -161,47 +152,29 @@ export default function GraphismePage() {
           title="Édition"
           lead="Responsable du graphisme : création de collections, maquette de couvertures et d’intérieurs, choix de l’iconographie. Livres académiques, grand public, médicaux et scolaires."
         >
-          <div className="mb-2 grid max-w-2xl grid-cols-3 gap-3">
-            {mockups.map((item) => (
-              <Figure key={item.id} item={item} sizes="(min-width: 768px) 200px, 30vw" />
-            ))}
-          </div>
+          <SubTitle>Mises en situation</SubTitle>
+          <Grid items={mockups} />
+
           <SubTitle>Livres académiques</SubTitle>
           <Grid items={academic} />
+
           <SubTitle>Livres grand public</SubTitle>
           <Grid items={general} />
-          <SubTitle>Livres scolaires et pédagogiques</SubTitle>
+
+          <SubTitle>Scolaires &amp; pédagogiques</SubTitle>
           <Grid items={scholar} />
-          <SubTitle>Beau livre</SubTitle>
-          <div className="grid items-start gap-6 md:grid-cols-[minmax(200px,300px)_1fr]">
-            <div>
-              {beauLivreCover.map((item) => (
-                <Figure key={item.id} item={item} sizes="(min-width: 768px) 300px, 92vw" />
-              ))}
-            </div>
-            <div>
-              <p className="theme-text-muted mb-4 max-w-xl leading-relaxed">
-                <span className="theme-text font-semibold">Revenir à l’olivier</span>, Jean-Pierre
-                Sonnet (éditions Lessius). Ouvrage de méditation théologique, 64 pages.
-              </p>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {beauLivreSpreads.map((item) => (
-                  <Figure key={item.id} item={item} sizes={WIDE_SIZES} />
-                ))}
-              </div>
-            </div>
-          </div>
+
         </Part>
 
         <Part
           id="fabrication"
           title="Fabrication"
-          lead="Des objets à concevoir autant qu’à mettre en page : coffrets, calendriers, dépliants, kakémonos, éléments promotionnels pour les Éditions jésuites et le groupe Grego."
+          lead="Des objets à concevoir autant qu’à mettre en page : coffrets, calendriers, kakémonos, éléments promotionnels pour les Éditions jésuites et le groupe Grego."
           muted
         >
-          <div className="grid items-start gap-8 md:grid-cols-[minmax(200px,320px)_1fr]">
+          <div className="grid items-start gap-8 md:grid-cols-[minmax(200px,280px)_1fr]">
             {avent.map((item) => (
-              <Figure key={item.id} item={{ ...item, caption: "Calendrier de l’Avent 2024" }} sizes="(min-width: 768px) 320px, 92vw" />
+              <Figure key={item.id} item={{ ...item, caption: "Calendrier de l’Avent 2024" }} sizes="(min-width: 768px) 280px, 92vw" />
             ))}
             <div>
               <SubTitle>Calendrier de l’Avent 2024</SubTitle>
@@ -227,7 +200,7 @@ export default function GraphismePage() {
           title="Communication"
           lead="Affiches, plaquettes et catalogues, pour les éditeurs comme pour des associations."
         >
-          <Grid items={[...posters, ...catalogueHighlights]} wide />
+          <Grid items={[...posters, ...catalogueHighlights]} />
         </Part>
 
         <Part
@@ -244,30 +217,25 @@ export default function GraphismePage() {
           title="Illustration"
           lead="Dessin traditionnel et numérique. Illustrations pour deux guides de voyage alternatifs des éditions Nanika : Côte d’Ivoire (2018) et Martinique (2021). Book illustration complet sur demande."
         >
-          <Grid items={illustration} />
+          <Grid items={illustration} shape="square" />
 
           <SubTitle>Séries d’illustrations</SubTitle>
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
             Déclinaisons d’illustrations numériques pour des projets éditoriaux.
           </p>
-          <div className="mb-4 grid max-w-2xl grid-cols-4 gap-4">
-            {mascotteIcons.map((item) => (
-              <Figure key={item.id} item={item} sizes="(min-width: 640px) 160px, 22vw" />
-            ))}
-          </div>
-          <Grid items={illustrationSeries} />
+          <Grid items={[...mascotteIcons, ...illustrationSeries]} shape="square" />
 
           <SubTitle>Musiciens</SubTitle>
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
             Pour Croq en live, sur le Festival West Side (2013).
           </p>
-          <Grid items={musiciens} />
+          <Grid items={musiciens} shape="square" />
 
           <SubTitle>Illustrations diverses</SubTitle>
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
             Série d’illustrations numériques et conventionnelles. Certaines ont été publiées.
           </p>
-          <Grid items={illustrationsDiverses} />
+          <Grid items={illustrationsDiverses} shape="square" />
         </Part>
 
         <Part id="clients" title="Clients & éditeurs" muted>
