@@ -12,13 +12,6 @@ export const graphismeDir = "/images/graphisme";
 export const thumbSrc = (id: string) => `${graphismeDir}/thumb/${id}.jpg`;
 export const fullSrc = (id: string) => `${graphismeDir}/full/${id}.jpg`;
 
-export const mockups: GraphismeImage[] = [
-  { id: "mock_eco", caption: "", width: 495, height: 640 },
-  { id: "mock_saveur", caption: "", width: 495, height: 640 },
-  { id: "mock_pottier", caption: "", width: 495, height: 640 },
-  { id: "mock_ecologie", caption: "", width: 687, height: 1007 },
-];
-
 export const academic: GraphismeImage[] = [
   { id: "c_eco", caption: "Éco-théologie", width: 453, height: 640 },
   { id: "c_saveur", caption: "La saveur des récits évangéliques", width: 453, height: 640 },

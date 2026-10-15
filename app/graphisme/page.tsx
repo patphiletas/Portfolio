@@ -12,7 +12,6 @@ import {
   illustrationScientifique,
   illustrationSeries,
   illustrationsDiverses,
-  mockups,
   musiciens,
   plv,
   posters,
@@ -237,9 +236,6 @@ export default function GraphismePage() {
           title="Édition"
           lead="Responsable du graphisme : création de collections, maquette de couvertures et d’intérieurs, choix de l’iconographie. Livres académiques, grand public, médicaux et scolaires."
         >
-          <SubTitle>Mises en situation</SubTitle>
-          <Grid items={mockups} />
-
           <SubTitle>Livres académiques</SubTitle>
           <Grid items={academic} />
 
