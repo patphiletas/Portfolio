@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 
 const catalogueHighlights = catalogues.filter((item) => item.id === "k_cat1" || item.id === "k_cat2");
 
-const OVERVIEW = [
+const OVERVIEW: { id: string; title: string; image: string; position?: string; description: string }[] = [
   {
     id: "edition",
     title: "Édition",
@@ -59,7 +59,8 @@ const OVERVIEW = [
   {
     id: "web",
     title: "Web",
-    image: thumbSrc("wb_29"),
+    image: "/images/graphisme/full/wb_42.jpg",
+    position: "object-left-top",
     description: "Bannières auteurs et nouveautés, opérations commerciales, visuels pour les sites.",
   },
   {
@@ -71,7 +72,7 @@ const OVERVIEW = [
   {
     id: "illustration-scientifique",
     title: "Illustration scientifique",
-    image: thumbSrc("sci_11"),
+    image: "/images/graphisme-scientifique.jpg",
     description: "Schémas et planches pour des ouvrages médicaux : hématologie, immunologie, anatomie.",
   },
 ];
@@ -210,7 +211,7 @@ export default function GraphismePage() {
                     alt={section.title}
                     fill
                     sizes="(min-width: 768px) 33vw, 50vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    className={`object-cover ${section.position ?? ""} transition-transform duration-300 group-hover:scale-105`}
                   />
                 </div>
                 <div className="p-4">
