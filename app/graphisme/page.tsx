@@ -239,9 +239,9 @@ export default function GraphismePage() {
           </p>
           <Grid items={musiciens} shape="square" />
 
-          <SubTitle>Illustrations diverses</SubTitle>
+          <SubTitle>Illustrations diverses et dessin de presse</SubTitle>
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
-            Série d’illustrations numériques et conventionnelles. Certaines ont été publiées.
+            Illustrations numériques et traditionnelles, caricatures et dessins de presse. Certains ont été publiés.
           </p>
           <Grid items={illustrationsDiverses} shape="square" />
         </Part>
