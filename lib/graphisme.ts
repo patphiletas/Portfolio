@@ -220,3 +220,55 @@ export const illustrationScientifique: GraphismeImage[] = [
   { id: "sci_19", caption: "Vertèbre et moelle épinière", width: 1561, height: 1600 },
   { id: "sci_20", caption: "Fibre musculaire", width: 801, height: 867 },
 ];
+
+export const webBanners: GraphismeImage[] = [
+  { id: "w_nouveautes", caption: "Bannière — nouveautés", width: 2400, height: 300 },
+  { id: "w_rivages", caption: "Bannière — revue Rivages", width: 2400, height: 300 },
+  { id: "w_rouleau", caption: "Bannière — opération « Le livre et le rouleau »", width: 2400, height: 300 },
+];
+
+export const webSlides: GraphismeImage[] = [
+  { id: "w_ikb", caption: "Slide — iKB Cardiologie", width: 1920, height: 655 },
+  { id: "w_khalifa", caption: "Slide — réunion de méthodologie DFASM2", width: 1920, height: 700 },
+];
+
+export const webVisuals: GraphismeImage[] = [
+  { id: "w_avent24", caption: "Visuel — campagne de l’Avent 2024", width: 1417, height: 992 },
+  { id: "w_voeux", caption: "Visuel — cartes de vœux", width: 1416, height: 992 },
+  { id: "w_avent23", caption: "Visuel — Avent 2023", width: 1000, height: 1333 },
+  { id: "w_rmpp_signets", caption: "Visuel — Réseau mondial de prière du Pape, signets", width: 1226, height: 1600 },
+  { id: "w_rmpp_affiches", caption: "Visuel — Réseau mondial de prière du Pape, affiches", width: 1226, height: 1600 },
+];
+
+export const webAuthorBanners: GraphismeImage[] = [
+  { id: "wb_30", caption: "Nikolaas Sintobin — Prier avec la Bible", width: 1983, height: 500 },
+  { id: "wb_29", caption: "Nikolaas Sintobin — l’auteur qui monte", width: 1983, height: 500 },
+  { id: "wb_28", caption: "Alain Patin — Se laisser étonner par l’Ancien Testament", width: 1983, height: 500 },
+  { id: "wb_40", caption: "Jean-Noël Aletti — les 4 derniers titres", width: 1983, height: 500 },
+  { id: "wb_33", caption: "Jean-Noël Aletti — La saveur des récits évangéliques", width: 1983, height: 500 },
+  { id: "wb_9", caption: "Dominique Struyf et Bernard Pottier — Psychologie et spiritualité", width: 1983, height: 500 },
+  { id: "wb_36", caption: "Bernard Pottier — Portraits philosophiques du Christ", width: 1983, height: 500 },
+  { id: "wb_31", caption: "Christoph Wrembek — Judas, mon ami", width: 1983, height: 500 },
+  { id: "wb_32", caption: "Geneviève Perret — Marie-Thérèse de Soubiran", width: 1983, height: 500 },
+  { id: "wb_21", caption: "Pape François — Politique et écologie", width: 1983, height: 500 },
+  { id: "wb_42", caption: "Guide pratique de l’écologie intégrale", width: 1983, height: 500 },
+  { id: "wb_44", caption: "Celia Deane-Drummond — Éco-théologie", width: 1983, height: 500 },
+  { id: "wb_50", caption: "Austen Ivereigh — En retraite avec le pape François", width: 1983, height: 500 },
+  { id: "wb_51", caption: "Nicolas Rousselot — Le tour de la foi", width: 1983, height: 500 },
+  { id: "wb_39", caption: "Jean Rouet — Libérez l’Évangile", width: 1983, height: 500 },
+  { id: "wb_37", caption: "Claude Lichtert — Vers un paradis urbain", width: 1983, height: 500 },
+];
+
+export const webEventBanners: GraphismeImage[] = [
+  { id: "wb_8", caption: "Conférence-débat — Michel de Certeau, Alfonso Mendiola", width: 1983, height: 500 },
+  { id: "wb_10", caption: "Conférence de sœur Anne-Catherine Avril", width: 1983, height: 500 },
+];
+
+export const webOpsBanners: GraphismeImage[] = [
+  { id: "wb_7", caption: "Avent 2023 — signets et affiches", width: 1983, height: 500 },
+  { id: "wb_18", caption: "Carême 2024 — signets, affiches, calendriers", width: 1983, height: 500 },
+  { id: "wb_46", caption: "Avent 2024 — signets, affiches, calendrier", width: 1983, height: 500 },
+  { id: "wb_6", caption: "Nouveautés de la rentrée", width: 1983, height: 500 },
+  { id: "wb_11", caption: "Idée cadeau — romans pour ados", width: 1983, height: 500 },
+  { id: "wb_49", caption: "Carte de la Toussaint", width: 1983, height: 500 },
+];

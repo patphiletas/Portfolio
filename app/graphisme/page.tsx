@@ -17,6 +17,12 @@ import {
   plv,
   posters,
   scholar,
+  webAuthorBanners,
+  webBanners,
+  webEventBanners,
+  webOpsBanners,
+  webSlides,
+  webVisuals,
   type GraphismeImage,
 } from "@/lib/graphisme";
 import { Figure, LightboxProvider } from "./Lightbox";
@@ -87,6 +93,25 @@ function Grid({
           <Figure key={item.id} item={item} shape={shape} contain={contain} sizes={GRID_SIZES} />
         ),
       )}
+    </div>
+  );
+}
+
+function Banners({ items }: { items: GraphismeImage[] }) {
+  return (
+    <div className="grid gap-4 sm:grid-cols-2">
+      {items.map((item) => {
+        const wide = item.width / item.height > 5;
+        return (
+          <Figure
+            key={item.id}
+            item={item}
+            shape="natural"
+            sizes={wide ? "(min-width: 1152px) 1104px, 92vw" : "(min-width: 640px) 46vw, 92vw"}
+            className={wide ? "sm:col-span-2" : ""}
+          />
+        );
+      })}
     </div>
   );
 }
@@ -211,10 +236,31 @@ export default function GraphismePage() {
         </Part>
 
         <Part
+          id="web"
+          title="Web"
+          lead="Bannières et visuels pour les sites des Éditions jésuites et du groupe Grego : nouveautés, opérations commerciales, temps liturgiques, événements."
+          muted
+        >
+          <SubTitle>Auteurs et nouveautés — Éditions jésuites</SubTitle>
+          <Banners items={webAuthorBanners} />
+
+          <SubTitle>Événements</SubTitle>
+          <Banners items={webEventBanners} />
+
+          <SubTitle>Temps forts et opérations</SubTitle>
+          <Banners items={[...webBanners, ...webOpsBanners]} />
+
+          <SubTitle>Slides — groupe Grego</SubTitle>
+          <Banners items={webSlides} />
+
+          <SubTitle>Visuels pour le site</SubTitle>
+          <Grid items={webVisuals} />
+        </Part>
+
+        <Part
           id="plv"
           title="PLV et affiches de promotion"
           lead="Affiches de lancement et supports promotionnels, dont des supports destinés aux libraires."
-          muted
         >
           <Grid items={plv} />
         </Part>
@@ -223,6 +269,7 @@ export default function GraphismePage() {
           id="illustration"
           title="Illustration"
           lead="Dessin traditionnel et numérique. Illustrations pour deux guides de voyage alternatifs des éditions Nanika : Côte d’Ivoire (2018) et Martinique (2021). Book illustration complet sur demande."
+          muted
         >
           <Grid items={illustration} shape="square" />
 
@@ -254,12 +301,11 @@ export default function GraphismePage() {
           id="illustration-scientifique"
           title="Illustration scientifique"
           lead="Schémas et planches pour des ouvrages médicaux : hématologie, immunologie, anatomie. Des dessins précis et lisibles, pensés pour accompagner l’apprentissage."
-          muted
         >
           <Grid items={illustrationScientifique} shape="square" contain />
         </Part>
 
-        <Part id="clients" title="Clients & éditeurs">
+        <Part id="clients" title="Clients & éditeurs" muted>
           <div className="flex flex-wrap gap-3">
             {clients.map((client) => (
               <span key={client} className="theme-chip rounded px-4 py-2 text-sm">
@@ -273,7 +319,6 @@ export default function GraphismePage() {
           id="contact-graphisme"
           title="Contact"
           lead="Disponible immédiatement, en CDI, CDD ou en freelance (affilié Maison des Artistes). Mobile en Île-de-France."
-          muted
         >
           <p className="theme-text mb-2 font-semibold">Patrice Philétas · Montereau-Fault-Yonne (77)</p>
           <p className="theme-text-muted space-x-3">

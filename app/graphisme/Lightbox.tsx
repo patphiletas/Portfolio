@@ -65,12 +65,13 @@ const FRAMES = {
   square: "aspect-square",
   portrait: "aspect-[5/7]",
   landscape: "h-0 pb-[calc(70%-0.7rem)]",
+  natural: "",
 };
 
 type FigureProps = {
   item: GraphismeImage;
   sizes: string;
-  shape?: "square" | "portrait" | "landscape";
+  shape?: "square" | "portrait" | "landscape" | "natural";
   contain?: boolean;
   className?: string;
 };
@@ -86,6 +87,7 @@ export function Figure({ item, sizes, shape = "portrait", contain = false, class
         onClick={() => lightbox?.open(item)}
         aria-label={`Agrandir : ${label}`}
         className={`relative block w-full cursor-zoom-in bg-white ${FRAMES[shape]}`}
+        style={shape === "natural" ? { aspectRatio: `${item.width} / ${item.height}` } : undefined}
       >
         <Image
           src={thumbSrc(item.id)}
