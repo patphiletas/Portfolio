@@ -148,7 +148,6 @@ export const illustrationsDiverses: GraphismeImage[] = [
   { id: "div_7", caption: "", width: 1003, height: 954 },
   { id: "div_8", caption: "", width: 919, height: 958 },
   { id: "div_9", caption: "", width: 553, height: 794 },
-  { id: "div_10", caption: "", width: 1255, height: 1011 },
 ];
 
 export const illustrationScientifique: GraphismeImage[] = [
