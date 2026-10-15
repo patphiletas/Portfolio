@@ -8,7 +8,7 @@ import ThemeToggle from "./ThemeToggle";
 const devNavLinks = [
   { href: "/#parcours", label: "Parcours" },
   { href: "/#projets", label: "Projets" },
-  { href: "/#graphisme", label: "Graphisme" },
+  { href: "/graphisme", label: "Graphisme" },
   { href: "/#contact", label: "Contact" },
 ];
 

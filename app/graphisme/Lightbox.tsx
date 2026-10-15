@@ -135,6 +135,7 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
               {position.index + 1} / {position.total}
             </span>
           </p>
+          {current.note && <p className="mt-1 text-center text-xs italic text-zinc-400">{current.note}</p>}
         </div>
       )}
     </LightboxContext.Provider>

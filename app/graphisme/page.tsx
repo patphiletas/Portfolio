@@ -194,6 +194,15 @@ export default function GraphismePage() {
               imprimeurs. Je conçois aussi les bannières web des éditeurs et dessine, des
               personnages aux schémas scientifiques. InDesign, Illustrator, Photoshop, Quite Imposing.
             </p>
+
+            <a
+              href="/portfolio-graphisme.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="theme-link mt-6 inline-flex items-center gap-2 text-sm underline underline-offset-2"
+            >
+              Version PDF du portfolio <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </section>
 

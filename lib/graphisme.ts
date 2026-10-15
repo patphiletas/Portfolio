@@ -4,6 +4,8 @@ export type GraphismeImage = {
   width: number;
   height: number;
   link?: string;
+  // Précision affichée uniquement dans la vue agrandie.
+  note?: string;
 };
 
 export const graphismeDir = "/images/graphisme";
@@ -29,15 +31,15 @@ export const academic: GraphismeImage[] = [
 ];
 
 export const general: GraphismeImage[] = [
-  { id: "c_autain", caption: "Clémentine Autain — biographie", width: 422, height: 640 },
+  { id: "c_autain", caption: "Clémentine Autain — biographie", width: 422, height: 640, note: "Maquette intérieure uniquement — couverture d’un autre graphiste." },
   { id: "c_musulmane", caption: "Musulmane, disciple du Christ", width: 404, height: 640, link: "https://www.calameo.com/read/006730137c506b192a13a" },
   { id: "c_politique", caption: "Politique et écologie", width: 453, height: 640 },
   { id: "c_portraits", caption: "15 portraits philosophiques du Christ", width: 990, height: 1400 },
-  { id: "c_pascote", caption: "Un pas de côté", width: 945, height: 1496, link: "https://www.calameo.com/read/0067301378c221a790ced" },
+  { id: "c_pascote", caption: "Un pas de côté", width: 945, height: 1496, link: "https://www.calameo.com/read/0067301378c221a790ced", note: "Illustration de couverture : mon dessin." },
   { id: "c_choisir", caption: "Choisissez bien votre psy", width: 391, height: 640 },
   { id: "c_ecologie", caption: "Guide pratique de l’écologie intégrale", width: 404, height: 640, link: "https://www.calameo.com/read/006730137e0cda3411a3b" },
   { id: "c_kobik", caption: "Ignace de Loyola, le pèlerinage intérieur", width: 421, height: 640, link: "https://www.calameo.com/read/00673013785915b69059c" },
-  { id: "c_feujbook", caption: "Feujbook", width: 313, height: 449 },
+  { id: "c_feujbook", caption: "Feujbook", width: 313, height: 449, note: "Maquette intérieure uniquement — couverture d’un autre graphiste." },
   { id: "c_bible", caption: "Prier avec la Bible", width: 990, height: 1400 },
   { id: "b_cover", caption: "Revenir à l’olivier", width: 640, height: 640, link: "https://www.calameo.com/read/00673013712ab99379d85" },
 ];
@@ -45,9 +47,9 @@ export const general: GraphismeImage[] = [
 export const scholar: GraphismeImage[] = [
   { id: "c_route", caption: "En route vers la lecture", width: 1400, height: 1400 },
   { id: "c_lire", caption: "Lire et écrire", width: 256, height: 368 },
-  { id: "c_abc", caption: "L’ABCdaire médical", width: 954, height: 1400 },
-  { id: "c_psy", caption: "Carnets de stage infirmiers — Psychiatrie", width: 331, height: 455 },
-  { id: "c_inter", caption: "Intermemo — Gynécologie obstétrique", width: 307, height: 455 },
+  { id: "c_abc", caption: "L’ABCdaire médical", width: 954, height: 1400, note: "Illustration de couverture : mon dessin (série « L’étudiant en médecine »)." },
+  { id: "c_psy", caption: "Carnets de stage infirmiers — Psychiatrie", width: 331, height: 455, note: "Illustration de couverture : mon dessin (série « Spécialités médicales »)." },
+  { id: "c_inter", caption: "Intermemo — Gynécologie obstétrique", width: 307, height: 455, note: "Illustration de couverture : mon dessin (mascotte de la collection)." },
   { id: "c_corps", caption: "Corps, tonus et psychomotricité", width: 284, height: 455 },
   { id: "c_cut", caption: "Carnet ultime tour — Méthodologie", width: 290, height: 455 },
   { id: "c_mariage", caption: "Guide pour préparer son mariage", width: 450, height: 640, link: "https://www.calameo.com/read/0067301371784dff2435d" },
@@ -67,7 +69,7 @@ export const fabrication: GraphismeImage[] = [
 ];
 
 export const posters: GraphismeImage[] = [
-  { id: "k_hiphop", caption: "Affiche concert de soutien (Togo)", width: 753, height: 1075 },
+  { id: "k_hiphop", caption: "Affiche concert de soutien (Togo)", width: 753, height: 1075, note: "Illustration de l’affiche : mon dessin." },
   { id: "k_acat", caption: "Plaquette de l’ACAT-France — intérieur", width: 1369, height: 968 },
   { id: "k_acat2", caption: "Plaquette de l’ACAT-France — extérieur", width: 1334, height: 943 },
   { id: "k_altgen1", caption: "Plaquette Alternatives Générations — extérieur", width: 1390, height: 980 },
@@ -75,8 +77,8 @@ export const posters: GraphismeImage[] = [
   { id: "k_careme", caption: "Mailing — Vivre le Carême", width: 729, height: 1010 },
   { id: "k_lire21", caption: "Lettre « Lire avec les Éditions jésuites » — automne 2021", width: 732, height: 1007 },
   { id: "k_bdc", caption: "Bon de commande — Pratique du discernement en commun", width: 707, height: 1011 },
-  { id: "k_sessd1", caption: "Plaquette SESSD APF — couverture", width: 1128, height: 1600 },
-  { id: "k_sessd2", caption: "Plaquette SESSD APF — intérieur", width: 1600, height: 1135 },
+  { id: "k_sessd1", caption: "Plaquette SESSD APF — couverture", width: 1128, height: 1600, note: "Illustrations : mes dessins (série SESSD APF)." },
+  { id: "k_sessd2", caption: "Plaquette SESSD APF — intérieur", width: 1600, height: 1135, note: "Illustrations : mes dessins (série SESSD APF)." },
 ];
 
 export const catalogues: GraphismeImage[] = [
@@ -92,12 +94,13 @@ export const catalogues: GraphismeImage[] = [
 
 export const plv: GraphismeImage[] = [
   { id: "p_vg", caption: "Affiche libraires — commande directe", width: 388, height: 537 },
-  { id: "p_camsp", caption: "Livret d’accueil — CAMSP de Pontoise", width: 398, height: 538 },
+  { id: "p_camsp", caption: "Livret d’accueil — CAMSP de Pontoise", width: 398, height: 538, note: "Illustrations : mes coccinelles (série « La coccinelle »)." },
+  { id: "p_sessd", caption: "Affiche A1 pour le service — Charte des droits et libertés, SESSD APF", width: 1131, height: 1600, note: "Illustrations : mes dessins (série SESSD APF)." },
   { id: "p_pape", caption: "Affiche conférence-débat — Le Pape François", width: 710, height: 1007 },
   { id: "p_myst", caption: "Affiche de lancement — Mysterium Christi", width: 1130, height: 1600 },
   { id: "p_avent", caption: "Affiche — Avent 2024", width: 414, height: 545 },
   { id: "p_var", caption: "Affiche de lancement — Varillon", width: 1130, height: 1600 },
-  { id: "p_route", caption: "Affiche — méthode de lecture", width: 396, height: 545 },
+  { id: "p_route", caption: "Affiche — méthode de lecture", width: 396, height: 545, note: "Illustration de l’affiche : mon dessin." },
 ];
 
 export const illustration: GraphismeImage[] = [

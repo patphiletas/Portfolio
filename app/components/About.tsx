@@ -2,6 +2,7 @@
 
 import { skills } from "@/lib/data";
 import Chapter from "./Chapter";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -17,7 +18,12 @@ export default function About() {
               <p>
                 Cette transition n&apos;est pas un changement radical mais une évolution logique&nbsp;:
                 le même soin apporté à la mise en page d&apos;un livre de 700 pages se retrouve
-                dans la rigueur d&apos;un code propre, typé, et bien structuré.
+                dans la rigueur d&apos;un code propre, typé, et bien structuré. Cette double
+                compétence nourrit directement mon sens du design et de l&apos;UX (
+                <Link href="/graphisme" className="theme-link underline underline-offset-2">
+                  voir le portfolio graphisme
+                </Link>
+                ).
               </p>
               <p>
                 Je me forme actuellement à <span className="theme-text font-medium">Ada Tech School</span>, avec un accent

@@ -1,9 +1,9 @@
 "use client";
 
-const sommaire = [
+const sommaire: { number: string; title: string; href: string; page?: boolean }[] = [
   { number: "01", title: "Parcours", href: "#parcours" },
   { number: "02", title: "Projets", href: "#projets" },
-  { number: "03", title: "Graphisme", href: "#graphisme" },
+  { number: "03", title: "Graphisme", href: "/graphisme", page: true },
   { number: "04", title: "Contact", href: "#contact" },
 ];
 
@@ -41,7 +41,7 @@ export default function Cover() {
                     aria-hidden="true"
                     className="theme-text-muted text-sm shrink-0 transition-transform group-hover:translate-x-1"
                   >
-                    →
+                    {item.page ? "↗" : "→"}
                   </span>
                 </a>
               </li>
