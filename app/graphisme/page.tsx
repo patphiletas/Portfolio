@@ -30,6 +30,7 @@ export const metadata: Metadata = {
 const catalogueHighlights = catalogues.filter((item) => item.id === "k_cat1" || item.id === "k_cat2");
 
 const GRID_SIZES = "(min-width: 1024px) 18vw, (min-width: 640px) 30vw, 46vw";
+const WIDE_SIZES = "(min-width: 1024px) 36vw, (min-width: 640px) 60vw, 92vw";
 
 function Part({
   id,
@@ -76,10 +77,14 @@ function Grid({
   shape?: "square" | "portrait";
 }) {
   return (
-    <div className="grid grid-cols-2 items-start gap-4 sm:grid-cols-3 lg:grid-cols-5">
-      {items.map((item) => (
-        <Figure key={item.id} item={item} shape={shape} sizes={GRID_SIZES} />
-      ))}
+    <div className="grid grid-flow-dense grid-cols-2 items-start gap-4 sm:grid-cols-3 lg:grid-cols-5">
+      {items.map((item) =>
+        shape === "portrait" && item.width > item.height ? (
+          <Figure key={item.id} item={item} shape="landscape" sizes={WIDE_SIZES} className="col-span-2" />
+        ) : (
+          <Figure key={item.id} item={item} shape={shape} sizes={GRID_SIZES} />
+        ),
+      )}
     </div>
   );
 }
@@ -169,12 +174,12 @@ export default function GraphismePage() {
         <Part
           id="fabrication"
           title="Fabrication"
-          lead="Des objets à concevoir autant qu’à mettre en page : coffrets, calendriers, kakémonos, éléments promotionnels pour les Éditions jésuites et le groupe Grego."
+          lead="Des objets à concevoir autant qu’à mettre en page : calendriers, dépliants, marque-pages, kakémonos, éléments promotionnels pour les Éditions jésuites et le groupe Grego."
           muted
         >
-          <div className="grid items-start gap-8 md:grid-cols-[minmax(200px,280px)_1fr]">
+          <div className="grid items-start gap-8 md:grid-cols-[minmax(240px,400px)_1fr]">
             {avent.map((item) => (
-              <Figure key={item.id} item={{ ...item, caption: "Calendrier de l’Avent 2024" }} sizes="(min-width: 768px) 280px, 92vw" />
+              <Figure key={item.id} item={{ ...item, caption: "Calendrier de l’Avent 2024" }} shape="landscape" sizes="(min-width: 768px) 400px, 92vw" />
             ))}
             <div>
               <SubTitle>Calendrier de l’Avent 2024</SubTitle>

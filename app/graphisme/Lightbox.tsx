@@ -60,10 +60,17 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Le cadre paysage occupe 2 colonnes de grille (gap-4) et garde la hauteur d'un cadre portrait 5:7.
+const FRAMES = {
+  square: "aspect-square",
+  portrait: "aspect-[5/7]",
+  landscape: "h-0 pb-[calc(70%-0.7rem)]",
+};
+
 type FigureProps = {
   item: GraphismeImage;
   sizes: string;
-  shape?: "square" | "portrait";
+  shape?: "square" | "portrait" | "landscape";
   className?: string;
 };
 
@@ -77,7 +84,7 @@ export function Figure({ item, sizes, shape = "portrait", className = "" }: Figu
         type="button"
         onClick={() => lightbox?.open(item)}
         aria-label={`Agrandir : ${label}`}
-        className={`relative block w-full cursor-zoom-in bg-white ${shape === "square" ? "aspect-square" : "aspect-[5/7]"}`}
+        className={`relative block w-full cursor-zoom-in bg-white ${FRAMES[shape]}`}
       >
         <Image src={thumbSrc(item.id)} alt={label} fill sizes={sizes} className="object-cover" />
       </button>

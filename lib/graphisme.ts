@@ -14,6 +14,7 @@ export const mockups: GraphismeImage[] = [
   { id: "mock_eco", caption: "", width: 495, height: 640 },
   { id: "mock_saveur", caption: "", width: 495, height: 640 },
   { id: "mock_pottier", caption: "", width: 495, height: 640 },
+  { id: "mock_ecologie", caption: "", width: 687, height: 1007 },
 ];
 
 export const academic: GraphismeImage[] = [
@@ -24,6 +25,7 @@ export const academic: GraphismeImage[] = [
   { id: "c_myst", caption: "Mysterium Christi", width: 422, height: 596, link: "https://www.calameo.com/read/00673013789fd985d0307" },
   { id: "c_phenomene", caption: "Le Phénomène Humain", width: 422, height: 596, link: "https://www.calameo.com/read/006730137563f28b23b7e" },
   { id: "c_creux", caption: "Au creux du malheur, la lumière ?", width: 989, height: 1400 },
+  { id: "c_enfant", caption: "Prends l’enfant et sa mère", width: 695, height: 1011 },
 ];
 
 export const general: GraphismeImage[] = [
@@ -58,12 +60,21 @@ export const avent: GraphismeImage[] = [
 ];
 
 export const fabrication: GraphismeImage[] = [
+  { id: "f_noel", caption: "Dépliant — La sélection de Noël", width: 1313, height: 643 },
+  { id: "f_signets_avent", caption: "Marque-pages illustrés — Avent 2022", width: 854, height: 971 },
+  { id: "f_signets_careme", caption: "Marque-pages illustrés — Carême 2023", width: 1367, height: 972 },
   { id: "f_kak", caption: "Kakémono, hauteur 2 m", width: 577, height: 1400 },
 ];
 
 export const posters: GraphismeImage[] = [
-  { id: "k_hiphop", caption: "Affiche concert de soutien (Togo)", width: 462, height: 640 },
-  { id: "k_acat", caption: "Plaquette de l’ACAT-France", width: 640, height: 460 },
+  { id: "k_hiphop", caption: "Affiche concert de soutien (Togo)", width: 753, height: 1075 },
+  { id: "k_acat", caption: "Plaquette de l’ACAT-France — intérieur", width: 1369, height: 968 },
+  { id: "k_acat2", caption: "Plaquette de l’ACAT-France — extérieur", width: 1334, height: 943 },
+  { id: "k_altgen1", caption: "Plaquette Alternatives Générations — extérieur", width: 1390, height: 980 },
+  { id: "k_altgen2", caption: "Plaquette Alternatives Générations — intérieur", width: 1390, height: 980 },
+  { id: "k_careme", caption: "Mailing — Vivre le Carême", width: 729, height: 1010 },
+  { id: "k_lire21", caption: "Lettre « Lire avec les Éditions jésuites » — automne 2021", width: 732, height: 1007 },
+  { id: "k_bdc", caption: "Bon de commande — Pratique du discernement en commun", width: 707, height: 1011 },
 ];
 
 export const catalogues: GraphismeImage[] = [
@@ -80,6 +91,7 @@ export const catalogues: GraphismeImage[] = [
 export const plv: GraphismeImage[] = [
   { id: "p_vg", caption: "Affiche libraires — commande directe", width: 388, height: 537 },
   { id: "p_camsp", caption: "Livret d’accueil — CAMSP de Pontoise", width: 398, height: 538 },
+  { id: "p_pape", caption: "Affiche conférence-débat — Le Pape François", width: 710, height: 1007 },
   { id: "p_myst", caption: "Affiche de lancement — Mysterium Christi", width: 1130, height: 1600 },
   { id: "p_avent", caption: "Affiche — Avent 2024", width: 414, height: 545 },
   { id: "p_var", caption: "Affiche de lancement — Varillon", width: 1130, height: 1600 },
@@ -115,14 +127,19 @@ export const musiciens: GraphismeImage[] = [
   { id: "mus_2", caption: "Dustin Wong, l’artiste bicolore aux 1000 pédales", width: 785, height: 1400 },
   { id: "mus_3", caption: "Nisennenmondai — la charley obsessionnelle", width: 836, height: 1400 },
   { id: "mus_4", caption: "Gull — tout seul avec un masque diabolique", width: 836, height: 1400 },
-  { id: "mus_5", caption: "Rock.fr", width: 933, height: 1400 },
+  { id: "mus_5", caption: "Rock.fr", width: 920, height: 1380 },
+  { id: "mus_6", caption: "Not for you", width: 649, height: 654 },
 ];
 
 export const illustrationsDiverses: GraphismeImage[] = [
   { id: "div_1", caption: "", width: 739, height: 877 },
   { id: "div_2", caption: "", width: 701, height: 701 },
   { id: "div_3", caption: "", width: 709, height: 720 },
-  { id: "div_5", caption: "", width: 687, height: 709 },
-  { id: "div_6", caption: "", width: 701, height: 705 },
+  { id: "div_5", caption: "", width: 1745, height: 2465 },
+  { id: "div_6", caption: "", width: 1744, height: 1876 },
+  { id: "div_7", caption: "", width: 1003, height: 954 },
+  { id: "div_8", caption: "", width: 919, height: 958 },
+  { id: "div_9", caption: "", width: 553, height: 794 },
+  { id: "div_10", caption: "", width: 1255, height: 1011 },
 ];
 
