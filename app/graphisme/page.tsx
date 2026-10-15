@@ -72,7 +72,7 @@ const OVERVIEW: { id: string; title: string; image: string; position?: string; d
   {
     id: "illustration-scientifique",
     title: "Illustration scientifique",
-    image: "/images/graphisme-scientifique.jpg",
+    image: "/images/graphisme-cerveau-3.jpg",
     description: "Schémas et planches pour des ouvrages médicaux : hématologie, immunologie, anatomie.",
   },
 ];
