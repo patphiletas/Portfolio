@@ -17,6 +17,7 @@ const graphismeNavLinks = [
   { href: "/graphisme#fabrication", label: "Fabrication" },
   { href: "/graphisme#communication", label: "Communication" },
   { href: "/graphisme#illustration", label: "Illustration" },
+  { href: "/graphisme#illustration-scientifique", label: "Scientifique" },
   { href: "/graphisme#contact-graphisme", label: "Contact" },
 ];
 

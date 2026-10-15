@@ -71,10 +71,11 @@ type FigureProps = {
   item: GraphismeImage;
   sizes: string;
   shape?: "square" | "portrait" | "landscape";
+  contain?: boolean;
   className?: string;
 };
 
-export function Figure({ item, sizes, shape = "portrait", className = "" }: FigureProps) {
+export function Figure({ item, sizes, shape = "portrait", contain = false, className = "" }: FigureProps) {
   const lightbox = useContext(LightboxContext);
   const label = item.caption || "Réalisation graphique";
 
@@ -86,7 +87,13 @@ export function Figure({ item, sizes, shape = "portrait", className = "" }: Figu
         aria-label={`Agrandir : ${label}`}
         className={`relative block w-full cursor-zoom-in bg-white ${FRAMES[shape]}`}
       >
-        <Image src={thumbSrc(item.id)} alt={label} fill sizes={sizes} className="object-cover" />
+        <Image
+          src={thumbSrc(item.id)}
+          alt={label}
+          fill
+          sizes={sizes}
+          className={contain ? "object-contain p-2" : shape === "square" ? "object-cover" : "object-cover object-top"}
+        />
       </button>
       {item.caption && (
         <figcaption className="theme-text-muted line-clamp-2 px-3 py-2 text-[13px] leading-snug">

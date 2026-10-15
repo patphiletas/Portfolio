@@ -9,6 +9,7 @@ import {
   fabrication,
   general,
   illustration,
+  illustrationScientifique,
   illustrationSeries,
   illustrationsDiverses,
   mascotteIcons,
@@ -72,9 +73,11 @@ function SubTitle({ children }: { children: React.ReactNode }) {
 function Grid({
   items,
   shape = "portrait",
+  contain = false,
 }: {
   items: GraphismeImage[];
   shape?: "square" | "portrait";
+  contain?: boolean;
 }) {
   return (
     <div className="grid grid-flow-dense grid-cols-2 items-start gap-4 sm:grid-cols-3 lg:grid-cols-5">
@@ -82,7 +85,7 @@ function Grid({
         shape === "portrait" && item.width > item.height ? (
           <Figure key={item.id} item={item} shape="landscape" sizes={WIDE_SIZES} className="col-span-2" />
         ) : (
-          <Figure key={item.id} item={item} shape={shape} sizes={GRID_SIZES} />
+          <Figure key={item.id} item={item} shape={shape} contain={contain} sizes={GRID_SIZES} />
         ),
       )}
     </div>
@@ -228,7 +231,7 @@ export default function GraphismePage() {
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
             Déclinaisons d’illustrations numériques pour des projets éditoriaux.
           </p>
-          <Grid items={[...mascotteIcons, ...illustrationSeries]} shape="square" />
+          <Grid items={[...mascotteIcons, ...illustrationSeries]} shape="square" contain />
 
           <SubTitle>Musiciens</SubTitle>
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
@@ -243,7 +246,16 @@ export default function GraphismePage() {
           <Grid items={illustrationsDiverses} shape="square" />
         </Part>
 
-        <Part id="clients" title="Clients & éditeurs" muted>
+        <Part
+          id="illustration-scientifique"
+          title="Illustration scientifique"
+          lead="Schémas et planches pour des ouvrages médicaux : hématologie, immunologie, anatomie. Des dessins précis et lisibles, pensés pour accompagner l’apprentissage."
+          muted
+        >
+          <Grid items={illustrationScientifique} shape="square" contain />
+        </Part>
+
+        <Part id="clients" title="Clients & éditeurs">
           <div className="flex flex-wrap gap-3">
             {clients.map((client) => (
               <span key={client} className="theme-chip rounded px-4 py-2 text-sm">

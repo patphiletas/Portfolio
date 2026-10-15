@@ -120,6 +120,14 @@ export const mascotteIcons: GraphismeImage[] = [
   { id: "ser_17", caption: "", width: 761, height: 365 },
   { id: "ser_18", caption: "", width: 650, height: 411 },
   { id: "ser_19", caption: "", width: 682, height: 432 },
+  { id: "ser_4_attention", caption: "", width: 288, height: 288 },
+  { id: "ser_4_indication", caption: "", width: 288, height: 288 },
+  { id: "ser_4_interdit", caption: "", width: 288, height: 288 },
+  { id: "ser_4_synthese", caption: "", width: 360, height: 360 },
+  { id: "ser_6_attention", caption: "", width: 288, height: 288 },
+  { id: "ser_6_indication", caption: "", width: 288, height: 288 },
+  { id: "ser_6_interdit", caption: "", width: 288, height: 288 },
+  { id: "ser_6_synthese", caption: "", width: 288, height: 288 },
 ];
 
 export const musiciens: GraphismeImage[] = [
@@ -143,3 +151,25 @@ export const illustrationsDiverses: GraphismeImage[] = [
   { id: "div_10", caption: "", width: 1255, height: 1011 },
 ];
 
+export const illustrationScientifique: GraphismeImage[] = [
+  { id: "sci_01", caption: "Structure d’une immunoglobuline", width: 1600, height: 1320 },
+  { id: "sci_02", caption: "Clivage d’un anticorps par la papaïne", width: 1303, height: 1600 },
+  { id: "sci_03", caption: "Hématopoïèse — lignées cellulaires", width: 1600, height: 1169 },
+  { id: "sci_04", caption: "Planche — cellules sanguines et immunitaires", width: 1600, height: 786 },
+  { id: "sci_05", caption: "Morphologie du plasmocyte", width: 973, height: 1255 },
+  { id: "sci_06", caption: "Schéma cellulaire", width: 1600, height: 823 },
+  { id: "sci_07", caption: "Les phases de la mitose", width: 1192, height: 1600 },
+  { id: "sci_08", caption: "Translocation chromosomique", width: 1507, height: 1356 },
+  { id: "sci_09", caption: "Tube d’hématocrite après centrifugation", width: 1587, height: 1600 },
+  { id: "sci_10", caption: "Hématocrite — normal et pathologique", width: 1600, height: 1169 },
+  { id: "sci_11", caption: "Rate — structure", width: 1555, height: 1600 },
+  { id: "sci_12", caption: "Ganglion lymphatique", width: 1435, height: 1600 },
+  { id: "sci_13", caption: "Foie — vascularisation", width: 1600, height: 1148 },
+  { id: "sci_14", caption: "Formes de début et d’extension lymphatique", width: 1600, height: 1000 },
+  { id: "sci_15", caption: "Médiastin", width: 876, height: 798 },
+  { id: "sci_16", caption: "Cerveau — coupe sagittale", width: 1600, height: 1310 },
+  { id: "sci_17", caption: "Cerveau — coupe horizontale", width: 1600, height: 1443 },
+  { id: "sci_18", caption: "Cerveau — face inférieure", width: 1138, height: 1242 },
+  { id: "sci_19", caption: "Vertèbre et moelle épinière", width: 1561, height: 1600 },
+  { id: "sci_20", caption: "Fibre musculaire", width: 801, height: 867 },
+];
