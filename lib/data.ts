@@ -9,12 +9,6 @@ export type Project = {
   image: string;
 };
 
-export type GraphismeItem = {
-  title: string;
-  description: string;
-  image: string;
-};
-
 export type SkillItem = { name: string; featured?: true };
 
 export type Skill = {
@@ -110,27 +104,6 @@ export const projects: Project[] = [
   //   readmeUrl: "https://github.com/patphiletas/quiz-project#readme",
   //   image: "/images/quiz.png",
   // },
-];
-
-export const graphismeItems: GraphismeItem[] = [
-  {
-    title: "Maquette de livres",
-    description:
-      "Direction artistique et maquette de couvertures et intérieurs pour des maisons d'édition (Groupe Grego, Éditions jésuites, Éditions La Martinière, VG Éditions). Plus de 700 ouvrages publiés.",
-    image: "/images/graphisme-livres.png",
-  },
-  {
-    title: "Communication print",
-    description:
-      "Catalogues, mailings, affiches, flyers, kakémonos, identités visuelles. Suivi de fabrication complet : choix prestataires, imposition, prépresse.",
-    image: "/images/graphisme-logos.png",
-  },
-  {
-    title: "Illustration",
-    description:
-      "Séries d'illustrations numériques et conventionnelles pour des projets éditoriaux : guides de voyage, livrets d'accueil, mascotte de collections médicales.",
-    image: "/images/graphisme-illustration.jpg",
-  },
 ];
 
 export const skills: Skill[] = [
