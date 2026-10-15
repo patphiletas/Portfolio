@@ -33,7 +33,7 @@ export const general: GraphismeImage[] = [
   { id: "c_musulmane", caption: "Musulmane, disciple du Christ", width: 404, height: 640, link: "https://www.calameo.com/read/006730137c506b192a13a" },
   { id: "c_politique", caption: "Politique et écologie", width: 453, height: 640 },
   { id: "c_portraits", caption: "15 portraits philosophiques du Christ", width: 990, height: 1400 },
-  { id: "c_pascote", caption: "Un pas de côté", width: 884, height: 1400, link: "https://www.calameo.com/read/0067301378c221a790ced" },
+  { id: "c_pascote", caption: "Un pas de côté", width: 945, height: 1496, link: "https://www.calameo.com/read/0067301378c221a790ced" },
   { id: "c_choisir", caption: "Choisissez bien votre psy", width: 391, height: 640 },
   { id: "c_ecologie", caption: "Guide pratique de l’écologie intégrale", width: 404, height: 640, link: "https://www.calameo.com/read/006730137e0cda3411a3b" },
   { id: "c_kobik", caption: "Ignace de Loyola, le pèlerinage intérieur", width: 421, height: 640, link: "https://www.calameo.com/read/00673013785915b69059c" },
@@ -109,25 +109,71 @@ export const illustration: GraphismeImage[] = [
   { id: "i_church", caption: "", width: 619, height: 640 },
 ];
 
-export const illustrationSeries: GraphismeImage[] = [
-  { id: "ser_1", caption: "", width: 680, height: 728 },
-  { id: "ser_2", caption: "", width: 682, height: 810 },
-  { id: "ser_3", caption: "", width: 707, height: 832 },
-];
 
-export const mascotteIcons: GraphismeImage[] = [
-  { id: "ser_16", caption: "", width: 613, height: 387 },
-  { id: "ser_17", caption: "", width: 761, height: 365 },
-  { id: "ser_18", caption: "", width: 650, height: 411 },
-  { id: "ser_19", caption: "", width: 682, height: 432 },
-  { id: "ser_4_attention", caption: "", width: 288, height: 288 },
-  { id: "ser_4_indication", caption: "", width: 288, height: 288 },
-  { id: "ser_4_interdit", caption: "", width: 288, height: 288 },
-  { id: "ser_4_synthese", caption: "", width: 360, height: 360 },
-  { id: "ser_6_attention", caption: "", width: 288, height: 288 },
-  { id: "ser_6_indication", caption: "", width: 288, height: 288 },
-  { id: "ser_6_interdit", caption: "", width: 288, height: 288 },
-  { id: "ser_6_synthese", caption: "", width: 288, height: 288 },
+export type IllustrationSeries = { title: string; items: GraphismeImage[] };
+
+export const illustrationSeries: IllustrationSeries[] = [
+  {
+    title: "Pictogrammes de collection",
+    items: [
+      { id: "ser_16", caption: "", width: 613, height: 387 },
+      { id: "ser_17", caption: "", width: 761, height: 365 },
+      { id: "ser_18", caption: "", width: 650, height: 411 },
+      { id: "ser_19", caption: "", width: 682, height: 432 },
+    ],
+  },
+  {
+    title: "Spécialités médicales",
+    items: [
+      { id: "ser_bebe_cardio", caption: "", width: 1013, height: 1600 },
+      { id: "ser_bebe_gyneco", caption: "", width: 1328, height: 1600 },
+      { id: "ser_bebe_neuro", caption: "", width: 1467, height: 1600 },
+      { id: "ser_bebe_psy", caption: "", width: 1524, height: 1600 },
+    ],
+  },
+  {
+    title: "L’étudiant en médecine",
+    items: [
+      { id: "ser_2", caption: "", width: 682, height: 810 },
+      { id: "ser_etu_mm", caption: "", width: 1600, height: 1519 },
+      { id: "ser_etu_od", caption: "", width: 1553, height: 1600 },
+      { id: "ser_etu_noms", caption: "", width: 1032, height: 1060 },
+      { id: "ser_etu_amie", caption: "", width: 1181, height: 997 },
+    ],
+  },
+  {
+    title: "Pictogrammes de rubriques",
+    items: [
+      { id: "ser_rond_epidemio", caption: "", width: 1600, height: 1294 },
+      { id: "ser_rond_micro", caption: "", width: 1548, height: 1502 },
+      { id: "ser_rond_mots", caption: "", width: 1600, height: 1406 },
+    ],
+  },
+  {
+    title: "SESSD APF — enfants en situation de handicap",
+    items: [
+      { id: "ser_3", caption: "", width: 707, height: 832 },
+      { id: "ser_sessd_fauteuil", caption: "", width: 768, height: 750 },
+      { id: "ser_sessd_bequille", caption: "", width: 1175, height: 1600 },
+      { id: "ser_sessd_velo", caption: "", width: 1064, height: 1168 },
+      { id: "ser_sessd_sport", caption: "", width: 924, height: 838 },
+      { id: "ser_sessd_ecole", caption: "", width: 724, height: 821 },
+      { id: "ser_sessd_deambulateur", caption: "", width: 642, height: 656 },
+      { id: "ser_sessd_lunettes", caption: "", width: 454, height: 630 },
+      { id: "ser_sessd_therapeute", caption: "", width: 609, height: 698 },
+      { id: "ser_sessd_garcon", caption: "", width: 1056, height: 1600 },
+    ],
+  },
+  {
+    title: "La coccinelle",
+    items: [
+      { id: "ser_cox_02", caption: "", width: 1395, height: 1600 },
+      { id: "ser_cox_03", caption: "", width: 1395, height: 1600 },
+      { id: "ser_cox_04", caption: "", width: 1432, height: 1600 },
+      { id: "ser_cox_dos", caption: "", width: 1393, height: 1600 },
+      { id: "ser_cox_loupe", caption: "", width: 1574, height: 1600 },
+    ],
+  },
 ];
 
 export const musiciens: GraphismeImage[] = [

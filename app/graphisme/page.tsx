@@ -12,7 +12,6 @@ import {
   illustrationScientifique,
   illustrationSeries,
   illustrationsDiverses,
-  mascotteIcons,
   mockups,
   musiciens,
   plv,
@@ -231,7 +230,12 @@ export default function GraphismePage() {
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
             Déclinaisons d’illustrations numériques pour des projets éditoriaux.
           </p>
-          <Grid items={[...mascotteIcons, ...illustrationSeries]} shape="square" contain />
+          {illustrationSeries.map((series) => (
+            <div key={series.title} className="mb-8">
+              <h4 className="theme-text mb-3 text-sm font-semibold">{series.title}</h4>
+              <Grid items={series.items} shape="square" contain />
+            </div>
+          ))}
 
           <SubTitle>Musiciens</SubTitle>
           <p className="theme-text-muted max-w-2xl leading-relaxed mb-4 -mt-2">
