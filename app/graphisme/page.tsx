@@ -375,7 +375,7 @@ export default function GraphismePage() {
           title="Contact"
           lead="Disponible immédiatement, en CDI, CDD ou en freelance (affilié Maison des Artistes). Mobile en Île-de-France."
         >
-          <p className="theme-text mb-2 font-semibold">Patrice Philétas · Montereau-Fault-Yonne (77)</p>
+          <p className="theme-text mb-2 font-semibold">Patrice Philétas</p>
           <p className="theme-text-muted space-x-3">
             <a className="theme-link" href="mailto:patrice.philetas@gmail.com">
               patrice.philetas@gmail.com
