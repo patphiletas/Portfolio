@@ -43,7 +43,7 @@ Ce portfolio présente mon parcours de reconversion vers le développement web f
 | Accueil | Nom, accroche, autoportrait dessiné, boutons « Voir les projets » et CV, sommaire façon livre |
 | Projets web | Présentés comme un sommaire de revue : entrées numérotées séparées par un filet, image 16:10 sans cadre en alternance gauche/droite, technologies en petites capitales, liens soulignés « Voir le site ↗ · Code source ↗ · README ↗ » (plus de cartes, boutons ni pastilles) |
 | Démos vidéo | Courte démo muette en boucle (WebM, 8 à 11 s, 400 à 730 Ko) pour chacun des quatre projets : lecture au survol sur ordinateur, quand la carte est visible sur mobile, image fixe si « réduire les animations » est activé ; vidéo téléchargée seulement à la lecture |
-| Graphisme | Sélection de travaux éditoriaux, illustration et communication print |
+| Graphisme | Page `/graphisme` : sommaire illustré numéroté des six domaines, images sans cadre avec légendes discrètes (visionneuse au clic), clients en liste typographique ; même langage éditorial que l'accueil (pas de cartes ni de pastilles) |
 | Parcours | Présentation de la reconversion, de la formation Ada Tech School et de l'expérience professionnelle |
 | Compétences | Regroupées en quatre colonnes : front-end, back-end, outils & IA, graphisme |
 | Contact | Liens directs vers email, téléphone, GitHub, LinkedIn, CV et portfolio PDF |

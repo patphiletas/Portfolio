@@ -166,13 +166,14 @@ export function Figure({ item, sizes, shape = "portrait", contain = false, class
   useEffect(() => register?.(item), [register, item]);
 
   return (
-    <figure className={`theme-surface theme-card-border flex flex-col overflow-hidden rounded-lg ${className}`}>
+    // Image nue (pas de cadre ni de coins arrondis), légende discrète façon livre d'art
+    <figure className={`group flex flex-col ${className}`}>
       <button
         type="button"
         onClick={() => lightbox?.open(item)}
         data-lightbox-id={item.id}
         aria-label={`Agrandir : ${label}`}
-        className={`relative block w-full cursor-zoom-in bg-white ${FRAMES[shape]}`}
+        className={`relative block w-full cursor-zoom-in overflow-hidden bg-white ${FRAMES[shape]}`}
         style={shape === "natural" ? { aspectRatio: `${item.width} / ${item.height}` } : undefined}
       >
         <Image
@@ -180,11 +181,11 @@ export function Figure({ item, sizes, shape = "portrait", contain = false, class
           alt={label}
           fill
           sizes={sizes}
-          className={contain ? "object-contain p-2" : shape === "square" ? "object-cover" : "object-cover object-top"}
+          className={`${contain ? "object-contain p-2" : shape === "square" ? "object-cover" : "object-cover object-top"} transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]`}
         />
       </button>
       {item.caption && (
-        <figcaption className="theme-text-muted line-clamp-2 px-3 py-2 text-[13px] leading-snug">
+        <figcaption className="theme-text-muted line-clamp-2 pt-2 text-[12px] leading-snug">
           {item.caption}
         </figcaption>
       )}
@@ -193,7 +194,7 @@ export function Figure({ item, sizes, shape = "portrait", contain = false, class
           href={item.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="theme-link mt-auto block border-t theme-border-subtle px-3 py-1.5 text-[11px] uppercase tracking-widest transition-colors hover:opacity-80"
+          className="theme-text mt-1 text-[12px] underline underline-offset-4 decoration-1 transition-opacity hover:opacity-70"
         >
           Aperçu en ligne ↗
         </a>

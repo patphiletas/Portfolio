@@ -27,7 +27,7 @@ export function ShowMore({ height, children }: { height: string; children: React
           type="button"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
-          className="theme-chip rounded px-4 py-2 text-sm"
+          className="theme-text text-sm underline underline-offset-4 decoration-1 transition-opacity hover:opacity-70"
         >
           {open ? "Voir moins ↑" : "Voir plus ↓"}
         </button>

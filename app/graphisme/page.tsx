@@ -215,29 +215,31 @@ export default function GraphismePage() {
         </section>
 
         <Part id="chaine" title="Vue d’ensemble" lead="Six domaines complémentaires, du crayon au fichier imprimeur." muted>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
-            {OVERVIEW.map((section) => (
-              <a
-                key={section.id}
-                href={`#${section.id}`}
-                className="theme-surface theme-card-border group overflow-hidden rounded-lg"
-              >
-                <div className="relative aspect-[16/9] bg-white">
-                  <Image
-                    src={section.image}
-                    alt={section.title}
-                    fill
-                    sizes="(min-width: 768px) 33vw, 50vw"
-                    className={`object-cover ${section.position ?? ""} transition-transform duration-300 group-hover:scale-105`}
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="theme-text font-semibold">{section.title} →</h3>
-                  <p className="theme-text-muted mt-1 text-sm leading-relaxed">{section.description}</p>
-                </div>
-              </a>
+          {/* Sommaire illustré : image nue, numéro, titre serif, une ligne de description */}
+          <ol className="grid list-none grid-cols-1 gap-x-8 gap-y-12 p-0 sm:grid-cols-2 md:grid-cols-3">
+            {OVERVIEW.map((section, index) => (
+              <li key={section.id}>
+                <a href={`#${section.id}`} className="group block">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-white">
+                    <Image
+                      src={section.image}
+                      alt=""
+                      fill
+                      sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className={`object-cover ${section.position ?? ""} transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]`}
+                    />
+                  </div>
+                  <p className="mt-4 flex items-baseline gap-3">
+                    <span className="font-serif theme-text-muted text-sm">{String(index + 1).padStart(2, "0")}</span>
+                    <span className="font-serif theme-text text-2xl group-hover:opacity-70 transition-opacity">
+                      {section.title}
+                    </span>
+                  </p>
+                  <p className="theme-text-muted mt-2 text-sm leading-relaxed">{section.description}</p>
+                </a>
+              </li>
             ))}
-          </div>
+          </ol>
         </Part>
 
         <Part
@@ -272,13 +274,9 @@ export default function GraphismePage() {
                 <li>Éditions jésuites</li>
                 <li>Format fermé A4, 25 petites fenêtres</li>
               </ul>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["Mise en page", "Suivi de fabrication"].map((tag) => (
-                  <span key={tag} className="theme-chip rounded px-3 py-1 text-sm">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+              <p className="theme-text-muted mt-4 text-[11px] uppercase tracking-[0.15em]">
+                Mise en page · Suivi de fabrication
+              </p>
             </div>
           </div>
           <SubTitle>Autres supports</SubTitle>
@@ -370,13 +368,14 @@ export default function GraphismePage() {
         </Part>
 
         <Part id="clients" title="Clients & éditeurs" muted>
-          <div className="flex flex-wrap gap-3">
-            {clients.map((client) => (
-              <span key={client} className="theme-chip rounded px-4 py-2 text-sm">
-                {client}
+          <p className="font-serif theme-text max-w-4xl text-xl leading-relaxed md:text-2xl">
+            {clients.map((client, index) => (
+              <span key={client}>
+                <span className="whitespace-nowrap">{client}</span>
+                {index < clients.length - 1 && <span className="theme-text-muted"> · </span>}
               </span>
             ))}
-          </div>
+          </p>
         </Part>
 
         <Part
