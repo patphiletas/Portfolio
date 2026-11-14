@@ -32,6 +32,15 @@ export const metadata: Metadata = {
   title: "Portfolio graphisme — Patrice Philétas",
   description:
     "20 ans de graphisme éditorial, PAO, prépresse et fabrication. Plus de 700 ouvrages : couvertures, maquettes, supports de communication, PLV, illustration.",
+  openGraph: {
+    title: "Portfolio graphisme — Patrice Philétas",
+    description:
+      "20 ans de graphisme éditorial, PAO, prépresse et fabrication. Plus de 700 ouvrages.",
+    url: "/graphisme",
+    siteName: "Patrice Philétas",
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 const catalogueHighlights = catalogues.filter((item) => item.id === "k_cat1" || item.id === "k_cat2");

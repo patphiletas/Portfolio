@@ -32,7 +32,7 @@
 
 <br/>
 
-Ce portfolio présente mon parcours de reconversion vers le développement web full stack après près de 20 ans dans le graphisme éditorial. Il rassemble mes projets web, mes compétences techniques, mon expérience en direction artistique et les liens de contact pour une recherche d'alternance à partir de septembre 2026.
+Ce portfolio présente mon parcours de reconversion vers le développement web full stack après près de 20 ans dans le graphisme éditorial. Il rassemble mes projets web, mes compétences techniques, mon expérience en direction artistique et les liens de contact pour une recherche d'alternance dès que possible (prochaine rentrée : janvier 2027).
 
 ---
 

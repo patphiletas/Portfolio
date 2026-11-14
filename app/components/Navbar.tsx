@@ -33,11 +33,11 @@ export default function Navbar() {
     <header className="theme-surface theme-divider-bottom fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
       <div className="theme-border-subtle border-b">
         <div className="max-w-6xl mx-auto px-6 py-1.5 flex items-center justify-between gap-4 text-[10px] sm:text-[11px] uppercase tracking-[0.15em]">
-          <span className="theme-text-muted hidden sm:inline">Portfolio — Développeur & Graphiste</span>
-          <span className="font-medium" style={{ color: "var(--theme-accent)" }}>
+          <span className="theme-text-muted hidden lg:inline">Portfolio — Développeur & Graphiste</span>
+          <span className="font-medium ml-auto text-right" style={{ color: "var(--theme-accent)" }}>
             {isGraphisme
               ? "Disponible immédiatement — CDI, CDD, freelance"
-              : "Disponible — Alternance 4J/1J — Septembre 2026"}
+              : "Disponible dès maintenant — Alternance 4J/1J — Rentrée janvier 2027"}
           </span>
         </div>
       </div>
@@ -48,7 +48,7 @@ export default function Navbar() {
         </Link>
 
         <div className="flex items-center gap-6">
-          <ul className="hidden md:flex items-center gap-7 text-xs uppercase tracking-[0.12em]">
+          <ul className={`hidden ${isGraphisme ? "xl:flex gap-7" : "md:flex gap-7"} items-center text-xs uppercase tracking-[0.12em]`}>
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -74,9 +74,10 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <button
-              className="theme-text md:hidden flex flex-col gap-1.5"
+              className={`theme-text ${isGraphisme ? "xl:hidden" : "md:hidden"} flex flex-col gap-1.5`}
               onClick={() => setMenuOpen(!menuOpen)}
-              aria-label="Toggle menu"
+              aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+              aria-expanded={menuOpen}
             >
               <svg
                 width="24"
@@ -117,7 +118,7 @@ export default function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="theme-surface md:hidden theme-divider-top px-6 pb-6">
+        <div className={`theme-surface ${isGraphisme ? "xl:hidden" : "md:hidden"} theme-divider-top px-6 pb-6`}>
           <ul className="flex flex-col gap-4 text-xs uppercase tracking-[0.12em]">
             {navLinks.map((link) => (
               <li key={link.href}>

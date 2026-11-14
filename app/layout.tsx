@@ -17,9 +17,20 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfoliopatphiletas.vercel.app"),
   title: "Patrice Philétas — Développeur Full Stack",
   description:
     "Portfolio de Patrice Philétas, développeur Full Stack en formation (Ada Tech School) et graphiste avec 20 ans d'expérience éditoriale.",
+  openGraph: {
+    title: "Patrice Philétas — Développeur Full Stack",
+    description:
+      "Développeur full stack en alternance (Ada Tech School), 20 ans de graphisme éditorial. Disponible dès maintenant.",
+    url: "/",
+    siteName: "Patrice Philétas",
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({

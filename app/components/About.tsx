@@ -12,7 +12,7 @@ export default function About() {
             <h3 className="theme-text font-semibold text-lg mb-4">Reconversion</h3>
             <div className="theme-text-muted space-y-5 leading-relaxed">
               <p>
-                Après plus de 15 ans comme graphiste-maquettiste et chargé de fabrication
+                Après près de 20 ans comme graphiste-maquettiste et chargé de fabrication
                 éditoriale, j&apos;ai choisi de me reconvertir vers le développement web full stack.
               </p>
               <p>
@@ -32,9 +32,9 @@ export default function About() {
               <p>
                 Je recherche une{" "}
                 <span className="theme-text font-medium">
-                  alternance de 12 mois minimum à partir de septembre 2026
+                  alternance de 12 mois minimum, dès que possible
                 </span>{" "}
-                (4j/1j en professionnalisation).
+                (4j/1j en professionnalisation, prochaine rentrée en janvier 2027).
               </p>
             </div>
 

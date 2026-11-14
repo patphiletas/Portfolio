@@ -21,7 +21,7 @@ export const projects: Project[] = [
     id: "alternative",
     title: "AlterNative",
     description:
-      "Après 19 ans dans l'édition, j'ai codé la maison d'édition que j'aurais voulu avoir. Un auteur dépose son EPUB : titre, auteur, chapitres et couverture sont extraits automatiquement. L'éditeur relit, corrige et publie, et l'auteur est prévenu par e-mail. Les lecteurs notent et commentent. Projet solo, full stack : authentification, rôles, validation, rate limiting, tests et CI.",
+      "Après 20 ans dans l'édition, j'ai codé la maison d'édition que j'aurais voulu avoir. Un auteur dépose son EPUB : titre, auteur, chapitres et couverture sont extraits automatiquement. L'éditeur relit, corrige et publie, et l'auteur est prévenu par e-mail. Les lecteurs notent et commentent. Projet solo, full stack : authentification, rôles, validation, rate limiting, tests et CI.",
     stack: ["Next.js", "TypeScript", "PostgreSQL", "Drizzle", "Better Auth", "Vitest"],
     liveUrl: "https://demo-day-wine.vercel.app/",
     githubUrl: "https://github.com/patphiletas/DemoDay",
