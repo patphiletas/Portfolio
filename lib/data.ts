@@ -7,6 +7,8 @@ export type Project = {
   githubUrl: string;
   readmeUrl?: string;
   image: string;
+  /** Démo muette en boucle (WebM) dans public/videos/, jouée au survol de la carte. */
+  video?: string;
 };
 
 export type SkillItem = { name: string; featured?: true };
@@ -70,6 +72,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/patphiletas/adataviz-patphiletas",
     readmeUrl: "https://github.com/patphiletas/adataviz-patphiletas#readme",
     image: "/images/adataviz.jpg",
+    video: "/videos/on-sort.webm",
   },
   // {
   //   id: "skills",

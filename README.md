@@ -42,6 +42,7 @@ Ce portfolio présente mon parcours de reconversion vers le développement web f
 |---|---|
 | Accueil | Nom, accroche, autoportrait dessiné, boutons « Voir les projets » et CV, sommaire façon livre |
 | Projets web | Cartes détaillées avec description, stack, démo, GitHub et README ; captures 16:10 nettes de chaque site |
+| Démos vidéo | Courte démo muette en boucle (WebM) sur la carte « On sort ? » : lecture au survol sur ordinateur, quand la carte est visible sur mobile, image fixe si « réduire les animations » est activé ; vidéo téléchargée seulement à la lecture |
 | Graphisme | Sélection de travaux éditoriaux, illustration et communication print |
 | Parcours | Présentation de la reconversion, de la formation Ada Tech School et de l'expérience professionnelle |
 | Compétences | Regroupées en quatre colonnes : front-end, back-end, outils & IA, graphisme |
@@ -69,7 +70,7 @@ Ce portfolio présente mon parcours de reconversion vers le développement web f
 ```txt
 portfolio-patphiletas/
 ├── app/
-│   ├── components/      # Cover (sommaire), Chapter, About, Projects, Graphisme, Contact, Navbar
+│   ├── components/      # Cover (sommaire), Chapter, About, Projects, ProjectMedia (vignette + démo vidéo), Graphisme, Contact, Navbar
 │   ├── context/         # ThemeContext
 │   ├── globals.css      # Thèmes, variables CSS et styles globaux
 │   ├── layout.tsx       # Layout racine
@@ -78,8 +79,11 @@ portfolio-patphiletas/
 │   └── data.ts          # Projets, items graphisme, compétences et clients
 ├── public/
 │   ├── images/          # Captures projets, portrait et visuels graphisme
+│   ├── videos/          # Démos WebM des projets (on-sort.webm)
 │   ├── cv-patrice-philetas.pdf
 │   └── portfolio-graphisme.pdf
+├── scripts/
+│   └── capturer-demo-on-sort.mjs  # Filme la démo de « On sort ? » (Chrome headless → WebM)
 └── package.json
 ```
 
@@ -124,6 +128,7 @@ http://localhost:3000
 |---|---|
 | Projets web | `lib/data.ts` (texte) et `public/images/<projet>.jpg` (captures 1600×1000) |
 | Accueil | `app/components/Cover.tsx` |
+| Démos vidéo | `public/videos/*.webm`, champ `video` du projet dans `lib/data.ts` ; refaire avec `node scripts/capturer-demo-on-sort.mjs` |
 | Travaux graphisme | `lib/data.ts` et `public/images/` |
 | CV | `public/cv-patrice-philetas.pdf` |
 | Portfolio graphisme | `public/portfolio-graphisme.pdf` |

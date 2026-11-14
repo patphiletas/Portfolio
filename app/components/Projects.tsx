@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import ProjectMedia from "./ProjectMedia";
 import { projects } from "@/lib/data";
 import Chapter from "./Chapter";
 
@@ -12,15 +12,11 @@ export default function Projects() {
         {/* Featured project */}
         <article className="theme-surface-muted theme-card-border flex flex-col md:flex-row rounded-lg overflow-hidden mb-8 hover:opacity-95 transition-colors">
           <div className="relative h-56 md:h-auto md:w-2/5 bg-gray-800 shrink-0">
-            <Image
-              src={featured.image}
+            <ProjectMedia
+              image={featured.image}
               alt={featured.title}
-              fill
+              video={featured.video}
               sizes="(min-width: 768px) 40vw, 100vw"
-              className="object-cover object-top"
-              onError={(e) => {
-                (e.target as HTMLImageElement).style.display = "none";
-              }}
             />
           </div>
           <div className="flex flex-1 flex-col p-6">
@@ -79,15 +75,11 @@ export default function Projects() {
               className="theme-surface-muted theme-card-border flex h-full flex-col rounded-lg overflow-hidden hover:opacity-95 transition-colors"
             >
               <div className="relative aspect-[16/10] bg-gray-800 overflow-hidden">
-                <Image
-                  src={project.image}
+                <ProjectMedia
+                  image={project.image}
                   alt={project.title}
-                  fill
+                  video={project.video}
                   sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                  className="object-cover object-top"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
-                  }}
                 />
               </div>
               <div className="flex flex-1 flex-col p-5">
