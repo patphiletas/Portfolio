@@ -41,8 +41,8 @@ Ce portfolio présente mon parcours de reconversion vers le développement web f
 | Fonctionnalité | Description |
 |---|---|
 | Accueil | Nom, accroche, autoportrait dessiné, boutons « Voir les projets » et CV, sommaire façon livre |
-| Projets web | Cartes détaillées avec description, stack, démo, GitHub et README ; captures 16:10 nettes de chaque site |
-| Démos vidéo | Courte démo muette en boucle (WebM) sur la carte « On sort ? » : lecture au survol sur ordinateur, quand la carte est visible sur mobile, image fixe si « réduire les animations » est activé ; vidéo téléchargée seulement à la lecture |
+| Projets web | Présentés comme un sommaire de revue : entrées numérotées séparées par un filet, image 16:10 sans cadre en alternance gauche/droite, technologies en petites capitales, liens soulignés « Voir le site ↗ · Code source ↗ · README ↗ » (plus de cartes, boutons ni pastilles) |
+| Démos vidéo | Courte démo muette en boucle (WebM, 8 à 11 s, 400 à 730 Ko) pour chacun des quatre projets : lecture au survol sur ordinateur, quand la carte est visible sur mobile, image fixe si « réduire les animations » est activé ; vidéo téléchargée seulement à la lecture |
 | Graphisme | Sélection de travaux éditoriaux, illustration et communication print |
 | Parcours | Présentation de la reconversion, de la formation Ada Tech School et de l'expérience professionnelle |
 | Compétences | Regroupées en quatre colonnes : front-end, back-end, outils & IA, graphisme |
@@ -79,11 +79,11 @@ portfolio-patphiletas/
 │   └── data.ts          # Projets, items graphisme, compétences et clients
 ├── public/
 │   ├── images/          # Captures projets, portrait et visuels graphisme
-│   ├── videos/          # Démos WebM des projets (on-sort.webm)
+│   ├── videos/          # Démos WebM des projets (alternative, kpratik, real-book, on-sort)
 │   ├── cv-patrice-philetas.pdf
 │   └── portfolio-graphisme.pdf
 ├── scripts/
-│   └── capturer-demo-on-sort.mjs  # Filme la démo de « On sort ? » (Chrome headless → WebM)
+│   └── capturer-demo.mjs  # Filme la démo d'un projet (Chrome headless → WebM), un scénario par projet
 └── package.json
 ```
 
@@ -128,7 +128,7 @@ http://localhost:3000
 |---|---|
 | Projets web | `lib/data.ts` (texte) et `public/images/<projet>.jpg` (captures 1600×1000) |
 | Accueil | `app/components/Cover.tsx` |
-| Démos vidéo | `public/videos/*.webm`, champ `video` du projet dans `lib/data.ts` ; refaire avec `node scripts/capturer-demo-on-sort.mjs` |
+| Démos vidéo | `public/videos/*.webm`, champ `video` du projet dans `lib/data.ts` ; refaire avec `node scripts/capturer-demo.mjs <projet|tous>` |
 | Travaux graphisme | `lib/data.ts` et `public/images/` |
 | CV | `public/cv-patrice-philetas.pdf` |
 | Portfolio graphisme | `public/portfolio-graphisme.pdf` |

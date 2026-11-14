@@ -29,6 +29,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/patphiletas/DemoDay",
     readmeUrl: "https://github.com/patphiletas/DemoDay#readme",
     image: "/images/demoday.jpg",
+    video: "/videos/alternative.webm",
   },
   {
     id: "kpratik",
@@ -40,17 +41,19 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/patphiletas/kpratik",
     readmeUrl: "https://github.com/patphiletas/kpratik#readme",
     image: "/images/kpratik.jpg",
+    video: "/videos/kpratik.webm",
   },
   {
     id: "real-book",
     title: "My Real Book",
     description:
-      "Le Real Book, la bible des musiciens de jazz, en version web : on cherche un standard par titre, compositeur ou tonalité et la partition s'ouvre à côté de la liste. Une fiche IA (biographie, grille, anecdotes) est générée une fois puis gardée en base. Architecture Vite + Express migrée vers un seul projet Next.js.",
+      "Le Real Book, la bible des musiciens de jazz, en version web : on cherche un standard par titre, compositeur ou tonalité, la partition s'ouvre à côté de la liste et chaque morceau a son lien. Favoris, récents, et un mode scène qui inverse la partition pour jouer dans la pénombre. Une fiche IA (grille, anecdotes) est générée une fois puis gardée en base. 62 tests, CI.",
     stack: ["Next.js", "TypeScript", "PostgreSQL", "Cloudinary", "OpenAI"],
     liveUrl: "https://real-book-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/AdaRealBook",
     readmeUrl: "https://github.com/patphiletas/AdaRealBook#readme",
     image: "/images/real-book.jpg",
+    video: "/videos/real-book.webm",
   },
   // {
   //   id: "adaverse",
@@ -71,7 +74,7 @@ export const projects: Project[] = [
     liveUrl: "https://adataviz-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/adataviz-patphiletas",
     readmeUrl: "https://github.com/patphiletas/adataviz-patphiletas#readme",
-    image: "/images/adataviz.jpg",
+    image: "/images/on-sort.jpg",
     video: "/videos/on-sort.webm",
   },
   // {

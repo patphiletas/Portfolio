@@ -4,130 +4,87 @@ import ProjectMedia from "./ProjectMedia";
 import { projects } from "@/lib/data";
 import Chapter from "./Chapter";
 
+// Projets présentés comme un sommaire de revue : entrées numérotées séparées
+// par un filet, image nue en alternance gauche/droite, technologies en petites
+// capitales, liens soulignés. Pas de cadres, de boutons ni de pastilles.
 export default function Projects() {
-  const [featured, ...rest] = projects;
-
   return (
     <Chapter id="projets" title="Projets" kicker="Développement web">
-        {/* Featured project */}
-        <article className="theme-surface-muted theme-card-border flex flex-col md:flex-row rounded-lg overflow-hidden mb-8 hover:opacity-95 transition-colors">
-          <div className="relative h-56 md:h-auto md:w-2/5 bg-gray-800 shrink-0">
-            <ProjectMedia
-              image={featured.image}
-              alt={featured.title}
-              video={featured.video}
-              sizes="(min-width: 768px) 40vw, 100vw"
-            />
-          </div>
-          <div className="flex flex-1 flex-col p-6">
-            <div className="flex items-center gap-3 mb-3">
-              <h3 className="theme-text font-bold text-xl">{featured.title}</h3>
-              <span className="text-xs px-2 py-0.5 rounded theme-chip-featured">
-                Projet phare
-              </span>
-            </div>
-            <p className="theme-text-muted text-sm mb-4 leading-relaxed">
-              {featured.description}
-            </p>
-            <div className="flex flex-wrap gap-1.5 mb-5">
-              {featured.stack.map((tech) => (
-                <span key={tech} className="theme-chip text-xs px-2 py-0.5 rounded border">
-                  {tech}
-                </span>
-              ))}
-            </div>
-            {featured.readmeUrl && (
-              <a
-                href={featured.readmeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="theme-link mb-4 text-xs underline underline-offset-2 hover:opacity-80 transition-colors"
-              >
-                Voir le README
-              </a>
-            )}
-            <div className="mt-auto flex gap-3">
-              <a
-                href={featured.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="theme-button-primary flex-1 text-center text-xs py-2 font-semibold rounded hover:opacity-80 transition-colors"
-              >
-                Démo
-              </a>
-              <a
-                href={featured.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="theme-button-secondary flex-1 text-center text-xs py-2 border rounded hover:opacity-80 transition-colors"
-              >
-                GitHub
-              </a>
-            </div>
-          </div>
-        </article>
+      <ol className="list-none p-0 m-0">
+        {projects.map((project, index) => {
+          const numero = String(index + 1).padStart(2, "0");
+          const imageADroite = index % 2 === 1;
 
-        {/* Other projects */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {rest.map((project) => (
-            <article
-              key={project.id}
-              className="theme-surface-muted theme-card-border flex h-full flex-col rounded-lg overflow-hidden hover:opacity-95 transition-colors"
-            >
-              <div className="relative aspect-[16/10] bg-gray-800 overflow-hidden">
-                <ProjectMedia
-                  image={project.image}
-                  alt={project.title}
-                  video={project.video}
-                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                />
-              </div>
-              <div className="flex flex-1 flex-col p-5">
-                <h3 className="theme-text font-bold text-lg mb-2">
-                  {project.title}
-                </h3>
-                <p className="theme-text-muted text-sm mb-4 leading-relaxed">
-                  {project.description}
+          return (
+            <li key={project.id}>
+              <article className="group theme-border-subtle border-t pt-6 pb-14">
+                <p className="mb-6 flex items-baseline gap-4">
+                  <span className="font-serif theme-text-muted text-sm">{numero}</span>
+                  {index === 0 && (
+                    <span className="theme-link text-[11px] uppercase tracking-[0.15em]">Projet phare</span>
+                  )}
                 </p>
-                <div className="flex flex-wrap gap-1.5 mb-5">
-                  {project.stack.map((tech) => (
-                    <span key={tech} className="theme-chip text-xs px-2 py-0.5 rounded border">
-                      {tech}
-                    </span>
-                  ))}
+
+                <div className="grid grid-cols-1 items-start gap-8 md:grid-cols-12 md:gap-12">
+                  <div
+                    className={`relative aspect-[16/10] overflow-hidden md:col-span-7 ${
+                      imageADroite ? "md:order-2" : ""
+                    }`}
+                  >
+                    <ProjectMedia
+                      image={project.image}
+                      alt={`Capture du projet ${project.title}`}
+                      video={project.video}
+                      sizes="(min-width: 768px) 55vw, 100vw"
+                    />
+                  </div>
+
+                  <div className={`md:col-span-5 ${imageADroite ? "md:order-1" : ""}`}>
+                    <h3 className="font-serif theme-text text-3xl md:text-4xl leading-[1.05] mb-5">
+                      {project.title}
+                    </h3>
+
+                    <p className="theme-text-muted leading-relaxed mb-6">{project.description}</p>
+
+                    <p className="theme-text-muted text-[11px] uppercase tracking-[0.15em] leading-relaxed mb-6">
+                      {project.stack.join(" · ")}
+                    </p>
+
+                    <p className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="theme-text underline underline-offset-4 decoration-1 hover:opacity-70 transition-opacity"
+                      >
+                        Voir le site ↗
+                      </a>
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="theme-text underline underline-offset-4 decoration-1 hover:opacity-70 transition-opacity"
+                      >
+                        Code source ↗
+                      </a>
+                      {project.readmeUrl && (
+                        <a
+                          href={project.readmeUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="theme-text-muted underline underline-offset-4 decoration-1 hover:opacity-70 transition-opacity"
+                        >
+                          README ↗
+                        </a>
+                      )}
+                    </p>
+                  </div>
                 </div>
-                {project.readmeUrl && (
-                  <a
-                    href={project.readmeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="theme-link mb-4 text-xs underline underline-offset-2 hover:opacity-80 transition-colors"
-                  >
-                    Voir le README
-                  </a>
-                )}
-                <div className="mt-auto flex gap-3">
-                  <a
-                    href={project.liveUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="theme-button-primary flex-1 text-center text-xs py-2 font-semibold rounded hover:opacity-80 transition-colors"
-                  >
-                    Démo
-                  </a>
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="theme-button-secondary flex-1 text-center text-xs py-2 border rounded hover:opacity-80 transition-colors"
-                  >
-                    GitHub
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+              </article>
+            </li>
+          );
+        })}
+      </ol>
     </Chapter>
   );
 }

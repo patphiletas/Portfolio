@@ -74,7 +74,7 @@ export default function ProjectMedia({ image, alt, sizes, video }: Props) {
         alt={alt}
         fill
         sizes={sizes}
-        className="object-cover object-top"
+        className="object-cover object-top transition-transform duration-700 ease-out motion-safe:group-hover:scale-[1.02]"
         onError={(e) => {
           (e.target as HTMLImageElement).style.display = "none";
         }}
