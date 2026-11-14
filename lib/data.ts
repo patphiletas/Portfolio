@@ -45,7 +45,7 @@ export const projects: Project[] = [
     description:
       "Le Real Book, la bible des musiciens de jazz, en version web : on cherche un standard par titre, compositeur ou tonalité et la partition s'ouvre à côté de la liste. Une fiche IA (biographie, grille, anecdotes) est générée une fois puis gardée en base. Architecture Vite + Express migrée vers un seul projet Next.js.",
     stack: ["Next.js", "TypeScript", "PostgreSQL", "Cloudinary", "OpenAI"],
-    liveUrl: "https://real-book-patphiletas-projects.vercel.app/",
+    liveUrl: "https://real-book-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/AdaRealBook",
     readmeUrl: "https://github.com/patphiletas/AdaRealBook#readme",
     image: "/images/real-book.png",
