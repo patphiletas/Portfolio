@@ -25,8 +25,8 @@
 ## Aperçu
 
 <div align="center">
-  <img src="public/images/real-book.png" alt="Projet My Real Book" width="260" />
-  <img src="public/images/adaverse.png" alt="Projet Adaverse" width="260" />
+  <img src="public/images/demoday.jpg" alt="Projet AlterNative" width="260" />
+  <img src="public/images/kpratik.jpg" alt="Projet Kpratik" width="260" />
   <img src="public/images/graphisme-livres.png" alt="Travaux de graphisme éditorial" width="260" />
 </div>
 
@@ -40,10 +40,11 @@ Ce portfolio présente mon parcours de reconversion vers le développement web f
 
 | Fonctionnalité | Description |
 |---|---|
-| Projets web | Cartes détaillées avec description, stack, démo, GitHub et README |
+| Accueil | Nom, accroche, autoportrait dessiné, boutons « Voir les projets » et CV, sommaire façon livre |
+| Projets web | Cartes détaillées avec description, stack, démo, GitHub et README ; captures 16:10 nettes de chaque site |
 | Graphisme | Sélection de travaux éditoriaux, illustration et communication print |
 | Parcours | Présentation de la reconversion, de la formation Ada Tech School et de l'expérience professionnelle |
-| Compétences | Vue synthétique des compétences front-end, back-end, outils et graphisme |
+| Compétences | Regroupées en quatre colonnes : front-end, back-end, outils & IA, graphisme |
 | Contact | Liens directs vers email, téléphone, GitHub, LinkedIn, CV et portfolio PDF |
 | Thème clair/sombre | Gestion du thème via contexte React et variables CSS |
 | Responsive | Interface adaptée aux écrans mobiles, tablettes et desktop |
@@ -121,7 +122,8 @@ http://localhost:3000
 
 | Section | Source |
 |---|---|
-| Projets web | `lib/data.ts` |
+| Projets web | `lib/data.ts` (texte) et `public/images/<projet>.jpg` (captures 1600×1000) |
+| Accueil | `app/components/Cover.tsx` |
 | Travaux graphisme | `lib/data.ts` et `public/images/` |
 | CV | `public/cv-patrice-philetas.pdf` |
 | Portfolio graphisme | `public/portfolio-graphisme.pdf` |

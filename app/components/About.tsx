@@ -78,14 +78,23 @@ export default function About() {
 
         <div>
           <h3 className="theme-text font-semibold text-lg mb-6">Compétences</h3>
-          <div className="flex flex-wrap gap-2">
-            {skills.flatMap((g) => g.items).map(({ name, featured }) => (
-              <span
-                key={name}
-                className={`text-xs px-3 py-1 rounded ${featured ? "theme-chip-featured" : "theme-chip"}`}
-              >
-                {name}
-              </span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {skills.map((group) => (
+              <div key={group.category}>
+                <h4 className="theme-text-muted text-[11px] uppercase tracking-[0.15em] mb-3">
+                  {group.category}
+                </h4>
+                <ul className="flex flex-wrap gap-2">
+                  {group.items.map(({ name, featured }) => (
+                    <li
+                      key={name}
+                      className={`text-xs px-3 py-1 rounded ${featured ? "theme-chip-featured" : "theme-chip"}`}
+                    >
+                      {name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
           </div>
         </div>

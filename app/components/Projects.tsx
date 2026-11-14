@@ -78,7 +78,7 @@ export default function Projects() {
               key={project.id}
               className="theme-surface-muted theme-card-border flex h-full flex-col rounded-lg overflow-hidden hover:opacity-95 transition-colors"
             >
-              <div className="relative h-44 bg-gray-800 overflow-hidden">
+              <div className="relative aspect-[16/10] bg-gray-800 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
