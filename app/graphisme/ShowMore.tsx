@@ -3,7 +3,16 @@
 import { useState } from "react";
 
 // Replie un bloc trop long ; le masque estompe le bas quel que soit le fond de la section.
-export function ShowMore({ height, children }: { height: string; children: React.ReactNode }) {
+export function ShowMore({
+  height,
+  label = "Voir plus",
+  children,
+}: {
+  height: string;
+  /** Texte du bouton replié, ex. « Voir les 29 couvertures ». */
+  label?: string;
+  children: React.ReactNode;
+}) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -29,7 +38,7 @@ export function ShowMore({ height, children }: { height: string; children: React
           aria-expanded={open}
           className="theme-text text-sm underline underline-offset-4 decoration-1 transition-opacity hover:opacity-70"
         >
-          {open ? "Voir moins ↑" : "Voir plus ↓"}
+          {open ? "Voir moins ↑" : `${label} ↓`}
         </button>
       </div>
     </div>

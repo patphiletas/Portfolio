@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { clients } from "@/lib/data";
 import {
@@ -16,7 +15,7 @@ import {
   plv,
   posters,
   scholar,
-  thumbSrc,
+  selection,
   webAuthorBanners,
   webBanners,
   webEventBanners,
@@ -45,42 +44,35 @@ export const metadata: Metadata = {
 
 const catalogueHighlights = catalogues.filter((item) => item.id === "k_cat1" || item.id === "k_cat2");
 
-const OVERVIEW: { id: string; title: string; image: string; position?: string; description: string }[] = [
+const OVERVIEW: { id: string; title: string; description: string }[] = [
   {
     id: "edition",
     title: "Édition",
-    image: "/images/graphisme-livres.png",
     description: "Couvertures, maquettes intérieures et collections : académique, grand public, médical, scolaire.",
   },
   {
     id: "fabrication",
     title: "Fabrication",
-    image: thumbSrc("f_signets_careme"),
     description: "Calendriers, dépliants, marque-pages, kakémonos : de l’objet imprimé au suivi chez l’imprimeur.",
   },
   {
     id: "communication",
     title: "Communication",
-    image: "/images/graphisme-logos.png",
     description: "Affiches, plaquettes, mailings et catalogues, PLV pour les libraires.",
   },
   {
     id: "web",
     title: "Web",
-    image: "/images/graphisme/full/wb_42.jpg",
-    position: "object-left-top",
     description: "Bannières auteurs et nouveautés, opérations commerciales, visuels pour les sites.",
   },
   {
     id: "illustration",
     title: "Illustration",
-    image: "/images/graphisme-illustration.jpg",
     description: "Guides de voyage, personnages déclinés en séries, musiciens, dessin de presse.",
   },
   {
     id: "illustration-scientifique",
     title: "Illustration scientifique",
-    image: "/images/graphisme-cerveau-3.jpg",
     description: "Schémas et planches pour des ouvrages médicaux : hématologie, immunologie, anatomie.",
   },
 ];
@@ -214,28 +206,42 @@ export default function GraphismePage() {
           </div>
         </section>
 
+        <Part
+          id="selection"
+          title="Sélection"
+          lead="Une douzaine de pièces pour un premier regard : couvertures, objets imprimés, communication, web et illustration. Le détail par domaine suit."
+        >
+          {/* Mosaïque façon planche de magazine : colonnes, images à leurs proportions réelles */}
+          <div className="columns-1 gap-8 sm:columns-2 lg:columns-3">
+            {selection().map((item) => (
+              <Figure
+                key={item.id}
+                item={item}
+                shape="natural"
+                sizes="(min-width: 1024px) 30vw, (min-width: 640px) 46vw, 92vw"
+                className="mb-8 break-inside-avoid"
+              />
+            ))}
+          </div>
+        </Part>
+
         <Part id="chaine" title="Vue d’ensemble" lead="Six domaines complémentaires, du crayon au fichier imprimeur." muted>
-          {/* Sommaire illustré : image nue, numéro, titre serif, une ligne de description */}
-          <ol className="grid list-none grid-cols-1 gap-x-8 gap-y-12 p-0 sm:grid-cols-2 md:grid-cols-3">
+          {/* Sommaire typographique, comme celui de l'accueil : la sélection montre déjà les images */}
+          <ol className="theme-border-subtle grid list-none grid-cols-1 border-b p-0 md:grid-cols-2 md:gap-x-12">
             {OVERVIEW.map((section, index) => (
-              <li key={section.id}>
-                <a href={`#${section.id}`} className="group block">
-                  <div className="relative aspect-[16/9] overflow-hidden bg-white">
-                    <Image
-                      src={section.image}
-                      alt=""
-                      fill
-                      sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
-                      className={`object-cover ${section.position ?? ""} transition-transform duration-500 ease-out motion-safe:group-hover:scale-[1.03]`}
-                    />
-                  </div>
-                  <p className="mt-4 flex items-baseline gap-3">
-                    <span className="font-serif theme-text-muted text-sm">{String(index + 1).padStart(2, "0")}</span>
-                    <span className="font-serif theme-text text-2xl group-hover:opacity-70 transition-opacity">
+              // Pas de filet au-dessus de la première rangée : l'en-tête de section en a déjà un
+              <li key={section.id} className="theme-border-subtle border-t first:border-t-0 md:[&:nth-child(2)]:border-t-0">
+                <a href={`#${section.id}`} className="group flex items-baseline gap-4 py-4">
+                  <span className="font-serif theme-text-muted shrink-0 text-sm">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="min-w-0">
+                    <span className="font-serif theme-text block text-xl transition-opacity group-hover:opacity-70 md:text-2xl">
                       {section.title}
                     </span>
-                  </p>
-                  <p className="theme-text-muted mt-2 text-sm leading-relaxed">{section.description}</p>
+                    <span className="theme-text-muted mt-1 block text-sm leading-relaxed">{section.description}</span>
+                  </span>
+                  <span aria-hidden="true" className="theme-text-muted ml-auto shrink-0 text-sm transition-transform group-hover:translate-y-0.5">
+                    ↓
+                  </span>
                 </a>
               </li>
             ))}
@@ -247,14 +253,16 @@ export default function GraphismePage() {
           title="Édition"
           lead="Responsable du graphisme : création de collections, maquette de couvertures et d’intérieurs, choix de l’iconographie. Livres académiques, grand public, médicaux et scolaires."
         >
-          <SubTitle>Livres académiques</SubTitle>
-          <Grid items={academic} />
+          <ShowMore height="44rem" label={`Voir les ${academic.length + general.length + scholar.length} couvertures`}>
+            <SubTitle>Livres académiques</SubTitle>
+            <Grid items={academic} />
 
-          <SubTitle>Livres grand public</SubTitle>
-          <Grid items={general} />
+            <SubTitle>Livres grand public</SubTitle>
+            <Grid items={general} />
 
-          <SubTitle>Scolaires &amp; pédagogiques</SubTitle>
-          <Grid items={scholar} />
+            <SubTitle>Scolaires &amp; pédagogiques</SubTitle>
+            <Grid items={scholar} />
+          </ShowMore>
 
         </Part>
 
@@ -297,22 +305,22 @@ export default function GraphismePage() {
           lead="Bannières et visuels pour les sites des Éditions jésuites et du groupe Grego : nouveautés, opérations commerciales, temps liturgiques, événements."
           muted
         >
-          <SubTitle>Auteurs et nouveautés — Éditions jésuites</SubTitle>
-          <ShowMore height="36rem">
+          <ShowMore height="40rem" label="Voir toutes les bannières et visuels web">
+            <SubTitle>Auteurs et nouveautés — Éditions jésuites</SubTitle>
             <Banners items={webAuthorBanners} />
+
+            <SubTitle>Événements</SubTitle>
+            <Banners items={webEventBanners} />
+
+            <SubTitle>Temps forts et opérations</SubTitle>
+            <Banners items={[...webBanners, ...webOpsBanners]} />
+
+            <SubTitle>Slides — groupe Grego</SubTitle>
+            <Banners items={webSlides} />
+
+            <SubTitle>Visuels pour le site</SubTitle>
+            <Grid items={webVisuals} />
           </ShowMore>
-
-          <SubTitle>Événements</SubTitle>
-          <Banners items={webEventBanners} />
-
-          <SubTitle>Temps forts et opérations</SubTitle>
-          <Banners items={[...webBanners, ...webOpsBanners]} />
-
-          <SubTitle>Slides — groupe Grego</SubTitle>
-          <Banners items={webSlides} />
-
-          <SubTitle>Visuels pour le site</SubTitle>
-          <Grid items={webVisuals} />
         </Part>
 
         <Part

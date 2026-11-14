@@ -136,6 +136,17 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
             </span>
           </p>
           {current.note && <p className="mt-1 text-center text-xs italic text-zinc-400">{current.note}</p>}
+          {current.link && (
+            <a
+              href={current.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(event) => event.stopPropagation()}
+              className="mt-2 text-sm text-white underline underline-offset-4 decoration-1 hover:opacity-70"
+            >
+              Aperçu en ligne ↗
+            </a>
+          )}
         </div>
       )}
     </LightboxContext.Provider>

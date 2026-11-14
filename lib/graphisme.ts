@@ -269,3 +269,48 @@ export const webOpsBanners: GraphismeImage[] = [
   { id: "wb_11", caption: "Idée cadeau — romans pour ados", width: 1983, height: 500 },
   { id: "wb_49", caption: "Carte de la Toussaint", width: 1983, height: 500 },
 ];
+
+// ---------------------------------------------------------------
+// Sélection affichée en tête de la page /graphisme : une douzaine de pièces
+// représentatives des six domaines. Pour la modifier, changer simplement la
+// liste d'identifiants ci-dessous (ordre = ordre d'affichage).
+export const SELECTION_IDS = [
+  "c_eco",
+  "f_avent",
+  "k_hiphop",
+  "c_myst",
+  "i_woman",
+  "wb_29",
+  "c_ecologie",
+  "k_acat",
+  "sci_04",
+  "c_abc",
+  "i_taxi",
+  "f_signets_careme",
+];
+
+export function selection(): GraphismeImage[] {
+  const toutes = [
+    ...academic,
+    ...general,
+    ...scholar,
+    ...avent,
+    ...fabrication,
+    ...posters,
+    ...catalogues,
+    ...plv,
+    ...illustration,
+    ...illustrationSeries.flatMap((serie) => serie.items),
+    ...musiciens,
+    ...illustrationsDiverses,
+    ...illustrationScientifique,
+    ...webBanners,
+    ...webSlides,
+    ...webVisuals,
+    ...webAuthorBanners,
+    ...webEventBanners,
+    ...webOpsBanners,
+  ];
+  const parId = new Map(toutes.map((image) => [image.id, image]));
+  return SELECTION_IDS.map((id) => parId.get(id)).filter((image): image is GraphismeImage => Boolean(image));
+}

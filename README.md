@@ -43,7 +43,7 @@ Ce portfolio présente mon parcours de reconversion vers le développement web f
 | Accueil | Nom, accroche, autoportrait dessiné, boutons « Voir les projets » et CV, sommaire façon livre |
 | Projets web | Présentés comme un sommaire de revue : entrées numérotées séparées par un filet, image 16:10 sans cadre en alternance gauche/droite, technologies en petites capitales, liens soulignés « Voir le site ↗ · Code source ↗ · README ↗ » (plus de cartes, boutons ni pastilles) |
 | Démos vidéo | Courte démo muette en boucle (WebM, 8 à 11 s, 400 à 730 Ko) pour chacun des quatre projets : lecture au survol sur ordinateur, quand la carte est visible sur mobile, image fixe si « réduire les animations » est activé ; vidéo téléchargée seulement à la lecture |
-| Graphisme | Page `/graphisme` : sommaire illustré numéroté des six domaines, images sans cadre avec légendes discrètes (visionneuse au clic), clients en liste typographique ; même langage éditorial que l'accueil (pas de cartes ni de pastilles) |
+| Graphisme | Page `/graphisme` : **sélection** de 12 pièces en mosaïque en tête de page (liste `SELECTION_IDS` dans `lib/graphisme.ts`), sections Édition et Web repliées (« Voir les 29 couvertures »), sommaire typographique numéroté des six domaines, en deux colonnes et sans images, images sans cadre avec légendes discrètes (visionneuse au clic, avec le lien « Aperçu en ligne ↗ » vers le feuilletage Calaméo quand il existe), clients en liste typographique ; même langage éditorial que l'accueil (pas de cartes ni de pastilles) |
 | Parcours | Présentation de la reconversion, de la formation Ada Tech School et de l'expérience professionnelle |
 | Compétences | Regroupées en quatre colonnes : front-end, back-end, outils & IA, graphisme |
 | Contact | Liens directs vers email, téléphone, GitHub, LinkedIn, CV et portfolio PDF |
@@ -129,7 +129,7 @@ http://localhost:3000
 | Projets web | `lib/data.ts` (texte) et `public/images/<projet>.jpg` (captures 1600×1000) |
 | Accueil | `app/components/Cover.tsx` |
 | Démos vidéo | `public/videos/*.webm`, champ `video` du projet dans `lib/data.ts` ; refaire avec `node scripts/capturer-demo.mjs <projet|tous>` |
-| Travaux graphisme | `lib/data.ts` et `public/images/` |
+| Travaux graphisme | `lib/graphisme.ts` (images par domaine, `SELECTION_IDS` pour la sélection en tête de page) et `public/images/graphisme/` |
 | CV | `public/cv-patrice-philetas.pdf` |
 | Portfolio graphisme | `public/portfolio-graphisme.pdf` |
 | Thème | `app/context/ThemeContext.tsx` et `app/globals.css` |
