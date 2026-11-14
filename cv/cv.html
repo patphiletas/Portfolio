@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>CV — Patrice Philétas</title>
+<style>
+@font-face { font-family: "Fraunces"; font-weight: 100 900; src: url("../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 100 900; src: url("../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-italic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 100 900; src: url("../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2") format("woff2"); }
+
+@page { size: A4; margin: 0; }
+:root { --encre: #1a1714; --gris: #5f584f; --filet: #d9d0c1; --rouge: #b42d1a; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: "Inter", sans-serif; color: var(--encre); font-size: 8.4pt; line-height: 1.42; -webkit-font-smoothing: antialiased; }
+.page { width: 210mm; height: 297mm; padding: 13mm 14mm 11mm; display: flex; flex-direction: column; }
+a { color: inherit; text-decoration: none; }
+.surtitre { font-size: 6.8pt; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rouge); margin: 0; }
+.petit { font-size: 6.8pt; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gris); }
+
+/* En-tête */
+.entete { display: grid; grid-template-columns: 1fr 27mm; gap: 8mm; align-items: end; padding-bottom: 5mm; border-bottom: 0.6pt solid var(--encre); }
+h1 { font-family: "Fraunces"; font-weight: 700; font-size: 38pt; line-height: 0.95; letter-spacing: -0.01em; margin: 2mm 0 2.5mm; }
+h1 em { font-weight: 300; }
+.titre { font-family: "Fraunces"; font-size: 13pt; color: var(--gris); margin: 0 0 3mm; }
+.coordonnees { margin: 0; font-size: 8.2pt; }
+.coordonnees span + span::before { content: " · "; color: var(--gris); }
+.photo { width: 27mm; height: 27mm; border-radius: 50%; overflow: hidden; filter: grayscale(1); }
+.photo img { width: 112%; height: 112%; object-fit: cover; margin: -6% 0 0 -5%; }
+
+.chapo { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; padding: 4mm 0; border-bottom: 0.6pt solid var(--filet); }
+.chapo p { margin: 0; }
+.chapo .accroche { font-family: "Fraunces"; font-size: 10.5pt; line-height: 1.35; }
+.chapo .recherche { font-size: 8.4pt; }
+.chapo .recherche strong { color: var(--rouge); font-weight: 600; }
+
+/* Corps : colonne principale + colonne latérale */
+.corps { display: grid; grid-template-columns: 1fr 52mm; gap: 9mm; padding-top: 4mm; flex: 1; }
+h2 { font-size: 6.8pt; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gris); margin: 0 0 2mm; padding-bottom: 1.2mm; border-bottom: 0.6pt solid var(--filet); }
+.bloc + .bloc { margin-top: 5mm; }
+
+.projet { display: grid; grid-template-columns: 7mm 1fr; padding: 2.2mm 0; border-bottom: 0.6pt solid var(--filet); }
+.projet:last-child { border-bottom: 0; }
+.numero { font-family: "Fraunces"; color: var(--gris); font-size: 8.5pt; padding-top: 1.2mm; }
+.projet h3 { font-family: "Fraunces"; font-weight: 600; font-size: 13pt; margin: 0 0 0.8mm; line-height: 1.1; }
+.projet h3 a::after { content: " ↗"; font-family: "Inter"; font-size: 8pt; font-weight: 400; color: var(--gris); }
+.projet p { margin: 0; }
+.projet .stack { margin-top: 1mm; font-size: 6.6pt; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris); }
+
+.poste h3 { font-family: "Fraunces"; font-weight: 600; font-size: 11pt; margin: 0 0 0.5mm; line-height: 1.2; }
+.poste .dates { margin: 0 0 1mm; }
+.poste p { margin: 0 0 1mm; }
+
+/* Colonne latérale */
+.cote h3 { font-family: "Fraunces"; font-weight: 600; font-size: 9.5pt; margin: 2.2mm 0 0.6mm; }
+.cote h3:first-of-type { margin-top: 0; }
+.cote p { margin: 0; color: var(--gris); }
+.cote ul { list-style: none; margin: 0; padding: 0; }
+.cote li { margin-bottom: 1.2mm; }
+.cote li strong { display: block; font-family: "Fraunces"; font-weight: 600; font-size: 9.5pt; color: var(--encre); }
+.cote .qualites { font-family: "Fraunces"; font-size: 9.5pt; line-height: 1.45; color: var(--encre); }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="entete">
+    <div>
+      <p class="surtitre">Développeur full stack en formation · alternance</p>
+      <h1><em>Patrice</em> Philétas</h1>
+      <p class="titre">Développeur full stack — UX/UI &amp; IA · ancien graphiste éditorial</p>
+      <p class="coordonnees">
+        <span>06 29 37 01 65</span><span><a href="mailto:patrice.philetas@gmail.com">patrice.philetas@gmail.com</a></span><span><a href="https://portfoliopatphiletas.vercel.app">portfoliopatphiletas.vercel.app</a></span><span><a href="https://github.com/patphiletas">github.com/patphiletas</a></span><span><a href="https://www.linkedin.com/in/patricephiletas">linkedin.com/in/patricephiletas</a></span>
+      </p>
+    </div>
+    <div class="photo"><img src="photo.png" alt="Patrice Philétas"></div>
+  </header>
+
+  <section class="chapo">
+    <p class="accroche">Après 20 ans dans l’édition (Groupe Grego, Éditions La Martinière), je me reconvertis vers le développement web : le soin d’un graphiste éditorial, appliqué au code — interfaces lisibles, code typé et testé.</p>
+    <p class="recherche"><strong>Je recherche une alternance de 12 mois minimum, dès que possible</strong> (prochaine rentrée : janvier 2027), en rythme 4j/1j, au sein d’une équipe attachée à la qualité.<br><span class="petit">IA &amp; productivité</span> Claude Code, MCP, OpenAI, GitHub Copilot.</p>
+  </section>
+
+  <div class="corps">
+    <main>
+      <section class="bloc">
+        <h2>Projets</h2>
+        <article class="projet">
+          <span class="numero">01</span>
+          <div>
+            <h3><a href="https://demo-day-wine.vercel.app/">AlterNative</a></h3>
+            <p>Maison d’édition en ligne, projet solo full stack : l’auteur dépose son EPUB (titre, chapitres, couverture et italiques extraits automatiquement), l’éditeur relit et publie, l’auteur est prévenu par e&#8209;mail. Notes, commentaires, rôles, rate limiting, tests et CI.</p>
+            <p class="stack">Next.js · TypeScript · PostgreSQL · Drizzle · Better Auth · Zod · Vitest · GitHub Actions</p>
+          </div>
+        </article>
+        <article class="projet">
+          <span class="numero">02</span>
+          <div>
+            <h3><a href="https://kpratik.vercel.app/">Kpratik</a></h3>
+            <p>Intelligence commerciale B2B : une URL, et en moins de 5 s la stack technique, les signaux commerciaux, Wikipedia/Wikidata et un score /100 explicable. Un agent IA décide seul de lire d’autres pages. 106 tests.</p>
+            <p class="stack">Next.js · TypeScript · Tailwind CSS · Zod · Groq (IA) · Vitest · Upstash</p>
+          </div>
+        </article>
+        <article class="projet">
+          <span class="numero">03</span>
+          <div>
+            <h3><a href="https://real-book-patphiletas.vercel.app/">My Real Book</a></h3>
+            <p>Bibliothèque de partitions jazz façon Real Book : recherche par titre, compositeur ou tonalité, lien par morceau, favoris, mode scène (partition inversée), fiche IA mise en cache. 62 tests, CI.</p>
+            <p class="stack">Next.js · TypeScript · PostgreSQL · Cloudinary · OpenAI</p>
+          </div>
+        </article>
+        <article class="projet">
+          <span class="numero">04</span>
+          <div>
+            <h3><a href="https://adataviz-patphiletas.vercel.app/">On sort ?</a></h3>
+            <p>Les sorties à Paris d’après les données ouvertes de la Ville : recherche, filtres par date, prix et arrondissement, vue carte, lien partageable, mode nuit. Sans framework, 88 tests, Lighthouse 97–100.</p>
+            <p class="stack">JavaScript · Vite · Leaflet · Vitest</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="bloc">
+        <h2>Expérience</h2>
+        <div class="poste">
+          <h3>Graphiste-maquettiste chargé d’édition et de fabrication</h3>
+          <p class="dates petit">2006 – 2025 · CDI et freelance</p>
+          <p>Groupe Grego (Éditions VG, Inpress, Medline, librairie VG, imprimerie Grego Print), Éditions jésuites (Bruxelles – Paris), Éditions La Martinière. Plus de 700 ouvrages, de la maquette au bon à tirer : imposition, prépresse, suivi d’impression. <a href="https://portfoliopatphiletas.vercel.app/graphisme"><u>Portfolio graphisme</u> ↗</a></p>
+          <p class="petit" style="margin-top:1.5mm">Aussi : illustrateur · professeur de musique · animateur · secouriste (Croix-Rouge)</p>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cote">
+      <section class="bloc">
+        <h2>Compétences</h2>
+        <h3>Front-end</h3><p>Next.js, React, JavaScript, TypeScript, Tailwind CSS, Angular (notions)</p>
+        <h3>Back-end</h3><p>Node.js, Express, PostgreSQL / ORM, API REST, authentification, Python (notions)</p>
+        <h3>Outils</h3><p>Git / GitHub, GitHub Actions (CI/CD), Vitest, VS Code, Claude Code, Docker (notions), Vercel, Neon</p>
+        <h3>Graphisme</h3><p>Figma, Excalidraw, UX / UI, Photoshop, InDesign, Illustrator, Acrobat Pro</p>
+      </section>
+
+      <section class="bloc">
+        <h2>Formation</h2>
+        <ul>
+          <li><strong>Développeur d’application full stack</strong>RNCP niveau 6 · Ada Tech School · 2025, en cours</li>
+          <li><strong>Maîtrise Communication politique et publique</strong>Upec · 2001</li>
+          <li>Permis B · brevets de secourisme · BAFA</li>
+        </ul>
+      </section>
+
+      <section class="bloc">
+        <h2>Graphisme × code</h2>
+        <p class="qualites">Rigueur et précision · logique et résolution de problèmes · sens esthétique et UX · apprentissage continu · communication et collaboration · gestion de projet</p>
+      </section>
+    </aside>
+  </div>
+</div>
+</body>
+</html>
