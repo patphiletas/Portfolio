@@ -64,8 +64,8 @@ export const projects: Project[] = [
     id: "adataviz",
     title: "Que faire à Paris",
     description:
-      "Trouver une sortie à Paris en quelques secondes : concerts, ateliers, expos, à partir des données ouvertes de la Ville, mises à jour en direct. Recherche instantanée, filtres par tag et par public, événements passés masqués. Sans framework, volontairement : un besoin simple, une app légère.",
-    stack: ["JavaScript", "Vite", "Open Data Paris", "CSS"],
+      "Que faire ce week-end, gratuitement, dans le 11e ? L'app répond en un clic parmi plus de 3 000 concerts, expos et ateliers, à partir des données ouvertes de la Ville, en direct. Recherche, filtres par date, prix, arrondissement et thème, lien partageable. Sans framework, volontairement : un besoin simple, une app légère. 57 tests.",
+    stack: ["JavaScript", "Vite", "Open Data Paris", "Vitest"],
     liveUrl: "https://adataviz-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/adataviz-patphiletas",
     readmeUrl: "https://github.com/patphiletas/adataviz-patphiletas#readme",
