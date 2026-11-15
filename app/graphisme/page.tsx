@@ -100,7 +100,18 @@ function Part({
     >
       <div className="mx-auto max-w-6xl">
         <div className="theme-border-subtle mb-8 border-b pb-4">
-          <h2 className="font-serif theme-text text-2xl md:text-3xl">{title}</h2>
+          {/* Même lien de retour que les chapitres de l'accueil */}
+          <div className="flex items-baseline justify-between gap-6">
+            <h2 className="font-serif theme-text text-2xl md:text-3xl">{title}</h2>
+            {id !== "chaine" && id !== "selection" && (
+              <a
+                href="#chaine"
+                className="theme-link shrink-0 text-[11px] uppercase tracking-[0.15em] transition-colors"
+              >
+                ↑ Sommaire
+              </a>
+            )}
+          </div>
           {lead && <p className="theme-text-muted mt-3 max-w-2xl leading-relaxed">{lead}</p>}
         </div>
         {children}
