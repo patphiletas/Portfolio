@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>CV graphisme — Patrice Philétas</title>
+<style>
+@font-face { font-family: "Fraunces"; font-weight: 100 900; src: url("../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces"; font-style: italic; font-weight: 100 900; src: url("../node_modules/@fontsource-variable/fraunces/files/fraunces-latin-wght-italic.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-weight: 100 900; src: url("../node_modules/@fontsource-variable/inter/files/inter-latin-wght-normal.woff2") format("woff2"); }
+
+@page { size: A4; margin: 0; }
+:root { --encre: #1a1714; --gris: #5f584f; --filet: #d9d0c1; --rouge: #b42d1a; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { font-family: "Inter", sans-serif; color: var(--encre); font-size: 8.1pt; line-height: 1.38; -webkit-font-smoothing: antialiased; }
+.page { width: 210mm; height: 297mm; padding: 12mm 14mm 10mm; display: flex; flex-direction: column; }
+a { color: inherit; text-decoration: none; }
+.surtitre { font-size: 6.8pt; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rouge); margin: 0; }
+.petit { font-size: 6.8pt; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gris); }
+
+/* En-tête */
+.entete { display: grid; grid-template-columns: 1fr 27mm; gap: 8mm; align-items: end; padding-bottom: 5mm; border-bottom: 0.6pt solid var(--encre); }
+h1 { font-family: "Fraunces"; font-weight: 700; font-size: 34pt; line-height: 0.95; letter-spacing: -0.01em; margin: 2mm 0 2.5mm; }
+h1 em { font-weight: 300; }
+.titre { font-family: "Fraunces"; font-size: 13pt; color: var(--gris); margin: 0 0 3mm; }
+.coordonnees { margin: 0; font-size: 8.2pt; }
+.coordonnees span + span::before { content: " · "; color: var(--gris); }
+.photo { width: 27mm; height: 27mm; border-radius: 50%; overflow: hidden; filter: grayscale(1); }
+.photo img { width: 112%; height: 112%; object-fit: cover; margin: -6% 0 0 -5%; }
+
+.chapo { display: grid; grid-template-columns: 1.35fr 1fr; gap: 8mm; padding: 3.5mm 0; border-bottom: 0.6pt solid var(--filet); }
+.chapo p { margin: 0; }
+.chapo .accroche { font-family: "Fraunces"; font-size: 10.2pt; line-height: 1.38; }
+.chapo .dispo strong { color: var(--rouge); font-weight: 600; }
+
+
+/* Corps */
+.corps { display: grid; grid-template-columns: 1fr 60mm; gap: 8mm; padding-top: 5mm; flex: 1; }
+h2 { font-size: 6.8pt; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gris); margin: 0 0 2mm; padding-bottom: 1.2mm; border-bottom: 0.6pt solid var(--filet); }
+.bloc + .bloc { margin-top: 4mm; }
+
+.poste { padding: 1.8mm 0 2.4mm; border-bottom: 0.6pt solid var(--filet); }
+.poste:last-child { border-bottom: 0; }
+.poste h3 { font-family: "Fraunces"; font-weight: 600; font-size: 10.8pt; margin: 0; line-height: 1.2; }
+.poste h3 span { font-weight: 400; color: var(--gris); }
+.poste .dates { margin: 0.6mm 0 1.2mm; }
+.poste ul { margin: 0; padding-left: 3.5mm; }
+.poste li { margin-bottom: 0.4mm; }
+
+.cote h3 { font-family: "Fraunces"; font-weight: 600; font-size: 9.2pt; margin: 1.8mm 0 0.3mm; }
+.cote h3:first-of-type { margin-top: 0; }
+.cote p { margin: 0; color: var(--gris); }
+.cote ul { list-style: none; margin: 0; padding: 0; }
+.cote li { margin-bottom: 1.2mm; color: var(--gris); }
+.cote li strong { display: block; font-family: "Fraunces"; font-weight: 600; font-size: 9.5pt; color: var(--encre); }
+.autres { margin: 2.5mm 0 0; }
+.cote .qualites { font-family: "Fraunces"; font-size: 9pt; line-height: 1.4; color: var(--encre); }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="entete">
+    <div>
+      <p class="surtitre">Graphiste · disponible immédiatement</p>
+      <h1><em>Patrice</em> Philétas</h1>
+      <p class="titre">Graphiste-maquettiste · PAO · Fabrication</p>
+      <p class="coordonnees">
+        <span>06 29 37 01 65</span><span><a href="mailto:patrice.philetas@gmail.com">patrice.philetas@gmail.com</a></span><span><a href="https://portfoliopatphiletas.vercel.app/graphisme">portfoliopatphiletas.vercel.app/graphisme</a></span><span><a href="https://www.linkedin.com/in/patricephiletas">linkedin.com/in/patricephiletas</a></span>
+      </p>
+    </div>
+    <div class="photo"><img src="photo.png" alt="Patrice Philétas"></div>
+  </header>
+
+  <section class="chapo">
+    <p class="accroche">Vingt ans de graphisme et de mise en page (Groupe Grego, Éditions jésuites, Éditions La Martinière) : maquettes d’après briefs et chartes, traitement des images, contrôle des formats, des découpes et des couleurs avant le BAT, fichiers prêts pour les imprimeurs.</p>
+    <p class="dispo"><strong>Disponible immédiatement</strong>, en CDI, CDD ou freelance (affilié Maison des Artistes). Mobile en Île&#8209;de&#8209;France.<br>Expert InDesign et Acrobat, rigoureux et autonome, à l’aise avec les chefs de projet comme avec les prestataires.</p>
+  </section>
+
+
+  <div class="corps">
+    <main>
+      <section class="bloc">
+        <h2>Expérience</h2>
+        <div class="poste">
+          <h3>Graphiste-maquettiste, chargé de la fabrication <span>— Éditions jésuites (CDI)</span></h3>
+          <p class="dates petit">02/2021 – 02/2025 · Bruxelles / Paris · recherche académique, philosophie, spiritualité, enseignement</p>
+          <ul>
+            <li>Conception et réalisation de maquettes éditoriales (ouvrages académiques, BD, poches, beaux livres) : environ 30 ouvrages par an.</li>
+            <li>Gestion de l’iconographie : illustrations originales, recherche et achat d’images, coordination des prestataires.</li>
+            <li>Suivi de fabrication : devis, relation imprimeurs, préparation des fichiers, BAT.</li>
+            <li>Création d’identités visuelles et de collections éditoriales.</li>
+            <li>Supports de communication print et digitaux : catalogues, affiches, PLV, flyers, mailings, bannières, vidéos ; participation à la gestion graphique et éditoriale du site.</li>
+          </ul>
+        </div>
+        <div class="poste">
+          <h3>Graphiste-maquettiste, chargé d’édition et de fabrication <span>— Groupe Grego (CDI)</span></h3>
+          <p class="dates petit">01/2006 – 02/2021 · Paris · édition médicale, sciences humaines, théologie, formation médicale</p>
+          <ul>
+            <li>Conception et réalisation de plus de 700 ouvrages (scolaires, scientifiques, beaux livres, coffrets).</li>
+            <li>Schémas techniques, illustrations numériques et gestion de l’iconographie.</li>
+            <li>Suivi éditorial et co-gestion des auteurs : contrats, ligne éditoriale, ISBN, BnF.</li>
+            <li>Suivi de fabrication et préparation des fichiers imprimeurs ; prépresse et PAO au sein de l’imprimerie numérique Grego Print.</li>
+            <li>Chartes graphiques, supports de communication institutionnels, mise à jour des supports web.</li>
+          </ul>
+        </div>
+        <div class="poste">
+          <h3>Graphiste / illustrateur <span>— freelance</span></h3>
+          <p class="dates petit">2002 – 2019</p>
+          <ul>
+            <li>Illustration, maquette éditoriale, identité visuelle, signalétique, affiches et supports institutionnels.</li>
+            <li>Pour des maisons d’édition, des institutions culturelles, des associations et des collectivités : Éditions Danger Public, La Martinière, Croix-Rouge française, ACAT&#8209;France, Association des Paralysés de France, Maison des Réseaux, Mairie de Maisons-Alfort, Institut de Pathologie de Paris, Salon Automedon&#8209;Motorama…</li>
+          </ul>
+        </div>
+        <p class="petit autres">Aussi : professeur de musique · animateur de centre de loisirs · secouriste à la Croix-Rouge</p>
+      </section>
+    </main>
+
+    <aside class="cote">
+      <section class="bloc">
+        <h2>Compétences</h2>
+        <h3>Édition et fabrication</h3><p>Maquettes print et numériques, documents longs et complexes ; typographie, hiérarchie de l’information ; iconographie, prépresse, imposition, BAT ; chartes graphiques.</p>
+        <h3>Communication visuelle</h3><p>Affiches, flyers, catalogues, signalétique, supports institutionnels ; illustration traditionnelle et numérique ; retouche photo, tableaux et schémas complexes ; motion design et montage vidéo simple.</p>
+        <h3>Web et numérique</h3><p>Sites WordPress et PrestaShop ; développement front-end et full stack (HTML, CSS, JavaScript, React) ; sensibilité UX/UI.</p>
+        <h3>Composition multilingue</h3><p>Traitement typographique de l’arabe, de l’hébreu, du russe et de l’anglais.</p>
+        <h3>Logiciels</h3><p>InDesign et Acrobat Pro (expert), Photoshop, Illustrator, Premiere Pro, After Effects, ProLexis, Quite Imposing, Clip Studio Paint ; Figma, VS Code, Git ; macOS, Windows.</p>
+      </section>
+
+      <section class="bloc">
+        <h2>Formation</h2>
+        <ul>
+          <li><strong>Développeur d’application full stack</strong>RNCP niveau 6 · Ada Tech School · 2025, en cours</li>
+          <li><strong>Maîtrise Communication politique et publique</strong>Université Paris-Est Créteil · 2001</li>
+          <li>BAFA · brevets de secourisme (BNPS, CFAPSE) · permis B, véhicule personnel</li>
+        </ul>
+      </section>
+
+      <section class="bloc">
+        <h2>Références</h2>
+        <p>Sur demande : direction des Éditions jésuites et du groupe Vernazobres-Grego.</p>
+      </section>
+    </aside>
+  </div>
+</div>
+</body>
+</html>

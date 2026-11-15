@@ -82,10 +82,10 @@ portfolio-patphiletas/
 │   ├── videos/          # Démos WebM des projets (alternative, kpratik, real-book, on-sort)
 │   ├── cv-patrice-philetas.pdf
 │   └── portfolio-graphisme.pdf
-├── cv/                  # Source du CV (cv.html + photo.png), exportée en PDF par `npm run cv`
+├── cv/                  # Sources des CV (cv.html, cv-graphisme.html, photo.png), exportées en PDF par `npm run cv`
 ├── scripts/
 │   ├── capturer-demo.mjs  # Filme la démo d'un projet (Chrome headless → WebM), un scénario par projet
-│   └── generer-cv.mjs     # Exporte cv/cv.html en public/cv-patrice-philetas.pdf
+│   └── generer-cv.mjs     # Exporte cv/*.html en PDF dans public/
 └── package.json
 ```
 
@@ -121,7 +121,7 @@ http://localhost:3000
 | `npm run build` | Génère la version de production |
 | `npm run start` | Lance l'application après build |
 | `npm run lint` | Exécute ESLint |
-| `npm run cv` | Régénère le CV PDF du site depuis `cv/cv.html` (Chrome headless, contrôle « une seule page ») |
+| `npm run cv` | Régénère les deux CV PDF du site depuis `cv/*.html` (Chrome headless, contrôle « une seule page ») |
 
 ---
 
@@ -133,7 +133,7 @@ http://localhost:3000
 | Accueil | `app/components/Cover.tsx` |
 | Démos vidéo | `public/videos/*.webm`, champ `video` du projet dans `lib/data.ts` ; refaire avec `node scripts/capturer-demo.mjs <projet|tous>` |
 | Travaux graphisme | `lib/graphisme.ts` (images par domaine, `SELECTION_IDS` pour la sélection en tête de page) et `public/images/graphisme/` |
-| CV | Source `cv/cv.html` (HTML/CSS, style éditorial du site, photo `cv/photo.png`) → `npm run cv` génère `public/cv-patrice-philetas.pdf` (A4, une page, liens cliquables) |
+| CV | Sources `cv/cv.html` (développeur) et `cv/cv-graphisme.html` (graphiste), style éditorial du site, photo `cv/photo.png` → `npm run cv` génère `public/cv-patrice-philetas.pdf` et `public/cv-patrice-philetas-graphisme.pdf` (A4, une page, liens cliquables) |
 | Portfolio graphisme | `public/portfolio-graphisme.pdf` |
 | Thème | `app/context/ThemeContext.tsx` et `app/globals.css` |
 
