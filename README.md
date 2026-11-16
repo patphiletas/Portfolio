@@ -135,6 +135,7 @@ http://localhost:3000
 | Travaux graphisme | `lib/graphisme.ts` (images par domaine, `SELECTION_IDS` pour la sélection en tête de page) et `public/images/graphisme/` |
 | CV | Sources `cv/cv.html` (développeur) et `cv/cv-graphisme.html` (graphiste), style éditorial du site, photo `cv/photo.png` → `npm run cv` génère `public/cv-patrice-philetas.pdf` et `public/cv-patrice-philetas-graphisme.pdf` (A4, une page, liens cliquables) |
 | Portfolio graphisme | `public/portfolio-graphisme.pdf` |
+| Icône d'onglet | `app/icon.tsx` : « P » en Fraunces, blanc sur encre (remplace le `favicon.ico` par défaut de Next.js, supprimé le 2026-11-16) |
 | Images de partage (LinkedIn, messageries) | `app/opengraph-image.tsx` (accueil) et `app/graphisme/opengraph-image.tsx` (page graphisme : nom, « Graphiste-maquettiste · PAO · Fabrication », affiche, illustration et planche scientifique — volontairement pas de couverture religieuse). Après un changement, demander à LinkedIn de relire la page avec son Post Inspector |
 | Thème | `app/context/ThemeContext.tsx` et `app/globals.css` |
 
