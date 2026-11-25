@@ -32,9 +32,10 @@ export default function About() {
               <p>
                 Je recherche une{" "}
                 <span className="theme-text font-medium">
-                  alternance de 12 mois minimum, dès que possible
+                  alternance de 12 mois minimum, avec un démarrage possible dès maintenant
                 </span>{" "}
-                (4j/1j en professionnalisation, prochaine rentrée en janvier 2027).
+                (4 jours en entreprise / 1 jour en formation, contrat de professionnalisation&nbsp;; prochaine rentrée
+                de formation en janvier 2027).
               </p>
             </div>
 
@@ -77,7 +78,11 @@ export default function About() {
         </div>
 
         <div>
-          <h3 className="theme-text font-semibold text-lg mb-6">Compétences</h3>
+          <h3 className="theme-text font-semibold text-lg mb-2">Compétences</h3>
+          <p className="theme-text-muted text-xs mb-6">
+            <span className="theme-text font-medium">En accent</span>&nbsp;: pratiqué dans mes projets ou en poste
+            · sans accent&nbsp;: déjà utilisé · <span className="italic">en italique</span>&nbsp;: notions
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {skills.map((group) => (
               <div key={group.category}>
@@ -85,12 +90,19 @@ export default function About() {
                   {group.category}
                 </h4>
                 <ul className="flex flex-wrap gap-2">
-                  {group.items.map(({ name, featured }) => (
+                  {group.items.map(({ name, level }) => (
                     <li
                       key={name}
-                      className={`text-xs px-3 py-1 rounded ${featured ? "theme-chip-featured" : "theme-chip"}`}
+                      className={`text-xs px-3 py-1 rounded ${
+                        level === "pratique"
+                          ? "theme-chip-featured"
+                          : level === "notions"
+                            ? "theme-chip italic opacity-70"
+                            : "theme-chip"
+                      }`}
                     >
                       {name}
+                      {level === "notions" && <span className="sr-only"> (notions)</span>}
                     </li>
                   ))}
                 </ul>

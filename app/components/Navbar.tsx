@@ -37,7 +37,7 @@ export default function Navbar() {
           <span className="font-medium ml-auto text-right" style={{ color: "var(--theme-accent)" }}>
             {isGraphisme
               ? "Disponible immédiatement — CDI, CDD, freelance"
-              : "Disponible dès maintenant — Alternance 4J/1J — Rentrée janvier 2027"}
+              : "Disponible dès maintenant — Alternance 4 j / 1 j — Rentrée janvier 2027"}
           </span>
         </div>
       </div>

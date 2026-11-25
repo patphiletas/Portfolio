@@ -7,7 +7,7 @@ export default function Contact() {
     <Chapter id="contact" title="Contact">
       <div className="max-w-2xl mx-auto text-center">
         <p className="theme-text-muted mb-10 leading-relaxed">
-          Je recherche une alternance de 12 mois minimum, dès que possible (prochaine rentrée : janvier 2027).
+          Je recherche une alternance de 12 mois minimum (4 jours en entreprise / 1 jour en formation), avec un démarrage possible dès maintenant&nbsp;; prochaine rentrée de formation en janvier 2027.
           N&apos;hésitez pas à me contacter pour échanger sur vos projets.
         </p>
 

@@ -11,7 +11,14 @@ export type Project = {
   video?: string;
 };
 
-export type SkillItem = { name: string; featured?: true };
+/**
+ * Niveau affiché dans « Compétences » (À propos) :
+ * - "pratique" : utilisé dans mes projets en ligne ou en poste (style accentué) ;
+ * - "utilise"  : déjà utilisé, sans être au cœur d'un projet ;
+ * - "notions"  : découvert en formation, à approfondir.
+ */
+export type SkillLevel = "pratique" | "utilise" | "notions";
+export type SkillItem = { name: string; level: SkillLevel };
 
 export type Skill = {
   category: string;
@@ -35,7 +42,7 @@ export const projects: Project[] = [
     id: "kpratik",
     title: "Kpratik",
     description:
-      "Un commercial perd de longues minutes à fouiller le site d'un prospect. Ici, on colle une URL et on obtient en moins de 5 secondes la stack technique, les signaux commerciaux, les données Wikipedia et un score /100. Sans API payante. Un agent IA décide seul s'il doit lire d'autres pages ; le score, lui, reste calculé par des règles explicables. 98 tests.",
+      "Un commercial perd de longues minutes à fouiller le site d'un prospect. Ici, on colle une URL et on obtient en moins de 5 secondes la stack technique, les signaux commerciaux, les données Wikipedia et un score /100. Sans API payante. Un agent IA décide seul s'il doit lire d'autres pages ; le score, lui, reste calculé par des règles explicables. 106 tests.",
     stack: ["Next.js", "TypeScript", "Zod", "Groq", "Vitest"],
     liveUrl: "https://kpratik.vercel.app/",
     githubUrl: "https://github.com/patphiletas/kpratik",
@@ -69,7 +76,7 @@ export const projects: Project[] = [
     id: "adataviz",
     title: "On sort ?",
     description:
-      "Que faire ce week-end, gratuitement, dans le 11e ? L'app répond en un clic parmi plus de 3 000 concerts, expos et ateliers, à partir des données ouvertes de la Ville, en direct. Filtres par date, prix, arrondissement et thème, vue carte, lien partageable, mise en page façon agenda de magazine. Sans framework, volontairement : 88 tests, Lighthouse 97 à 100.",
+      "Que faire ce week-end, gratuitement, dans le 11e ? L'app répond en un clic parmi plus de 3 000 concerts, expos et ateliers, à partir des données ouvertes de la Ville, en direct. Filtres par date, prix, arrondissement et thème, vue carte, lien partageable, mise en page façon agenda de magazine. Sans framework, volontairement : 92 tests, Lighthouse 97 à 100.",
     stack: ["JavaScript", "Vite", "Open Data Paris", "Leaflet", "Vitest"],
     liveUrl: "https://adataviz-patphiletas.vercel.app/",
     githubUrl: "https://github.com/patphiletas/adataviz-patphiletas",
@@ -116,48 +123,47 @@ export const skills: Skill[] = [
   {
     category: "Front-End",
     items: [
-      { name: "Next JS", featured: true },
-      { name: "React JS", featured: true },
-      { name: "JavaScript", featured: true },
-      { name: "TypeScript", featured: true },
-      { name: "Tailwind CSS", featured: true },
-      { name: "Angular" },
+      { name: "Next.js", level: "pratique" },
+      { name: "React", level: "pratique" },
+      { name: "TypeScript", level: "pratique" },
+      { name: "JavaScript", level: "pratique" },
+      { name: "Tailwind CSS", level: "pratique" },
+      { name: "Angular", level: "notions" },
     ],
   },
   {
     category: "Back-End",
     items: [
-      { name: "NodeJS" },
-      { name: "ExpressJS" },
-      { name: "PostgreSQL / SQL", featured: true },
-      { name: "API Rest" },
-      { name: "CRUD" },
-      { name: "Python" },
+      { name: "PostgreSQL / SQL", level: "pratique" },
+      { name: "API REST", level: "pratique" },
+      { name: "Node.js", level: "utilise" },
+      { name: "Express", level: "utilise" },
+      { name: "Python", level: "notions" },
     ],
   },
   {
     category: "Outils & IA",
     items: [
-      { name: "Git / Github", featured: true },
-      { name: "Vitest", featured: true },
-      { name: "GitHub Actions" },
-      { name: "Vercel" },
-      { name: "Docker" },
-      { name: "Neon / Cloudinary" },
-      { name: "VSCode" },
-      { name: "Figma", featured: true },
-      { name: "Claude Code", featured: true },
-      { name: "Codex" },
-      { name: "ChatGPT" },
+      { name: "Git / GitHub", level: "pratique" },
+      { name: "Vitest", level: "pratique" },
+      { name: "GitHub Actions", level: "pratique" },
+      { name: "Vercel", level: "pratique" },
+      { name: "Neon / Cloudinary", level: "pratique" },
+      { name: "Claude Code", level: "pratique" },
+      { name: "Figma", level: "utilise" },
+      { name: "VS Code", level: "utilise" },
+      { name: "Codex", level: "utilise" },
+      { name: "ChatGPT", level: "utilise" },
+      { name: "Docker", level: "notions" },
     ],
   },
   {
     category: "Graphisme",
     items: [
-      { name: "Photoshop", featured: true },
-      { name: "Indesign", featured: true },
-      { name: "Illustrator", featured: true },
-      { name: "Acrobat Pro", featured: true },
+      { name: "InDesign", level: "pratique" },
+      { name: "Photoshop", level: "pratique" },
+      { name: "Illustrator", level: "pratique" },
+      { name: "Acrobat Pro", level: "pratique" },
     ],
   },
 ];

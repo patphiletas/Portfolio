@@ -32,7 +32,7 @@
 
 <br/>
 
-Ce portfolio présente mon parcours de reconversion vers le développement web full stack après près de 20 ans dans le graphisme éditorial. Il rassemble mes projets web, mes compétences techniques, mon expérience en direction artistique et les liens de contact pour une recherche d'alternance dès que possible (prochaine rentrée : janvier 2027).
+Ce portfolio présente mon parcours de reconversion vers le développement web full stack après près de 20 ans dans le graphisme éditorial. Il rassemble mes projets web, mes compétences techniques, mon expérience en direction artistique et les liens de contact pour une recherche d'alternance de 12 mois (4 jours en entreprise / 1 jour en formation) : démarrage possible dès maintenant, prochaine rentrée de formation en janvier 2027.
 
 ---
 
@@ -45,7 +45,7 @@ Ce portfolio présente mon parcours de reconversion vers le développement web f
 | Démos vidéo | Courte démo muette en boucle (WebM, 8 à 11 s, 400 à 730 Ko) pour chacun des quatre projets : lecture au survol sur ordinateur, quand la carte est visible sur mobile, image fixe si « réduire les animations » est activé ; vidéo téléchargée seulement à la lecture |
 | Graphisme | Page `/graphisme` : **sélection** de 12 pièces en mosaïque en tête de page (liste `SELECTION_IDS` dans `lib/graphisme.ts`), sections Édition et Web repliées (« Voir les 29 couvertures »), sommaire typographique numéroté des six domaines, en deux colonnes et sans images, images sans cadre avec légendes discrètes (visionneuse au clic, avec le lien « Aperçu en ligne ↗ » vers le feuilletage Calaméo quand il existe), clients en liste typographique ; même langage éditorial que l'accueil (pas de cartes ni de pastilles) |
 | Parcours | Présentation de la reconversion, de la formation Ada Tech School et de l'expérience professionnelle |
-| Compétences | Regroupées en quatre colonnes : front-end, back-end, outils & IA, graphisme |
+| Compétences | Regroupées en quatre colonnes (front-end, back-end, outils & IA, graphisme), avec trois niveaux et une légende : pratiqué en projet ou en poste (accent), déjà utilisé, notions (italique) — champ `level` dans `lib/data.ts` |
 | Contact | Liens directs vers email, téléphone, GitHub, LinkedIn, CV et portfolio PDF |
 | Thème clair/sombre | Gestion du thème via contexte React et variables CSS |
 | Responsive | Interface adaptée aux écrans mobiles, tablettes et desktop |

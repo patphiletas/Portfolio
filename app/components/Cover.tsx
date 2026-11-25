@@ -29,7 +29,7 @@ export default function Cover() {
               Le soin d&apos;un graphiste éditorial, appliqué au code&nbsp;: interfaces lisibles,
               code typé et testé.{" "}
               <span className="theme-text font-medium">
-                Alternance de 12 mois, dès que possible.
+                Alternance de 12 mois, dès maintenant.
               </span>
             </p>
 
