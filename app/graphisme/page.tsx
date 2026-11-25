@@ -262,7 +262,7 @@ export default function GraphismePage() {
         <Part
           id="edition"
           title="Édition"
-          lead="Responsable du graphisme : création de collections, maquette de couvertures et d’intérieurs, choix de l’iconographie. Livres académiques, grand public, médicaux et scolaires."
+          lead="Responsable du graphisme : création de collections, maquette de couvertures et d’intérieurs, choix de l’iconographie. Livres académiques, grand public, médicaux et scolaires. Neuf ouvrages se feuillettent en ligne, intérieur compris (lien « Feuilleter le livre »)."
         >
           <ShowMore height="44rem" label={`Voir les ${academic.length + general.length + scholar.length} couvertures`}>
             <SubTitle>Livres académiques</SubTitle>

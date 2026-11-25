@@ -144,7 +144,7 @@ export function LightboxProvider({ children }: { children: React.ReactNode }) {
               onClick={(event) => event.stopPropagation()}
               className="mt-2 text-sm text-white underline underline-offset-4 decoration-1 hover:opacity-70"
             >
-              Aperçu en ligne ↗
+              Feuilleter le livre ↗
             </a>
           )}
         </div>
@@ -207,7 +207,7 @@ export function Figure({ item, sizes, shape = "portrait", contain = false, class
           rel="noopener noreferrer"
           className="theme-text mt-1 text-[12px] underline underline-offset-4 decoration-1 transition-opacity hover:opacity-70"
         >
-          Aperçu en ligne ↗
+          Feuilleter le livre ↗
         </a>
       )}
     </figure>

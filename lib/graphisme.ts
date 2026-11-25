@@ -279,6 +279,7 @@ export const SELECTION_IDS = [
   "f_avent",
   "k_hiphop",
   "c_myst",
+  "c_phenomene",
   "i_woman",
   "wb_29",
   "c_ecologie",
